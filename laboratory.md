@@ -1,4 +1,4 @@
-> For the complete documentation index, see [llms.txt](https://docs.bleh.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.bleh.bot/laboratory.md).
+> For the complete documentation index, see [llms.txt](https://docs.bleh.rest/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.bleh.rest/laboratory.md).
 
 # Laboratory
 
@@ -14,7 +14,7 @@ If you need additional information that is not directly available in this page, 
 Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
 
 ```
-GET https://docs.bleh.bot/laboratory.md?ask=<question>&goal=<endgoal>
+GET https://docs.bleh.rest/laboratory.md?ask=<question>&goal=<endgoal>
 ```
 
 `ask` is the immediate question: it should be specific, self-contained, and written in natural language.

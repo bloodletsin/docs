@@ -1,4 +1,4 @@
-> For the complete documentation index, see [llms.txt](https://docs.bleh.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.bleh.bot/miscellaneous/tickets.md).
+> For the complete documentation index, see [llms.txt](https://docs.bleh.rest/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.bleh.rest/miscellaneous/tickets.md).
 
 # Tickets
 
@@ -90,7 +90,7 @@ Example: ;ticket send #ticket
 
 <figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Bildschirmfoto%202024-08-03%20um%2016.27.57.png" alt="" width="375"><figcaption></figcaption></figure>
 
-If you don't want the standard ticket embed, you can create one yourself. Go to <https://bleh.bot/embed>.
+If you don't want the standard ticket embed, you can create one yourself. Go to <https://bleh.rest/embed>.
 
 <figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Bildschirmfoto%202024-08-03%20um%2016.31.14.png" alt=""><figcaption></figcaption></figure>
 
@@ -134,7 +134,7 @@ It is now important to save this code as you will need it to retrieve the user r
 
 To display in the ticket message what the user has entered in the modal, you have to take the code and insert {code} into your open embed message like this
 
-{% embed url="<https://docs.bleh.bot/server/tickets#ticket-open-embed>" %}
+{% embed url="<https://docs.bleh.rest/server/tickets#ticket-open-embed>" %}
 
 ````
 Syntax: ;ticket settings embed [topic] [code]
@@ -203,7 +203,7 @@ If you need additional information that is not directly available in this page, 
 Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
 
 ```
-GET https://docs.bleh.bot/miscellaneous/tickets.md?ask=<question>&goal=<endgoal>
+GET https://docs.bleh.rest/miscellaneous/tickets.md?ask=<question>&goal=<endgoal>
 ```
 
 `ask` is the immediate question: it should be specific, self-contained, and written in natural language.
