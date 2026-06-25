@@ -1,0 +1,232 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<title>Server Voicemaster - Bleh Docs</title>
+<style>*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d1117;color:#c9d1d9;display:flex}
+.sidebar{width:260px;background:#161b22;padding:24px;border-right:1px solid #30363d;position:fixed;height:100vh;overflow-y:auto}
+.sidebar .logo{font-size:18px;font-weight:700;color:#58a6ff;display:block;margin-bottom:20px;text-decoration:none}
+.sidebar .group{display:block;color:#8b949e;font-size:11px;text-transform:uppercase;letter-spacing:1px;margin:16px 0 6px}
+.sidebar a{display:block;color:#c9d1d9;text-decoration:none;padding:5px 10px;border-radius:6px;font-size:14px}
+.sidebar a:hover{background:#1f6feb22;color:#58a6ff}
+.content{margin-left:260px;padding:40px 60px;max-width:900px}
+.content h1{color:#f0f6fc;font-size:28px;margin-bottom:16px}
+.content h2{color:#f0f6fc;font-size:22px;margin:28px 0 12px;padding-bottom:8px;border-bottom:1px solid #30363d}
+.content h3{color:#f0f6fc;font-size:18px;margin:20px 0 10px}
+.content p{line-height:1.7;margin-bottom:16px;color:#c9d1d9}
+.content code{background:#30363d;padding:2px 6px;border-radius:4px;font-size:13px}
+.content pre{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:16px;overflow-x:auto;margin:16px 0}
+.content a{color:#58a6ff}
+.content blockquote{border-left:3px solid #58a6ff;padding-left:16px;margin:16px 0;color:#8b949e}</style></head><body>
+<nav class="sidebar">
+<a href="index.html" class="logo">📖 Bleh Docs</a>
+<span class="group">Overview</span>
+<a href="overview_introduction.html">Introduction</a>
+<a href="overview_donator.html">Donator Perks</a>
+<span class="group">Security</span>
+<a href="security_antinuke.html">Antinuke</a>
+<a href="security_join-gate.html">Join Gate</a>
+<a href="security_moderation.html">Moderation</a>
+<a href="security_auto-moderation.html">Auto Moderation</a>
+<a href="security_fake-permissions.html">Fake Permissions</a>
+<span class="group">Server</span>
+<a href="server_roles.html">Roles</a>
+<a href="server_logging.html">Logging</a>
+<a href="server_starboard.html">Starboard</a>
+<a href="server_voicemaster.html">VoiceMaster</a>
+<a href="server_level.html">Level Rewards</a>
+<a href="server_bump.html">Bump Reminder</a>
+<span class="group">Misc</span>
+<a href="miscellaneous_tickets.html">Tickets</a>
+<a href="miscellaneous_giveaway.html">Giveaway</a>
+<span class="group">Economy</span>
+<a href="economy_general.html">General</a>
+<a href="business.html">Business</a>
+<a href="laboratory.html">Laboratory</a>
+<a href="company.html">Company</a>
+<a href="cards.html">Cards</a>
+<a href="games.html">Games</a>
+</nav>
+<div class="content"><p>&gt; For the complete documentation index, see <a href="https://docs.bleh.bot/llms.txt">llms.txt</a>. Markdown versions of documentation pages are available by appending <code>.md</code> to page URLs; this page is available as <a href="https://docs.bleh.bot/server/voicemaster.md">Markdown</a>.
+
+<h1>VoiceMaster</h1>
+
+<h2>Getting started &lt;a href="#getting-started" id="getting-started"&gt;&lt;/a&gt;</h2>
+
+The first step to using <strong>VoiceMaster</strong> is to use the <code>voicemaster setup</code> command.
+
+{% hint style="info" %}
+The created channels can be moved and renamed to your liking.
+{% endhint %}
+
+&lt;figure&gt;&lt;img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_m7JBotuepB.png" alt=""&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+
+<h3>What is the interface channel?</h3>
+
+The <code>#interface</code> channel will contain an embed with buttons that allow members to customize their temporary voice channel. This channel should be locked to keep the embed message at the top of the channel.
+
+&lt;figure&gt;&lt;img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_7gcgOzc21R.png" alt="" width="396"&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+
+<h3>What is the Join to Create channel? &lt;a href="#what-is-the-join-to-create-channel" id="what-is-the-join-to-create-channel"&gt;&lt;/a&gt;</h3>
+
+The <strong>Join to Create</strong> channel is where members will join to create their temporary voice channel. This channel is required for the <strong>VoiceMaster</strong> system to work.
+
+&lt;figure&gt;&lt;img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/UnbenanntesVideoMitClipchamperstelltonline-video-cutter.com-ezgif.com-video-to-gif-converter.gif" alt="" width="360"&gt;&lt;figcaption&gt;&lt;/figcaption&gt;&lt;/figure&gt;
+
+<h2>Customizing new voice channels</h2>
+
+You can customize what the temporary voice channels look like when they’re created.
+
+&lt;details&gt;
+
+&lt;summary&gt;Redirecting voice channels&lt;/summary&gt;
+
+Redirect voice channels to a specific category.
+
+``<code>
+Syntax: ;voicemaster category [category]
+Example: ;voicemaster category Voice Channels
+</code>`<code>
+
+&lt;/details&gt;
+
+&lt;details&gt;
+
+&lt;summary&gt;Setting the default channel name&lt;/summary&gt;
+
+The name can use the </code>{user}<code>, </code>{user.name}<code> and </code>{user.display_name}<code> variables.
+
+</code>`<code>
+Syntax: ;voicemaster name [name]
+Example: ;voicemaster name {user.display_name}'s vc
+</code>`<code>
+
+&lt;/details&gt;
+
+&lt;details&gt;
+
+&lt;summary&gt;Setting the default channel bitrate&lt;/summary&gt;
+
+The bitrate must be between </code>8<code> and </code>384<code>.
+
+</code>`<code>
+Syntax: ;voicemaster bitrate [bitrate]
+Example: ;voicemaster bitrate 384
+</code>`<code>
+
+&lt;/details&gt;
+
+&lt;details&gt;
+
+&lt;summary&gt;Setting the default channel region&lt;/summary&gt;
+
+The region must be one of the following\
+</code>brazil<code>, </code>hongkong<code>, </code>india<code>, </code>japan<code>, </code>rotterdam<code>, </code>russia<code>, </code>singapore<code>, </code>south-korea<code>, </code>southafrica<code>, </code>sydney<code>, </code>us-central<code>, </code>us-east<code>, </code>us-south<code>, </code>us-west<code>
+
+</code>`<code>
+Syntax: ;voicemaster region [region]
+Example: ;voicemaster region russia
+</code>`<code>
+
+&lt;/details&gt;
+
+<h2>Customizing your voice channel &lt;a href="#customizing-your-voice-channel" id="customizing-your-voice-channel"&gt;&lt;/a&gt;</h2>
+
+The following commands can be done via the </code>#interface<code> channel.
+
+<h3>Renaming your voice channel &lt;a href="#renaming-your-voice-channel" id="renaming-your-voice-channel"&gt;&lt;/a&gt;</h3>
+
+You can use the </code>voice rename<code> command to change the name of your voice channel.
+
+{% hint style="info" %}
+This command can only be used <strong>once</strong> every <strong>10 minutes</strong>.
+{% endhint %}
+
+</code>`<code>
+Syntax: ;voice rename [name]
+Example: ;voice rename Valorant Voice
+</code>`<code>
+
+<h3>Limiting the number of members &lt;a href="#limiting-the-number-of-members" id="limiting-the-number-of-members"&gt;&lt;/a&gt;</h3>
+
+You can use the </code>voice limit<code> command to set a limit on the number of members that can join your voice channel.
+
+</code>`<code>
+Syntax: ;voice limit [limit]
+Example: ;voice limit 5
+</code>`<code>
+
+<h3>Making your voice channel private &lt;a href="#making-your-voice-channel-private" id="making-your-voice-channel-private"&gt;&lt;/a&gt;</h3>
+
+You can lock &amp; hide your voice channel with the following commands.
+
+* </code>voice lock<code> - Prevents anyone from joining the voice channel.
+  * </code>voice unlock<code> - Allows anyone join the voice channel.
+* </code>voice hide<code> - Hides the voice channel from the channel list.
+  * </code>voice reveal<code> - Reveals the voice channel in the channel list.
+
+<h3>Permitting members to join</h3>
+
+You can use the </code>voice permit<code> command to allow specific members to join your voice channel.
+
+</code>`<code>
+Syntax: ;voice permit [member]
+Example: ;voice permit bender.py
+</code>`<code>
+
+<h2>Related commands</h2>
+
+&lt;details&gt;
+
+&lt;summary&gt;Claiming ownership&lt;/summary&gt;
+
+If the owner of a voice channel leaves, you can use the </code>voice claim<code> command to take ownership of the voice channel.
+
+&lt;/details&gt;
+
+&lt;details&gt;
+
+&lt;summary&gt;Transferring ownership&lt;/summary&gt;
+
+You can use the </code>voice transfer<code> command to transfer ownership of a voice channel to another member.
+
+</code>`<code>
+Syntax: ;voice transfer [member]
+Example: ;voice transfer bender.py
+</code>`<code>
+
+&lt;/details&gt;
+
+&lt;details&gt;
+
+&lt;summary&gt;Change channel status&lt;/summary&gt;
+
+You can use the </code>voice status<code> command to change current channel status.
+
+</code>`<code>
+Syntax: ;voice status [status]
+Example: ;voice status Gaming
+</code>`<code>
+
+&lt;/details&gt;
+
+
+---
+
+<h1>Agent Instructions</h1>
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+<h2>Querying This Documentation</h2>
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the </code>ask<code> query parameter, and the optional </code>goal<code> query parameter:
+
+</code>`<code>
+GET https://docs.bleh.bot/server/voicemaster.md?ask=&lt;question&gt;&amp;goal=&lt;endgoal&gt;
+</code>`<code>
+
+</code>ask<code> is the immediate question: it should be specific, self-contained, and written in natural language.
+</code>goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
+
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.</p></div>
+</body></html>
