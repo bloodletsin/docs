@@ -6,7 +6,7 @@
 
 Donator perks can be purchased via **our Store** on our [**Website**](https://bleh.rest/premium).
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-26%20003530.png" alt="" width="563"><figcaption></figcaption></figure>
+
 
 
 ---

@@ -4,9 +4,7 @@
 
 ## Information
 
-{% hint style="warning" %}
-To start using antinuke, you need to need to use `antinuke setup`.
-{% endhint %}
+
 
 Antinuke is triggered by a threshold set **per user**.
 
@@ -20,17 +18,15 @@ Your antinuke should **never** have to be higher than 5. Antinuke will not work 
 | punishment | Action to be taken on trigger |
 | time       | Threshold for account age     |
 
-{% hint style="info" %}
-Review the contents of each **antinuke subcommand** to see what parameters are supported. All parameters above aren't available to every subcommand!
-{% endhint %}
+
 
 ## Punishments
 
 Click the following to view all antinuke punishments available:
 
-{% content-ref url="/pages/M8W1s0B1kjPxF5dsKqD9" %}
+
 [Punishments](/resources/punishments.md)
-{% endcontent-ref %}
+
 
 ## Admins & Whitelisted <a href="#admins-and-whitelisted" id="admins-and-whitelisted"></a>
 
@@ -38,9 +34,7 @@ You can whitelist members from triggering antinuke by using `antinuke whitelist 
 
 You can also grant antinuke admin to a user, which allows them to modify antinuke settings. You can do this by using `[prefix] antinuke admin [user]`. Only give this to people you trust.
 
-{% hint style="warning" %}
-Be careful who you whitelist. They can nuke your server without being detected by antinuke.
-{% endhint %}
+
 
 ## Antinuke Logs <a href="#antinuke-logs" id="antinuke-logs"></a>
 

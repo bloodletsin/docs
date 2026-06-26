@@ -14,13 +14,11 @@ When a moderator is given fake permissions, such as `ban_members`, they will be 
 
 You can locate the required permissions for a command with `;help (command)`
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_mGCYYCNrMc.png" alt=""><figcaption></figcaption></figure>
+
 
 ## Setting up fake permissions
 
-{% hint style="warning" %}
-The following commands can only be used by the **server owner**.
-{% endhint %}
+
 
 <details>
 
@@ -84,53 +82,7 @@ Use the `fakepermissions reset` command to reset all fake permissions.
 
 ## Recommended Configuration
 
-{% tabs %}
-{% tab title="Moderator" %}
 
-* `manage_messages` - Allows the moderator to delete messages.
-* `moderate_members` - Allows the moderator to timeout members.
-* `manage_nicknames` - Allows the moderator to change nicknames.
-* `kick_members` - Allows the moderator to kick members from the server.
-
-```
-;fakepermissions add (moderator role) manage_messages
-;fakepermissions add (moderator role) moderate_members
-;fakepermissions add (moderator role) manage_nicknames
-;fakepermissions add (moderator role) kick_members
-```
-
-{% endtab %}
-
-{% tab title="Administrator" %}
-
-* `manage_messages` - Allows the administrator to delete messages.
-* `moderate_members` - Allows the administrator to timeout members.
-* `manage_nicknames` - Allows the administrator to change nicknames.
-* `manage_roles` - Allows the administrator to manage roles.
-* `ban_members` - Allows the administrator to ban members.
-* `kick_members` - Allows the administrator to kick members.
-
-```
-;fakepermissions add (admin role) manage_messages
-;fakepermissions add (admin role) moderate_members
-;fakepermissions add (admin role) manage_nicknames
-;fakepermissions add (admin role) manage_roles
-;fakepermissions add (admin role) ban_members
-;fakepermissions add (admin role) kick_members
-```
-
-{% endtab %}
-
-{% tab title="Co-Owner" %}
-
-* `administrator` - Allows the co-owner to use all moderation commands.
-
-```
-;fakepermissions add (co-owner role) administrator
-```
-
-{% endtab %}
-{% endtabs %}
 
 
 ---

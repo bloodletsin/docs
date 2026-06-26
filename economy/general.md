@@ -23,7 +23,7 @@ Syntax: ,deposit [amount]
 Example: ,deposit 125
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-26%20024510.png" alt=""><figcaption></figcaption></figure>
+
 
 With `withdraw` you can withdraw your money to gamble with it or buy things with it.
 
@@ -32,7 +32,7 @@ Syntax: ,withdraw [amount]
 Example: ,withdraw 125
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-26%20024705.png" alt=""><figcaption></figcaption></figure>
+
 
 With `transfer` you can give money to your friends, but keep in mind there is a daily limit of 10 Million coins.
 
@@ -41,7 +41,7 @@ Syntax: ;transfer [member] [amount]
 Example: ;transfer bender.py 125
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-26%20025029.png" alt="" width="359"><figcaption></figcaption></figure>
+
 
 
 ---

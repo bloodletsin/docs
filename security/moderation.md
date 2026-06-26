@@ -6,25 +6,25 @@
 
 Moderation commands require some basic setup before they can be used. This includes **moderation logs**, **mute roles**, and the **jailed role & channel**.
 
-{% stepper %}
-{% step %}
+
+
 
 #### Creating the case logs & jail role
 
 *Jail is a feature similar to mute, but it restricts users from all channels except `#jail`*
 
 Use the `;setjail` command to create the case logs channel and jail role.
-{% endstep %}
 
-{% step %}
+
+
 
 #### Creating the necessary mute roles
 
 *This will create a **image mute**, and **reaction mute** role.*
 
 Use the `;setmute` command to create the necessary mute roles.
-{% endstep %}
-{% endstepper %}
+
+
 
 Upon completion of the setup, you’ll notice a few new roles and channels in your server.
 
@@ -41,9 +41,7 @@ The following moderation commands can be customized:
 
 * `jail`, `kick`, `ban` & `mute`
 
-{% hint style="info" %}
-The `message` parameter can be raw text or an [embed](https://github.com/BlehServices/docs/blob/main/security/broken-reference/README.md) with dynamic [variables](/resources/scripting/variables.md).
-{% endhint %}
+
 
 Command response:
 

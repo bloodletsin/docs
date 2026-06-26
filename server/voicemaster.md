@@ -6,23 +6,21 @@
 
 The first step to using **VoiceMaster** is to use the `voicemaster setup` command.
 
-{% hint style="info" %}
-The created channels can be moved and renamed to your liking.
-{% endhint %}
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_m7JBotuepB.png" alt=""><figcaption></figcaption></figure>
+
+
 
 ### What is the interface channel?
 
 The `#interface` channel will contain an embed with buttons that allow members to customize their temporary voice channel. This channel should be locked to keep the embed message at the top of the channel.
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_7gcgOzc21R.png" alt="" width="396"><figcaption></figcaption></figure>
+
 
 ### What is the Join to Create channel? <a href="#what-is-the-join-to-create-channel" id="what-is-the-join-to-create-channel"></a>
 
 The **Join to Create** channel is where members will join to create their temporary voice channel. This channel is required for the **VoiceMaster** system to work.
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/UnbenanntesVideoMitClipchamperstelltonline-video-cutter.com-ezgif.com-video-to-gif-converter.gif" alt="" width="360"><figcaption></figcaption></figure>
+
 
 ## Customizing new voice channels
 
@@ -89,9 +87,7 @@ The following commands can be done via the `#interface` channel.
 
 You can use the `voice rename` command to change the name of your voice channel.
 
-{% hint style="info" %}
-This command can only be used **once** every **10 minutes**.
-{% endhint %}
+
 
 ```
 Syntax: ;voice rename [name]

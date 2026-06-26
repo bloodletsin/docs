@@ -6,7 +6,7 @@
 
 The starboard is a channel where members can react to messages and after a certain number of reactions, the message will be reposted to the starboard channel.
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_ziXlLYxaLU.png" alt=""><figcaption></figcaption></figure>
+
 
 ## Getting started
 
@@ -21,7 +21,7 @@ Syntax: ;starboard channel [channel]
 Example: ;starboard channel #starboard
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_gS0yteytim.png" alt=""><figcaption></figcaption></figure>
+
 
 ## Customizing the starboard <a href="#customizing-the-starboard" id="customizing-the-starboard"></a>
 
@@ -34,7 +34,7 @@ Syntax: ;starboard count [count]
 Example: ;starboard count 3
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_G8eHWI1ROk.png" alt=""><figcaption></figcaption></figure>
+
 
 ### Changing the emoji to watch for
 
@@ -45,7 +45,7 @@ Syntax: ;starboard emoji [emoji]
 Example: ;starboard emoji ⭐
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_j5vD65XQIv.png" alt=""><figcaption></figcaption></figure>
+
 
 
 ---

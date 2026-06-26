@@ -11,9 +11,9 @@ Syntax: ;giveaway create [channel] [time] [winners] [prize]
 Example: ;giveaway create #giveaway 12h 1 Nitro
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202024-12-21%20221201.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202024-12-21%20221228.png" alt=""><figcaption></figcaption></figure>
+
+
 
 ## Giveaway Requirements <a href="#changing-the-details" id="changing-the-details"></a>
 
@@ -24,9 +24,9 @@ Syntax: ;giveaway create [channel] [time] [winners] [prize]
 Example: ;giveaway create #giveaway 12h 1 Nitro --role @Trusted --messages 100 --level 10
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202024-12-21%20223108.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202024-12-21%20223128.png" alt=""><figcaption></figcaption></figure>
+
+
 
 ## Giveaway Bonus Entries <a href="#changing-the-details" id="changing-the-details"></a>
 
@@ -37,9 +37,9 @@ Syntax: ;giveaway create [channel] [time] [winners] [prize]
 Example: ;giveaway create #giveaway 12h 1 Nitro --bonus @Booster
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202024-12-25%20235555.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/imaefefge.png" alt=""><figcaption></figcaption></figure>
+
+
 
 ## Giveaway Blacklist <a href="#changing-the-details" id="changing-the-details"></a>
 
@@ -50,9 +50,9 @@ Syntax: ;giveaway create [channel] [time] [winners] [prize]
 Example: ;giveaway create #giveaway 12h 1 Nitro --ignore @Jail
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-01-09%20052437.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-01-09%20052454.png" alt=""><figcaption></figcaption></figure>
+
+
 
 ## Changing the details <a href="#changing-the-details" id="changing-the-details"></a>
 
@@ -132,7 +132,7 @@ Syntax: ;giveaway end [message]
 Example: ;giveaway end 1256932539411468380
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_mnyT6DImRt.png" alt=""><figcaption></figcaption></figure>
+
 
 ## Rerolling a Giveaway <a href="#rerolling-a-giveaway" id="rerolling-a-giveaway"></a>
 
@@ -143,13 +143,13 @@ Syntax: ;giveaway reroll [message] [winners]
 Example: ;giveaway reroll 1256932539411468380 1
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_tgGgMv4dan.png" alt=""><figcaption></figcaption></figure>
+
 
 ## Viewing all Giveaways
 
 You can view all giveaways with the `giveaway list` command.
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_pEZ7547S6X.png" alt=""><figcaption></figcaption></figure>
+
 
 
 ---

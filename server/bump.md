@@ -14,7 +14,7 @@ Once you’ve invited the **DISBOARD** bot, you can set up bump reminders by set
 ;bumpreminder enable
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-01-03%20220420.png" alt=""><figcaption></figcaption></figure>
+
 
 ## Customizing bump reminders
 
@@ -22,31 +22,27 @@ Once you’ve invited the **DISBOARD** bot, you can set up bump reminders by set
 
 You can change the reminder message with the `bumpreminder reminder` command. This is the message that will be sent every **two hours** when it’s time to `/bump` the server.
 
-{% hint style="info" %}
-The `message` parameter can be raw text or an [embed](/resources/scripting/embeds.md) with dynamic [variables](/resources/scripting/variables.md).
-{% endhint %}
+
 
 ```
 Syntax: ;bumpreminder reminder [code]
 Example: ;bumpreminder reminder Bump the server using **/bump**
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_psbNEIiamL.png" alt=""><figcaption></figcaption></figure>
+
 
 ### Changing the thank you message <a href="#changing-the-thank-you-message" id="changing-the-thank-you-message"></a>
 
 You can change the message which will be sent after bumping the server with the `bumpreminder thankyou` command.
 
-{% hint style="info" %}
-The `message` parameter can be raw text or an [embed](/resources/scripting/embeds.md) with dynamic [variables](/resources/scripting/variables.md).
-{% endhint %}
+
 
 ```
 Syntax: ;bumpreminder thankyou [code]
 Example: ;bumpreminder thankyou Thanks, {user.mention}
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_IVTSwSnfBf.png" alt=""><figcaption></figcaption></figure>
+
 
 
 ---

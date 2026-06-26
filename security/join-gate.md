@@ -13,7 +13,7 @@ Syntax: ;antiraid massjoin enable [punishment] [threshold]
 Example: ;antiraid massjoin enable ban 3
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-26%20022438.png" alt=""><figcaption></figcaption></figure>
+
 
 ### Requiring an avatar <a href="#requiring-an-avatar" id="requiring-an-avatar"></a>
 
@@ -24,29 +24,27 @@ Syntax: ;antiraid avatar enable [punishment]
 Example: ;antiraid avatar enable ban
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-26%20022541.png" alt=""><figcaption></figcaption></figure>
+
 
 ### Setting a minimum account age
 
 This module will trigger when an account joins the server that is younger than the specified age.
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-26%20022658.png" alt=""><figcaption></figcaption></figure>
+
 
 ### Exempting accounts from the antiraid <a href="#exempting-accounts-from-the-antiraid" id="exempting-accounts-from-the-antiraid"></a>
 
 You can exempt accounts from the antiraid with the `antiraid whitelist` command.
 
-{% hint style="info" %}
-You can use the `antiraid whitelist view` command to view all whitelisted accounts.
-{% endhint %}
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-26%20022814.png" alt=""><figcaption></figcaption></figure>
+
+
 
 ## Viewing the antiraid configuration <a href="#viewing-the-antiraid-configuration" id="viewing-the-antiraid-configuration"></a>
 
 You can use the `antiraid config` command to view the current antiraid configuration.
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-26%20022847.png" alt=""><figcaption></figcaption></figure>
+
 
 
 ---

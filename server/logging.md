@@ -10,18 +10,16 @@ Logging allows you to log events in your server. This can be useful for keeping 
 
 You can add a logging event using the `logs add` command.
 
-{% hint style="info" %}
-Available logging events are `messages`, `members`, `roles`, `channels`, `moderation`, `appeals`, `guild` and `voice`.
-{% endhint %}
+
 
 ```
 Syntax: ;logs add [event] [channel]
 Example: ;logs add messages #server
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_Dj1FfyGZcP.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_0DKaoZGT9m.png" alt=""><figcaption></figcaption></figure>
+
+
 
 ## Removing a logging event
 
@@ -32,7 +30,7 @@ Syntax: ;logs remove [event]
 Example: ;logs remove messages 
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_K4lx1c0W48.png" alt=""><figcaption></figcaption></figure>
+
 
 ## Ignoring a member or channel <a href="#ignoring-a-member-or-channel" id="ignoring-a-member-or-channel"></a>
 
@@ -46,13 +44,13 @@ Syntax: ;level ignore remove [target]
 Example: ;level ignore remove #general
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_YWWx5LAKFu.png" alt=""><figcaption></figcaption></figure>
+
 
 ## View all enabled logging events
 
 You can use the `logs list` command to view all enabled logging events.
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_O9J8PoRkeG.png" alt=""><figcaption></figcaption></figure>
+
 
 
 ---

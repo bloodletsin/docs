@@ -10,9 +10,7 @@ Before you run any commands, it’s important to use the `levels enable` command
 
 You should immediately ignore channels, roles & member that you don’t want gaining XP. You can do this by using the `levels ignore` command.
 
-{% hint style="info" %}
-If you no longer want to ignore a channel or role, you can re-run the command. You can also use `level ignore list` to view all ignored channels, roles & members.
-{% endhint %}
+
 
 ```
 Syntax: ;level ignore add [target]
@@ -22,19 +20,15 @@ Syntax: ;level ignore remove [target]
 Example: ;level ignore remove #general
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_vPvQBf0kAk.png" alt=""><figcaption></figcaption></figure>
+
 
 ## Setting up roles to reward
 
 You can reward your members with roles when they reach a certain level. You can use the `level rewards add` command to add a level reward.
 
-{% hint style="info" %}
-If you no longer want to reward a role for a level, you can use the `level rewards remove` command.
-{% endhint %}
 
-{% hint style="warning" %}
-If your server already has XP, you can use the `levels sync` command to ensure that all users have the correct roles based on their XP.
-{% endhint %}
+
+
 
 ```
 Syntax: ;level rewards add [level] [role]
@@ -44,7 +38,7 @@ Syntax: ;level rewards remove [role]
 Example: ;level rewards remove gang
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_TVbf88AIJQ.png" alt=""><figcaption></figcaption></figure>
+
 
 ### Stacking reward roles <a href="#stacking-reward-roles" id="stacking-reward-roles"></a>
 
@@ -59,9 +53,7 @@ Example: ;level rewards stack on
 
 You can customize the level-up message that will be sent when a user achieves a new level.
 
-{% hint style="info" %}
-The `message` parameter can be raw text or an [embed](/resources/scripting/embeds.md) with dynamic [variables](/resources/scripting/variables.md).
-{% endhint %}
+
 
 ```
 Syntax: ;level message [message]
@@ -77,7 +69,7 @@ Syntax: ;level channel [channel]
 Example: ;level channel #levels
 ```
 
-<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_TVbf88AIJQ.png" alt=""><figcaption></figcaption></figure>
+
 
 ## Changing a member’s level <a href="#changing-a-members-level" id="changing-a-members-level"></a>
 

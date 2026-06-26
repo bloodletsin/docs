@@ -4,11 +4,9 @@
 
 ## Guides
 
-{% hint style="info" %}
-Server prefix is set to `;` by default. Use `;prefix set (symbol)` to change it for your server.
-{% endhint %}
 
-<table data-card-size="large" data-view="cards"><thead><tr><th align="center"></th><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Security Setup</td><td align="center">Quickly configure your server to use bleh’s advanced moderation system.</td><td><a href="/pages/uFY4GnqQlPvYZntFDLM8">/pages/uFY4GnqQlPvYZntFDLM8</a></td></tr><tr><td align="center">Server Configuration</td><td align="center">Learn how to build embeds and use variables for your server’s configurations</td><td><a href="/pages/cKyl9NsiiqN8Z2gS0UC6">/pages/cKyl9NsiiqN8Z2gS0UC6</a></td></tr><tr><td align="center">Integrations</td><td align="center">Seamlessly integrate your favorite platforms directly into your server through bleh.</td><td><a href="/pages/uIevro7GO2Jd47PoR7iL">/pages/uIevro7GO2Jd47PoR7iL</a></td></tr><tr><td align="center">Embed Scripting</td><td align="center">Learn how to build embeds and use variables for your server’s configurations</td><td><a href="/pages/gnB3eihswUbsz7QJyDfM">/pages/gnB3eihswUbsz7QJyDfM</a></td></tr></tbody></table>
+
+
 
 
 ---
