@@ -2,13 +2,13 @@
   "name": "Bleh Docs",
   "theme": "mint",
   "colors": {
-    "primary": "#58A6FF",
-    "light": "#58A6FF",
-    "dark": "#58A6FF"
+    "primary": "#0c3175",
+    "light": "#0c3175",
+    "dark": "#0c3175"
   },
   "logo": {
-    "light": "https://bleh.rest/favicon.ico",
-    "dark": "https://bleh.rest/favicon.ico",
+    "light": "https://bleh.rest/logo.png",
+    "dark": "https://bleh.rest/logo.png",
     "href": "https://bleh.rest"
   },
   "navigation": {
@@ -128,5 +128,5 @@
     "discord": "https://discord.gg/bleh",
     "github": "https://github.com/bloodletsin/bleh-docs"
   },
-  "favicon": "https://bleh.rest/favicon.ico"
+  "favicon": "https://bleh.rest/logo.png"
 }
