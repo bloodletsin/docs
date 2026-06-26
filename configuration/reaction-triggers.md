@@ -23,7 +23,7 @@ You can use the `reaction` command to react to a message with bleh.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/reaction-triggers/react.gif?s=df4e22789a64022bb936a55eebef1815" width="427" height="187" data-path="images/configuration/reaction-triggers/react.gif" />
+  
 </Frame>
 
 ## Creating a reaction trigger
@@ -48,7 +48,7 @@ You can create a reaction trigger with the `reaction add` command.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/reaction-triggers/add.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=a20a58bb2ad5e0ea74fab668747b6c9f" width="397" height="274" data-path="images/configuration/reaction-triggers/add.png" />
+  
 </Frame>
 
 ### Viewing who added a reaction trigger
@@ -68,7 +68,7 @@ You can use the `reaction owner` command to view who added a reaction trigger.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/reaction-triggers/owner.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=756ac665a4209887a018c31dc5634b05" width="478" height="170" data-path="images/configuration/reaction-triggers/owner.png" />
+  
 </Frame>
 
 ## Removing a reaction trigger
@@ -90,7 +90,7 @@ You can remove a reaction trigger with the `reaction remove` command.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/reaction-triggers/remove.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=80b290f8649afc3e342496794aaec575" width="392" height="171" data-path="images/configuration/reaction-triggers/remove.png" />
+  
 </Frame>
 
 ### Removing all reactions for a trigger
@@ -110,7 +110,7 @@ You can remove all reactions for a trigger with the `reaction removeall` command
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/reaction-triggers/removeall.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=71c9fe755fb82cd5f5c03e7d16634aae" width="444" height="167" data-path="images/configuration/reaction-triggers/removeall.png" />
+  
 </Frame>
 
 ## Reacting to every message
@@ -136,7 +136,7 @@ This is useful for channels like `#selfies` where messages can be voted on.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/reaction-triggers/messages.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=2a8a4bfe567a9ef439ed862cbe0fb2be" width="506" height="173" data-path="images/configuration/reaction-triggers/messages.png" />
+  
 </Frame>
 
 ### Removing all message reactions
@@ -156,7 +156,7 @@ You can use the `reaction messages` command without emojis to remove all reactio
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/reaction-triggers/messages-remove.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=03f13efb41c4a21a0f92121efc1ad3d8" width="467" height="170" data-path="images/configuration/reaction-triggers/messages-remove.png" />
+  
 </Frame>
 
 ## Related commands

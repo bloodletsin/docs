@@ -91,7 +91,7 @@ This module will trigger when the number of accounts joining the server exceeds 
 </AccordionGroup>
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antiraid/massjoin.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=5a0ef54c0b01df31d4d840e7d4a954ec" width="661" height="190" data-path="images/security/antiraid/massjoin.png" />
+  
 </Frame>
 
 ### Requiring an avatar
@@ -128,7 +128,7 @@ This module will trigger when an account joins the server without an avatar.
 </AccordionGroup>
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antiraid/avatar.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=b3e366950ba2a00238095c9d2a9c53b5" width="521" height="172" data-path="images/security/antiraid/avatar.png" />
+  
 </Frame>
 
 ### Setting a minimum account age
@@ -185,7 +185,7 @@ This module will trigger when an account joins the server that is younger than t
 </AccordionGroup>
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antiraid/age.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=3c68e3976fa9fee11fc1d269c17434ee" width="663" height="194" data-path="images/security/antiraid/age.png" />
+  
 </Frame>
 
 ### Exempting accounts from the antiraid
@@ -207,7 +207,7 @@ You can exempt accounts from the antiraid with the `antiraid whitelist` command.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antiraid/whitelist.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=f6c055f770a392c9cb8b8e82c2b10406" width="545" height="175" data-path="images/security/antiraid/whitelist.png" />
+  
 </Frame>
 
 ## Viewing the antiraid configuration
@@ -215,7 +215,7 @@ You can exempt accounts from the antiraid with the `antiraid whitelist` command.
 You can use the `antiraid config` command to view the current antiraid configuration.
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antiraid/config.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=d33fdc88289eff3c9920d740cb672952" width="452" height="331" data-path="images/security/antiraid/config.png" />
+  
 </Frame>
 
 ## What to do after a raid

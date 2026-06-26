@@ -37,7 +37,7 @@ You can create an auto message with the `timer add` command.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/messages/timer/add.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=07bbdc815e1eef4e13a85546be023e8c" width="613" height="226" data-path="images/configuration/messages/timer/add.png" />
+  
 </Frame>
 
 ## Removing an auto message
@@ -57,7 +57,7 @@ You can remove an auto message with the `timer remove` command.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/messages/timer/remove.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=1c91b147a73d25c0ca69d5a47775f3ff" width="483" height="174" data-path="images/configuration/messages/timer/remove.png" />
+  
 </Frame>
 
 ## Related commands

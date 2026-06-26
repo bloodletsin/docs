@@ -45,7 +45,7 @@ Initially, only the **server owner** can configure the antinuke. However, you ca
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antinuke/admin.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=2c607b17195ebd51a5dbcccec920dc1c" alt="" width="658" height="371" data-path="images/security/antinuke/admin.png" />
+  
 </Frame>
 
 ### Exempting users from the antinuke
@@ -70,7 +70,7 @@ You can exempt users from the antinuke with the `antinuke whitelist` command.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antinuke/whitelist.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=3d0c13568d3c1006003971732d9445db" alt="" width="573" height="346" data-path="images/security/antinuke/whitelist.png" />
+  
 </Frame>
 
 ## Enabling an antinuke module
@@ -154,7 +154,7 @@ The following flags can be used to define the antinuke module
     <br />
 
     <Frame>
-      <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antinuke/vanity.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=a3da459d9d0f3d4d65d39d5aea12b664" alt="" width="590" height="174" data-path="images/security/antinuke/vanity.png" />
+      
     </Frame>
   </Accordion>
 
@@ -178,7 +178,7 @@ The following flags can be used to define the antinuke module
     <br />
 
     <Frame>
-      <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antinuke/botadd.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=a4d82d10f8a804705e96b741099cdca3" alt="" width="415" height="174" data-path="images/security/antinuke/botadd.png" />
+      
     </Frame>
   </Accordion>
 
@@ -202,7 +202,7 @@ The following flags can be used to define the antinuke module
     <br />
 
     <Frame>
-      <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antinuke/ban.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=26404c754f89bf2b5683ae341cc38781" alt="" width="610" height="193" data-path="images/security/antinuke/ban.png" />
+      
     </Frame>
   </Accordion>
 
@@ -226,7 +226,7 @@ The following flags can be used to define the antinuke module
     <br />
 
     <Frame>
-      <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antinuke/kick.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=9f4ebf5118e75c60f272cf24594794cd" alt="" width="616" height="189" data-path="images/security/antinuke/kick.png" />
+      
     </Frame>
   </Accordion>
 
@@ -250,7 +250,7 @@ The following flags can be used to define the antinuke module
     <br />
 
     <Frame>
-      <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antinuke/role.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=af70263d33fc8caa6011f18457eab8cf" alt="" width="611" height="194" data-path="images/security/antinuke/role.png" />
+      
     </Frame>
   </Accordion>
 
@@ -270,7 +270,7 @@ The following flags can be used to define the antinuke module
     <br />
 
     <Frame>
-      <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antinuke/channel.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=efa5138c97745fd3f384e1885ec05f03" alt="" width="440" height="191" data-path="images/security/antinuke/channel.png" />
+      
     </Frame>
   </Accordion>
 
@@ -290,7 +290,7 @@ The following flags can be used to define the antinuke module
     <br />
 
     <Frame>
-      <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antinuke/emoji.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=eb1629eabf5ac3fce204fb231eddd45b" alt="" width="451" height="192" data-path="images/security/antinuke/emoji.png" />
+      
     </Frame>
   </Accordion>
 
@@ -310,7 +310,7 @@ The following flags can be used to define the antinuke module
     <br />
 
     <Frame>
-      <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antinuke/webhook.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=4fdfa6219ce5a26aea2a92d47012962e" alt="" width="446" height="192" data-path="images/security/antinuke/webhook.png" />
+      
     </Frame>
   </Accordion>
 </AccordionGroup>
@@ -324,7 +324,7 @@ You can disable an antinuke module with the same command you used to enable it, 
 You can use the `antinuke config` command to view the current antinuke configuration.
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antinuke/config.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=c446e9579d51bf376b7a66d6b67af7b2" alt="" width="590" height="408" data-path="images/security/antinuke/config.png" />
+  
 </Frame>
 
 ### Viewing the modules & whitelist
@@ -332,7 +332,7 @@ You can use the `antinuke config` command to view the current antinuke configura
 You can use the `antinuke list` command to view the enabled modules and whitelisted users.
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antinuke/list.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=07d2e85b4ddd0f20cb79c00afcf9e3aa" alt="" width="572" height="496" data-path="images/security/antinuke/list.png" />
+  
 </Frame>
 
 ### Viewing users with antinuke admin
@@ -340,7 +340,7 @@ You can use the `antinuke list` command to view the enabled modules and whitelis
 You can use the `antinuke admins` command to view users which can configure the antinuke.
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antinuke/admins.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=124a9e5b847736ca33ea362b900ce06c" alt="" width="291" height="307" data-path="images/security/antinuke/admins.png" />
+  
 </Frame>
 
 ### Permissions available for `antinuke permissions (grant or remove)`

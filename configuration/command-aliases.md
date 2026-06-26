@@ -27,7 +27,7 @@ You can create an alias using the `alias add` command.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/aliases/add.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=d239addf8a60eb2bbce6fd4a3a1f86e2" width="547" height="480" data-path="images/configuration/aliases/add.png" />
+  
 </Frame>
 
 ### Predefined arguments
@@ -60,7 +60,7 @@ If you're interested in creating a command that grants image permissions to a us
 ```
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/aliases/add-pic.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=feab82f27b0eed2c91af00006dcfd377" width="459" height="350" data-path="images/configuration/aliases/add-pic.png" />
+  
 </Frame>
 
 ## Removing an alias
@@ -80,7 +80,7 @@ You can remove an alias using the `alias remove` command.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/aliases/remove.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=e94113db2bd413f867f272e717b42af1" width="337" height="169" data-path="images/configuration/aliases/remove.png" />
+  
 </Frame>
 
 ## Related commands

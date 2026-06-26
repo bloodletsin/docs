@@ -20,7 +20,7 @@ When a moderator is given fake permissions, such as `ban_members`, they will be 
 You can locate the required permissions for a command with `,help (command)`.
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/moderation/permissions.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=b0b1985817e0d410fa9bc0c4791c8722" width="529" height="324" data-path="images/security/moderation/permissions.png" />
+  
 </Frame>
 
 ### Setting up fake permissions

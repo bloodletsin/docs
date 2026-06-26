@@ -12,7 +12,7 @@ The syntax for the translation command is `translate (to) (from) (text)`. The `(
 For example, if you want to translate text to **French**, you would use the language code `fr`.
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/resources/translation.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=96fde7408e72e2435e30da05af44b5fc" width="373" height="223" data-path="images/resources/translation.png" />
+  
 </Frame>
 
 | Language                | Code    |

@@ -36,13 +36,13 @@ You can add a logging event using the `log add` command.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/logging/add.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=b6f2e7dfe8d6a2f4f7cc1faa5882902a" width="407" height="155" data-path="images/configuration/logging/add.png" />
+  
 </Frame>
 
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/logging/example.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=e74f31d984d2b34b04f12ff41357d68c" width="416" height="389" data-path="images/configuration/logging/example.png" />
+  
 </Frame>
 
 ## Removing a logging event
@@ -62,7 +62,7 @@ You can remove a logging event using the `log remove` command.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/logging/remove.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=276266440470159494b486f90f7ce621" width="435" height="156" data-path="images/configuration/logging/remove.png" />
+  
 </Frame>
 
 <Tip>
@@ -88,7 +88,7 @@ You can ignore and unignore a member or channel from being logged using the `log
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/logging/ignore.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=496feec888e9132ef2da48c0b819f8ea" width="370" height="318" data-path="images/configuration/logging/ignore.png" />
+  
 </Frame>
 
 ## Related commands

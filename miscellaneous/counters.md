@@ -42,7 +42,7 @@ You can add a counter using the `counter add` command.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/counters/add.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=a8e9c932123564eb81c547b4257e41a4" width="773" height="199" data-path="images/miscellaneous/counters/add.png" />
+  
 </Frame>
 
 <br />
@@ -68,5 +68,5 @@ You can remove a counter using the `counter remove` command.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/counters/remove.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=260ffdb89e9b8c280968e9f4567e3a74" width="756" height="205" data-path="images/miscellaneous/counters/remove.png" />
+  
 </Frame>

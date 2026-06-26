@@ -36,7 +36,7 @@ For some commands, you can remove entries by their ID. The ID for entry can be f
 After you have the ID, you can remove the entry with the `remove` subcommand followed by the format: `select:ID`.
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/resources/syntax/select.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=2d1b423fe77408e4ba3f41df9a8cf4b6" width="388" height="437" data-path="images/resources/syntax/select.png" />
+  
 </Frame>
 
 ## Flag Punishments

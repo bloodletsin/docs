@@ -33,7 +33,7 @@ You can change bleh's avatar using the `customize avatar` command.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/txEFoa5RuKdxsZBt/images/overview/donator-perks/customization/avadd.png?fit=max&auto=format&n=txEFoa5RuKdxsZBt&q=85&s=6b549a2e6cfceadfd5d691faa19941e8" width="1716" height="834" data-path="images/overview/donator-perks/customization/avadd.png" />
+  
 </Frame>
 
 <br />
@@ -55,7 +55,7 @@ You can change bleh's banner using the `customize banner` command.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/txEFoa5RuKdxsZBt/images/overview/donator-perks/customization/banneradd.png?fit=max&auto=format&n=txEFoa5RuKdxsZBt&q=85&s=a8ae308a948d2fd6ab1e396e35fe16c9" width="1558" height="500" data-path="images/overview/donator-perks/customization/banneradd.png" />
+  
 </Frame>
 
 ## Customizing bleh's bio
@@ -79,5 +79,5 @@ You can set bleh's bio using the `customize bio` command.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/txEFoa5RuKdxsZBt/images/overview/donator-perks/customization/bioadd.png?fit=max&auto=format&n=txEFoa5RuKdxsZBt&q=85&s=ca6ae2739cdd1b37201c258a8da8ab6c" width="1182" height="312" data-path="images/overview/donator-perks/customization/bioadd.png" />
+  
 </Frame>

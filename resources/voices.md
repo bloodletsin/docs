@@ -7,7 +7,7 @@
 > All available voices for the text-to-speech command.
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/resources/tts.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=20dae2a0fd8b3fc4d57124eec685572c" width="559" height="244" data-path="images/resources/tts.png" />
+  
 </Frame>
 
 <br />

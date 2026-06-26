@@ -39,7 +39,7 @@ You'll need to set what vanity you want to monitor. You can do this by using the
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/configuration/roles/vanity/set-substring.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=7549afa286423548397987e58ad0b8fd" width="419" height="125" data-path="images/configuration/roles/vanity/set-substring.png" />
+  
 </Frame>
 
 ## Setting up roles to reward
@@ -66,7 +66,7 @@ You can use the `/vanity role add` command to add a vanity reward.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/configuration/roles/vanity/setting-roles.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=076d214a53517fc11473463f63d9e2f8" width="430" height="257" data-path="images/configuration/roles/vanity/setting-roles.png" />
+  
 </Frame>
 
 ### Viewing all roles being rewarded
@@ -74,7 +74,7 @@ You can use the `/vanity role add` command to add a vanity reward.
 You can use the `/vanity role list` command to view all roles being rewarded.
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/configuration/roles/vanity/role-list.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=0745a85bef98bef3950f8aa747c716d2" width="349" height="219" data-path="images/configuration/roles/vanity/role-list.png" />
+  
 </Frame>
 
 ## Setting up the award message

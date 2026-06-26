@@ -19,7 +19,7 @@ There are three system message commands, each with the same subcommands.
   Message** enabled or whenever the user receives the **Server Booster** role
   which only occurs once.
 
-  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/messages/system/integrated.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=d85571a9469b39091778b675a2b68897" width="749" height="319" data-path="images/configuration/messages/system/integrated.png" />
+  
 </Tip>
 
 <Info>
@@ -54,7 +54,7 @@ You can create a system message with the `welcome add` command.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/messages/system/add.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=29bd6269965c1da77c9eeb05050b4b4a" width="669" height="193" data-path="images/configuration/messages/system/add.png" />
+  
 </Frame>
 
 # Removing a system message
@@ -74,7 +74,7 @@ You can remove a system message with the `welcome remove` command.
 <br />
 
 <Frame>
-  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/messages/system/remove.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=c09d10ddc9c93ddafd77e05c40f5edfe" width="481" height="172" data-path="images/configuration/messages/system/remove.png" />
+  
 </Frame>
 
 ## Related commands
