@@ -11,112 +11,114 @@
     "dark": "https://bleh.rest/favicon.ico",
     "href": "https://bleh.rest"
   },
-  "navigation": [
-    {
-      "group": "Overview",
-      "pages": [
-        "overview/introduction",
-        "overview/customization",
-        "overview/donator-perks"
-      ]
-    },
-    {
-      "group": "Security",
-      "pages": [
-        "security/antinuke",
-        "security/antiraid",
-        "security/fake-permissions",
-        "security/moderation"
-      ]
-    },
-    {
-      "group": "Configuration",
-      "pages": [
-        "configuration/command-aliases",
-        "configuration/logging",
-        "configuration/starboard",
-        "configuration/voicemaster",
-        "configuration/bump-reminder",
-        "configuration/level-rewards",
-        "configuration/reaction-triggers",
-        {
-          "group": "Messages",
-          "pages": [
-            "configuration/messages/system",
-            "configuration/messages/responder",
-            "configuration/messages/timer"
-          ]
-        },
-        {
-          "group": "Roles",
-          "pages": [
-            "configuration/roles/booster",
-            "configuration/roles/button",
-            "configuration/roles/reaction",
-            "configuration/roles/vanity"
-          ]
-        },
-        {
-          "group": "Tickets",
-          "pages": [
-            "configuration/tickets/overview",
-            "configuration/tickets/options",
-            "configuration/tickets/panels",
-            "configuration/tickets/commands",
-            "configuration/tickets/lifecycle",
-            "configuration/tickets/access",
-            "configuration/tickets/forms",
-            "configuration/tickets/messages",
-            "configuration/tickets/variables"
-          ]
-        }
-      ]
-    },
-    {
-      "group": "Misc",
-      "pages": [
-        "miscellaneous/counters",
-        "miscellaneous/giveaway",
-        "miscellaneous/music",
-        "miscellaneous/webhook"
-      ]
-    },
-    {
-      "group": "Integrations",
-      "pages": [
-        "integrations/fortnite",
-        "integrations/lastfm",
-        "integrations/social-notifications",
-        "integrations/spotify"
-      ]
-    },
-    {
-      "group": "Resources",
-      "pages": [
-        "resources/syntax",
-        "resources/permissions",
-        "resources/events",
-        "resources/languages",
-        "resources/voices",
-        {
-          "group": "Scripting",
-          "pages": [
-            "resources/scripting/embeds",
-            "resources/scripting/variables",
-            "resources/scripting/pagination"
-          ]
-        }
-      ]
-    },
-    {
-      "group": "Troubleshooting",
-      "pages": [
-        "common-issues/ios-dash",
-        "common-issues/permissions",
-        "common-issues/server-removal"
-      ]
-    }
-  ],
+  "navigation": {
+    "docs": [
+      {
+        "group": "Overview",
+        "pages": [
+          "overview/introduction",
+          "overview/customization",
+          "overview/donator-perks"
+        ]
+      },
+      {
+        "group": "Security",
+        "pages": [
+          "security/antinuke",
+          "security/antiraid",
+          "security/fake-permissions",
+          "security/moderation"
+        ]
+      },
+      {
+        "group": "Configuration",
+        "pages": [
+          "configuration/command-aliases",
+          "configuration/logging",
+          "configuration/starboard",
+          "configuration/voicemaster",
+          "configuration/bump-reminder",
+          "configuration/level-rewards",
+          "configuration/reaction-triggers",
+          {
+            "group": "Messages",
+            "pages": [
+              "configuration/messages/system",
+              "configuration/messages/responder",
+              "configuration/messages/timer"
+            ]
+          },
+          {
+            "group": "Roles",
+            "pages": [
+              "configuration/roles/booster",
+              "configuration/roles/button",
+              "configuration/roles/reaction",
+              "configuration/roles/vanity"
+            ]
+          },
+          {
+            "group": "Tickets",
+            "pages": [
+              "configuration/tickets/overview",
+              "configuration/tickets/options",
+              "configuration/tickets/panels",
+              "configuration/tickets/commands",
+              "configuration/tickets/lifecycle",
+              "configuration/tickets/access",
+              "configuration/tickets/forms",
+              "configuration/tickets/messages",
+              "configuration/tickets/variables"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Misc",
+        "pages": [
+          "miscellaneous/counters",
+          "miscellaneous/giveaway",
+          "miscellaneous/music",
+          "miscellaneous/webhook"
+        ]
+      },
+      {
+        "group": "Integrations",
+        "pages": [
+          "integrations/fortnite",
+          "integrations/lastfm",
+          "integrations/social-notifications",
+          "integrations/spotify"
+        ]
+      },
+      {
+        "group": "Resources",
+        "pages": [
+          "resources/syntax",
+          "resources/permissions",
+          "resources/events",
+          "resources/languages",
+          "resources/voices",
+          {
+            "group": "Scripting",
+            "pages": [
+              "resources/scripting/embeds",
+              "resources/scripting/variables",
+              "resources/scripting/pagination"
+            ]
+          }
+        ]
+      },
+      {
+        "group": "Troubleshooting",
+        "pages": [
+          "common-issues/ios-dash",
+          "common-issues/permissions",
+          "common-issues/server-removal"
+        ]
+      }
+    ]
+  },
   "footerSocials": {
     "discord": "https://discord.gg/bleh",
     "github": "https://github.com/bloodletsin/bleh-docs"
