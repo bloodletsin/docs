@@ -58,9 +58,8 @@ Example: ;giveaway create #giveaway 12h 1 Nitro --ignore @Jail
 
 You can customize the giveaway with the following commands
 
-<details>
 
-<summary>Changing the host</summary>
+**Changing the host**
 
 Use the `giveaway edit host` command to change the giveaway host.
 
@@ -69,11 +68,9 @@ Syntax: ;giveaway edit host [message] [host]
 Example: ;giveaway edit host 1256932539411468380 bender.py
 ```
 
-</details>
 
-<details>
 
-<summary>Changing the prize</summary>
+**Changing the prize**
 
 Use the `giveaway edit prize` command to change the giveaway prize.
 
@@ -82,11 +79,9 @@ Syntax: ;giveaway edit price [message] [price]
 Example: ;giveaway edit price 1256932539411468380 Nitro Yearly
 ```
 
-</details>
 
-<details>
 
-<summary>Changing the duration</summary>
+**Changing the duration**
 
 Use the `giveaway edit duration` command to change the duration of the giveaway.
 
@@ -95,11 +90,9 @@ Syntax: ;giveaway edit duration [message] [duration]
 Example: ;giveaway edit duration 1256932539411468380 1d
 ```
 
-</details>
 
-<details>
 
-<summary>Changing the amount of winners</summary>
+**Changing the amount of winners**
 
 Use the `giveaway edit winners` command to change the amount of people that can win the giveaway.
 
@@ -108,11 +101,9 @@ Syntax: ;giveaway edit winners [message] [winners]
 Example: ;giveaway edit winners 1256932539411468380 2
 ```
 
-</details>
 
-<details>
 
-<summary>Changing the requirements</summary>
+**Changing the requirements**
 
 Use the `giveaway requirements` command to requirements for a giveaway.
 
@@ -121,7 +112,6 @@ Syntax: ;giveaway requirements add/remove/edit [message] [flag] [input]
 Example: ;giveaway requirements edit role 1256932539411468380 Moderator
 ```
 
-</details>
 
 ## Ending a Giveaway
 

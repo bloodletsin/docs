@@ -26,9 +26,8 @@ The **Join to Create** channel is where members will join to create their tempor
 
 You can customize what the temporary voice channels look like when they’re created.
 
-<details>
 
-<summary>Redirecting voice channels</summary>
+**Redirecting voice channels**
 
 Redirect voice channels to a specific category.
 
@@ -37,11 +36,9 @@ Syntax: ;voicemaster category [category]
 Example: ;voicemaster category Voice Channels
 ```
 
-</details>
 
-<details>
 
-<summary>Setting the default channel name</summary>
+**Setting the default channel name**
 
 The name can use the `{user}`, `{user.name}` and `{user.display_name}` variables.
 
@@ -50,11 +47,9 @@ Syntax: ;voicemaster name [name]
 Example: ;voicemaster name {user.display_name}'s vc
 ```
 
-</details>
 
-<details>
 
-<summary>Setting the default channel bitrate</summary>
+**Setting the default channel bitrate**
 
 The bitrate must be between `8` and `384`.
 
@@ -63,11 +58,9 @@ Syntax: ;voicemaster bitrate [bitrate]
 Example: ;voicemaster bitrate 384
 ```
 
-</details>
 
-<details>
 
-<summary>Setting the default channel region</summary>
+**Setting the default channel region**
 
 The region must be one of the following\
 `brazil`, `hongkong`, `india`, `japan`, `rotterdam`, `russia`, `singapore`, `south-korea`, `southafrica`, `sydney`, `us-central`, `us-east`, `us-south`, `us-west`
@@ -77,7 +70,6 @@ Syntax: ;voicemaster region [region]
 Example: ;voicemaster region russia
 ```
 
-</details>
 
 ## Customizing your voice channel <a href="#customizing-your-voice-channel" id="customizing-your-voice-channel"></a>
 
@@ -123,17 +115,14 @@ Example: ;voice permit bender.py
 
 ## Related commands
 
-<details>
 
-<summary>Claiming ownership</summary>
+**Claiming ownership**
 
 If the owner of a voice channel leaves, you can use the `voice claim` command to take ownership of the voice channel.
 
-</details>
 
-<details>
 
-<summary>Transferring ownership</summary>
+**Transferring ownership**
 
 You can use the `voice transfer` command to transfer ownership of a voice channel to another member.
 
@@ -142,11 +131,9 @@ Syntax: ;voice transfer [member]
 Example: ;voice transfer bender.py
 ```
 
-</details>
 
-<details>
 
-<summary>Change channel status</summary>
+**Change channel status**
 
 You can use the `voice status` command to change current channel status.
 
@@ -155,4 +142,3 @@ Syntax: ;voice status [status]
 Example: ;voice status Gaming
 ```
 
-</details>

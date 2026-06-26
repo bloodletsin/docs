@@ -20,9 +20,8 @@ You can locate the required permissions for a command with `;help (command)`
 
 
 
-<details>
 
-<summary>Granting fake permissions to a role</summary>
+**Granting fake permissions to a role**
 
 Use the `fakepermissions add` command to grant a fake permission to a role.
 
@@ -31,11 +30,9 @@ Syntax: ;fakepermissions add [role] [permission]
 Example: ;fakepermissions add mod manage_messages
 ```
 
-</details>
 
-<details>
 
-<summary>Revoking fake permissions from a role</summary>
+**Revoking fake permissions from a role**
 
 Use the `fakepermissions remove` command to revoke a fake permission from a role.
 
@@ -44,11 +41,9 @@ Syntax: ;fakepermissions remove [role] [permission]
 Example: ;fakepermissions remove mod manage_messages
 ```
 
-</details>
 
-<details>
 
-<summary>Clear all fake permissions from a role</summary>
+**Clear all fake permissions from a role**
 
 Use the `fakepermissions clear` command to revoke all fake permission from a role.
 
@@ -57,11 +52,9 @@ Syntax: ;fakepermissions clear [role]
 Example: ;fakepermissions clear mod
 ```
 
-</details>
 
-<details>
 
-<summary>Viewing fake permissions</summary>
+**Viewing fake permissions**
 
 Use the `fakepermissions list` command to view all fake permissions.
 
@@ -70,14 +63,11 @@ Syntax: ;fakepermissions list [role]
 Example: ;fakepermissions list mod
 ```
 
-</details>
 
-<details>
 
-<summary>Revoking all fake permissions</summary>
+**Revoking all fake permissions**
 
 Use the `fakepermissions reset` command to reset all fake permissions.
 
-</details>
 
 ## Recommended Configuration
