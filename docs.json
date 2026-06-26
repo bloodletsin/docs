@@ -1,64 +1,66 @@
 {
+  "name": "Bleh Docs",
   "theme": "mint",
   "colors": {
     "primary": "#58A6FF",
     "light": "#58A6FF",
-    "dark": "#58A6FF",
-    "anchors": { "from": "#58A6FF", "to": "#1F6FEB" }
+    "dark": "#58A6FF"
   },
   "logo": {
     "light": "https://bleh.rest/favicon.ico",
     "dark": "https://bleh.rest/favicon.ico",
     "href": "https://bleh.rest"
   },
-  "navigation": [
-    {
-      "group": "Overview",
-      "pages": [
-        "overview/introduction",
-        "overview/donator"
-      ]
-    },
-    {
-      "group": "Security",
-      "pages": [
-        "security/antinuke",
-        "security/join-gate",
-        "security/moderation",
-        "security/auto-moderation",
-        "security/fake-permissions"
-      ]
-    },
-    {
-      "group": "Server",
-      "pages": [
-        "server/roles",
-        "server/logging",
-        "server/starboard",
-        "server/voicemaster",
-        "server/level",
-        "server/bump"
-      ]
-    },
-    {
-      "group": "Misc",
-      "pages": [
-        "miscellaneous/tickets",
-        "miscellaneous/giveaway"
-      ]
-    },
-    {
-      "group": "Economy",
-      "pages": [
-        "economy/general",
-        "business",
-        "laboratory",
-        "company",
-        "cards",
-        "games"
-      ]
-    }
-  ],
+  "navigation": {
+    "groups": [
+      {
+        "group": "Overview",
+        "pages": [
+          "overview/introduction",
+          "overview/donator"
+        ]
+      },
+      {
+        "group": "Security",
+        "pages": [
+          "security/antinuke",
+          "security/join-gate",
+          "security/moderation",
+          "security/auto-moderation",
+          "security/fake-permissions"
+        ]
+      },
+      {
+        "group": "Server",
+        "pages": [
+          "server/roles",
+          "server/logging",
+          "server/starboard",
+          "server/voicemaster",
+          "server/level",
+          "server/bump"
+        ]
+      },
+      {
+        "group": "Misc",
+        "pages": [
+          "miscellaneous/tickets",
+          "miscellaneous/giveaway"
+        ]
+      },
+      {
+        "group": "Economy",
+        "pages": [
+          "economy/general",
+          "business",
+          "laboratory",
+          "company",
+          "cards",
+          "games"
+        ]
+      }
+    ]
+  },
   "footerSocials": {
     "discord": "https://discord.gg/bleh",
     "github": "https://github.com/bloodletsin/bleh-docs"
