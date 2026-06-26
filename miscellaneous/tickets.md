@@ -86,7 +86,7 @@ Example: ;ticket send #ticket
 
 
 
-If you don't want the standard ticket embed, you can create one yourself. Go to <https://bleh.rest/embed>.
+If you don't want the standard ticket embed, you can create one yourself. Go to .
 
 
 
@@ -103,9 +103,11 @@ Example: ;ticket send #ticket {embed}$v{description: Create a Ticket}
 
 Change the message sent when a new ticket is created.
 
-<pre><code><strong>Syntax: ;ticket settings embed [topic] [code]
-</strong>Example: ;ticket settings embed default {embed}$v{description: Support will be with you shortly}
-</code></pre>
+```
+**Syntax: ;ticket settings embed [topic] [code]
+**Example: ;ticket settings embed default {embed}$v{description: Support will be with you shortly}
+
+```
 
 
 
@@ -195,7 +197,7 @@ If you need additional information that is not directly available in this page, 
 Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
 
 ```
-GET https://docs.bleh.rest/miscellaneous/tickets.md?ask=<question>&goal=<endgoal>
+GET https://docs.bleh.rest/miscellaneous/tickets.md?ask=&goal=
 ```
 
 `ask` is the immediate question: it should be specific, self-contained, and written in natural language.

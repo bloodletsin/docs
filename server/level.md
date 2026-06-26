@@ -6,7 +6,7 @@
 
 Before you run any commands, it’s important to use the `levels enable` command otherwise XP will not be tracked for users. You can also use the `levels disable` command reset it.
 
-## Ignoring channels, roles & members <a href="#ignoring-channels-and-roles" id="ignoring-channels-and-roles"></a>
+## Ignoring channels, roles & members 
 
 You should immediately ignore channels, roles & member that you don’t want gaining XP. You can do this by using the `levels ignore` command.
 
@@ -40,7 +40,7 @@ Example: ;level rewards remove gang
 
 
 
-### Stacking reward roles <a href="#stacking-reward-roles" id="stacking-reward-roles"></a>
+### Stacking reward roles 
 
 Stacking roles means that users will keep all the roles they’ve earned when they reach a new level, instead of only having the role for their current level. By default, this feature is enabled.
 
@@ -71,7 +71,7 @@ Example: ;level channel #levels
 
 
 
-## Changing a member’s level <a href="#changing-a-members-level" id="changing-a-members-level"></a>
+## Changing a member’s level 
 
 You can change a member’s level to a specific level.
 
@@ -84,41 +84,43 @@ Example: ;level set bender.py 15
 
 You can change the XP multiplier to increase or decrease the amount of XP members receive.
 
-<pre><code><strong>Syntax: ;level multiplier [multiplier]
-</strong>Example: ;level multiplier 2
+```
+**Syntax: ;level multiplier [multiplier]
+**Example: ;level multiplier 2
 
 Syntax: ;level booster [multiplier]
 Example: ;level booster 2
 
 Syntax: ;level rolemultiplier add/remove [role] [multiplier]
 Example: ;level rolemultiplier addVanity 3
-</code></pre>
 
-## Related commands <a href="#related-commands" id="related-commands"></a>
+```
 
-<details>
+## Related commands 
 
-<summary>Viewing a user's level and XP</summary>
+
+
+Viewing a user's level and XP
 
 Use the `rank` command to view a user’s level and XP.
 
-</details>
 
-<details>
 
-<summary>Viewing the XP leaderboard</summary>
+
+
+Viewing the XP leaderboard
 
 Use the `level leaderboard` subcommand to highest XP earners in the server.
 
-</details>
 
-<details>
 
-<summary>Viewing the level rewards</summary>
+
+
+Viewing the level rewards
 
 Use the `level rewards list` subcommand to view all level rewards.
 
-</details>
+
 
 
 ---
@@ -132,7 +134,7 @@ If you need additional information that is not directly available in this page, 
 Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
 
 ```
-GET https://docs.bleh.rest/server/level.md?ask=<question>&goal=<endgoal>
+GET https://docs.bleh.rest/server/level.md?ask=&goal=
 ```
 
 `ask` is the immediate question: it should be specific, self-contained, and written in natural language.
