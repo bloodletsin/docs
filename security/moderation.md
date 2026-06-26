@@ -1,58 +1,80 @@
-> For the complete documentation index, see [llms.txt](https://docs.bleh.rest/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.bleh.rest/security/moderation.md).
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
+> Use this file to discover all available pages before exploring further.
 
 # Moderation
 
-## Overview <a href="#overview" id="overview"></a>
+> Guide to setting up moderation commands in your server.
+
+## Overview
 
 Moderation commands require some basic setup before they can be used. This includes **moderation logs**, **mute roles**, and the **jailed role & channel**.
 
+<Steps>
+  <Step title="Creating the case logs & jail role">
+    <Info>
+      Jail is a feature similar to mute, but it restricts users from all channels except `#jail`.
+    </Info>
 
+    Use the `,setup` command to create the case logs channel and jail role.
+  </Step>
 
+  <Step title="Creating the necessary mute roles">
+    <Info>
+      This will create a **text mute**, **image mute**, and **reaction mute** role.
+    </Info>
 
-#### Creating the case logs & jail role
+    Use the `,setupmute` command to create the necessary mute roles.
+  </Step>
+</Steps>
 
-*Jail is a feature similar to mute, but it restricts users from all channels except `#jail`*
+Upon completion of the setup, you'll notice a few new roles and channels in your server.
 
-Use the `;setjail` command to create the case logs channel and jail role.
-
-
-
-
-#### Creating the necessary mute roles
-
-*This will create a **image mute**, and **reaction mute** role.*
-
-Use the `;setmute` command to create the necessary mute roles.
-
-
-
-Upon completion of the setup, you’ll notice a few new roles and channels in your server.
-
+* **Muted** - Used to restrict users from sending messages.
 * **Image Muted** - Used to restrict users from uploading attachments.
 * **Reaction Muted** - Used to restrict users from reacting to messages.
 * **Jailed** - Used to restrict users from all channels except the `#jail` channel.
-  * The jailed role can be renamed since it’s found by its id.
 
-## Invoke Messages <a href="#invoke-messages" id="invoke-messages"></a>
+<Info>
+  The `#jail-log` channel logs all moderation actions done through bleh (e.g.
+  `,ban` & `,kick`). The `#jail` channel is where users jailed by the `jail`
+  command are restricted to.
+</Info>
 
-You can customize the response for moderation commands and the direct message which will be sent after punishing the user.
+## Setting Staff Roles
+
+It's important to set the staff roles in your server to ensure that bleh can identify who has dangerous permissions. This is necessary for the `stripstaff` punishment to work.
+
+Use the `,bind staff @role` command to set a role as a staff role, you would re-run the command if you don't want a role set as staff anymore.
+
+<Tip>
+  You can view set staff roles with the `,bind staff list` command.
+</Tip>
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/moderation/staff-role.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=2b4663617337a1fc244ab07f1a065783" width="427" height="347" data-path="images/security/moderation/staff-role.png" />
+</Frame>
+
+## Invoke Messages
+
+You can customize the response for moderation commands which is by default `👍` and the direct message which will be sent after punishing the user.
 
 The following moderation commands can be customized:
 
-* `jail`, `kick`, `ban` & `mute`
+* `jail`, `kick`, `ban`, `tempban`, `softban`, `hardban`, `timeout` & `warn`.
 
+<Tip>
+  The `message` parameter can be raw text or an [embed](/resources/scripting/embeds) with dynamic [variables](/resources/scripting/variables).
+</Tip>
 
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,invoke (command) message (message)
+  ,invoke (command) dm (message)
+  ```
 
-Command response:
-
-```
-;invoke message (command) add [code]
-;invoke message (command) add Kicked, {member.mention}
-```
-
-Direct messages:
-
-```
-;invoke dm (command) add [code]
-;invoke dm (command) add Kicked, {member.mention}
-```
+  ```javascript Example theme={null}
+  ,invoke jail message {user.mention} has been jailed for {reason}
+  ,invoke jail dm you have been jailed for {reason}
+  ```
+</CodeGroup>

@@ -1,0 +1,141 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Bump Reminder
+
+> Receive reminders to bump your server on DISBOARD.
+
+## Why use bump reminders?
+
+Receiving reminders to bump your server on **DISBOARD** can help you increase your server's visibility and attract new members.
+You can set up the **DISBOARD** bot by clicking [here](https://discord.com/oauth2/authorize?scope=identify+guilds+guilds.join\&response_type=code\&approval_prompt=auto\&client_id=302050872383242240\&redirect_uri=https%3A%2F%2Fdisboard.org%2Fsite%2Foauth-callback).
+
+## Setting up bump reminders
+
+Once you've invited the **DISBOARD** bot, you can set up bump reminders by setting the channel where you want to receive reminders to run `/bump` every **two hours**.
+
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,bumpreminder channel (channel)
+  ```
+
+  ```javascript Example theme={null}
+  ,bumpreminder channel #bump
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/bump-reminder/channel.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=becbc6c155317bab276761d1e9a8f47d" width="528" height="172" data-path="images/configuration/bump-reminder/channel.png" />
+</Frame>
+
+## Customizing bump reminders
+
+### Changing the reminder message
+
+You can change the reminder message with the `bumpreminder message` command.
+This is the message that will be sent every **two hours** when it's time to `/bump` the server.
+
+<Info>
+  The `message` parameter can be raw text or an [embed](/resources/scripting)
+  with dynamic [variables](/resources/scripting/variables).
+</Info>
+
+<Tip>
+  This command is usually used to ping a role or user. In order for the message
+  to actually notify the role or user, you must include the `--pingable on` flag
+  in the command.
+</Tip>
+
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,bumpreminder message (text or embed code) [--pingable (on or off)]
+  ```
+
+  ```javascript Example theme={null}
+  ,bumpreminder message @bump please bump the server --pingable on
+  ,bumpreminder message {embed}$v{message: @bump}$v{title: bump}$v{description: please bump the server} --pingable on
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/bump-reminder/message.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=ad5e6115f3d714f49e48452d6f5a395e" width="605" height="172" data-path="images/configuration/bump-reminder/message.png" />
+</Frame>
+
+### Changing the thank you message
+
+You can change the message which will be sent after bumping the server with the `bumpreminder thankyou` command.
+
+<Info>
+  The `message` parameter can be raw text or an [embed](/resources/scripting)
+  with dynamic [variables](/resources/scripting/variables).
+</Info>
+
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,bumpreminder thankyou (text or embed code)
+  ```
+
+  ```javascript Example theme={null}
+  ,bumpreminder thankyou thank you for bumping the server {user.mention}!
+  ,bumpreminder thankyou {embed}$v{message: thank you for bumping the server {user.mention}}$v{description: you have helped the server grow!}
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/bump-reminder/thankyou.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=1d45c16d7e6dda47e3aa506442f3e137" width="640" height="172" data-path="images/configuration/bump-reminder/thankyou.png" />
+</Frame>
+
+### Locking the channel
+
+If you don't want members to send messages until it's time to bump the server, you can use the `bumpreminder autolock` command.
+
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,bumpreminder autolock (on or off)
+  ```
+
+  ```javascript Example theme={null}
+  ,bumpreminder autolock on
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/bump-reminder/autolock.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=24a9a479987e745e9fa81b6988060522" width="429" height="170" data-path="images/configuration/bump-reminder/autolock.png" />
+</Frame>
+
+### Cleaning up the channel
+
+If you don't want messages which aren't `/bump` to be sent in the channel, you can use the `bumpreminder autoclean` command.
+
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,bumpreminder autoclean (on or off)
+  ```
+
+  ```javascript Example theme={null}
+  ,bumpreminder autoclean on
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/bump-reminder/autoclean.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=c9b61f1e44fff4885cc5609779273310" width="432" height="168" data-path="images/configuration/bump-reminder/autoclean.png" />
+</Frame>
+
+## Viewing the configuration
+
+You can use the `bumpreminder config` command to view the current configuration.
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/bump-reminder/config.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=64a1d8dc6063ecd0412a9d5e5cf7ae12" width="349" height="365" data-path="images/configuration/bump-reminder/config.png" />
+</Frame>

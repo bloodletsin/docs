@@ -1,0 +1,62 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Syntax
+
+> General explanation of the syntax used for commands.
+
+## Formatting a duration
+
+When a command requires a `duration` parameter, you format it as a number followed by a unit. The unit can be one of the following:
+
+* `s` for seconds.
+* `m` for minutes.
+* `h` for hours.
+* `d` for days.
+* `w` for weeks.
+
+For example, `1d` represents one day, and `1w` represents one week. You can also combine units, for example, `1w2d` represents one week and two days.
+
+<CodeGroup>
+  ```javascript Correct theme={null}
+  ,timeout @member 1h
+  ,timeout @member 2d3h
+  ```
+
+  ```javascript Incorrect theme={null}
+  ,timeout @member 1 hour
+  ,timeout @member 2 days 3 hours
+  ```
+</CodeGroup>
+
+## Removing entries via ID
+
+For some commands, you can remove entries by their ID. The ID for entry can be found with the `list` subcommand.
+After you have the ID, you can remove the entry with the `remove` subcommand followed by the format: `select:ID`.
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/resources/syntax/select.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=2d1b423fe77408e4ba3f41df9a8cf4b6" width="388" height="437" data-path="images/resources/syntax/select.png" />
+</Frame>
+
+## Flag Punishments
+
+When a command has a `--do` flag, you can use it to specify the action to take. The available actions are:
+
+* `warn` to warn the user.
+* `jail` to jail the user.
+* `kick` to kick the member from the server.
+* `ban` to ban the member from the server.
+* `delete` to delete the message if applicable.
+* `stripstaff` to remove the staff role from the member.
+  * This is only available for **antinuke** commands.
+  * This will only work for roles set via the `bind staff` command.
+  * You can find more information about binding staff roles in the [moderation](/security/moderation#setting-staff-roles) section.
+
+For example, to warn a user, you would use `--do warn`.
+
+<Tip>
+  If bleh is responding with a different action than the one you specified,
+  make sure you're using the correct `--` instead of `—`. Learn more about the
+  difference [here](/common-issues/ios-dash).
+</Tip>
