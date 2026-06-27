@@ -1,4 +1,4 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/miscellaneous/invite-tracker.md).
+> For the complete documentation index, see [llms.txt](https://docs.bleh.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.bleh.bot/miscellaneous/invite-tracker.md).
 
 # Invite Tracker
 
@@ -6,7 +6,7 @@
 
 The first step to using **Invite Tracker** is to use the `invites enable` command.
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_XAoZVKFCoz.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_XAoZVKFCoz.png" alt=""><figcaption></figcaption></figure>
 
 ## Setting up invite logs <a href="#stacking-reward-roles" id="stacking-reward-roles"></a>
 
@@ -17,7 +17,7 @@ Syntax: ;invites logs [channel]
 Example: ;invites logs #logs
 ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_Cj6apkPZSS.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_Cj6apkPZSS.png" alt=""><figcaption></figcaption></figure>
 
 ### Customizing invite logs message
 
@@ -32,7 +32,7 @@ Syntax: ;invites message [message]
 Example: ;invites message {inviter.mention} has invited {user.mention} to the server!
 ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_7SX1UoFlZY.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_7SX1UoFlZY.png" alt=""><figcaption></figcaption></figure>
 
 ## Setup fake invite tracking
 
@@ -47,7 +47,7 @@ Syntax: ;invites fake-threshold [threshold]
 Example: ;invites fake-threshold 5
 ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_ZFtu0wxtpE.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_ZFtu0wxtpE.png" alt=""><figcaption></figcaption></figure>
 
 ## Setting up roles to reward
 
@@ -66,7 +66,7 @@ Syntax: ;invites rewards add [threshold] [role]
 Example: ;invites rewards add 5 @Inviter
 ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_Xh6JkyKG9K.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Discord_Xh6JkyKG9K.png" alt=""><figcaption></figcaption></figure>
 
 ### Stacking reward roles
 
@@ -123,7 +123,7 @@ If you need additional information that is not directly available in this page, 
 Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
 
 ```
-GET https://docs.evelina.bot/miscellaneous/invite-tracker.md?ask=<question>&goal=<endgoal>
+GET https://docs.bleh.bot/miscellaneous/invite-tracker.md?ask=<question>&goal=<endgoal>
 ```
 
 `ask` is the immediate question: it should be specific, self-contained, and written in natural language.

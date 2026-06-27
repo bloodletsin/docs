@@ -1,86 +1,110 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/server/roles/reaction.md).
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
+> Use this file to discover all available pages before exploring further.
 
 # Reaction Roles
+
+> Allow your members to assign themselves roles by reacting to a message.
 
 ## What are reaction roles?
 
 Reaction roles are roles that are assigned to members when they react to a message. This can be useful for letting members choose unique roles or as a way to verify themselves.
 
-## Creating a reaction role <a href="#creating-a-reaction-role" id="creating-a-reaction-role"></a>
+## Creating a reaction role
 
 You can create multiple reaction roles for a single message with a different emoji for each role.
 
-{% hint style="info" %}
-You can find the message link by **right-clicking** or **holding down** on the message and selecting **Copy Message Link**.
-{% endhint %}
+<Info>
+  You can find the message link by **right-clicking** or **holding down** on the
+  message and selecting **Copy Message Link**.
+</Info>
 
-```
-Syntax: ;reactionrole add [message] [emoji] [role]
-Example: ;reactionrole add .../channels/... :skull: dead chat
-```
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,reactionrole add (message link) (emoji) (role)
+  ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_xplsTENrss.png" alt=""><figcaption></figcaption></figure>
+  ```javascript Example theme={null}
+  ,reactionrole add .../channels/... ✅ @Member
+  ```
+</CodeGroup>
 
-## Removing a reaction role <a href="#removing-a-reaction-role" id="removing-a-reaction-role"></a>
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/configuration/roles/reaction/setting-role.gif?s=07967900a85adb9659d427136bb7b609" width="1082" height="464" data-path="images/configuration/roles/reaction/setting-role.gif" />
+</Frame>
+
+## Removing a reaction role
 
 You can remove a reaction role by using the `reactionrole remove` command.
 
-{% hint style="info" %}
-You can use the `reactionrole list` command to see all reaction roles and their emojis.
-{% endhint %}
+<Tip>
+  You can use the `reactionrole list` command to see all reaction roles and their emojis.
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_XnbLC7ueMv.png" alt="" width="290"><figcaption></figcaption></figure>
+  <Frame>
+    <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/configuration/roles/reaction/list.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=bd5fbd49bef5e2c1e6fbe06cc84345f3" width="390" height="234" data-path="images/configuration/roles/reaction/list.png" />
+  </Frame>
+</Tip>
 
-```
-Syntax: ;reactionrole remove [message] [emoji]
-Example: ;reactionrole remove .../channels/... :skull:
-```
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,reactionrole remove (message link) (emoji)
+  ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_3HAiA4qEQq.png" alt=""><figcaption></figcaption></figure>
+  ```javascript Example theme={null}
+  ,reactionrole remove .../channels/... ✅
+  ```
+</CodeGroup>
 
-### Removing all reaction roles for a message <a href="#removing-all-reaction-roles-for-a-message" id="removing-all-reaction-roles-for-a-message"></a>
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/configuration/roles/reaction/remove.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=4b0ba248862c3875fa1fa8dd29685b1e" width="583" height="171" data-path="images/configuration/roles/reaction/remove.png" />
+</Frame>
+
+### Removing all reaction roles for a message
 
 You can remove all reaction roles for a message with the `reactionrole removeall` command.
 
-{% hint style="info" %}
-This is different from `reactionrole clear` which removes all reaction roles from the server.
-{% endhint %}
+<Info>This is different from `reactionrole reset` which removes all reaction roles from the server.</Info>
 
-```
-Syntax: ;reactionrole removeall [message]
-Example: ;reactionrole removeall .../channels/...
-```
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,reactionrole removeall (message link)
+  ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_yjAT9xruhv.png" alt=""><figcaption></figcaption></figure>
+  ```javascript Example theme={null}
+  ,reactionrole removeall .../channels/...
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/configuration/roles/reaction/removeall.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=91fbffb073caed2eb91a0626acf108c7" width="606" height="171" data-path="images/configuration/roles/reaction/removeall.png" />
+</Frame>
 
 ### Removing all reaction roles from the server
 
-You can remove all reaction roles from the server by using the `reactionrole clear` command.
+You can remove all reaction roles from the server by using the `reactionrole reset` command.
 
-{% hint style="warning" %}
-This **CAN NOT** be undone and will remove **ALL** reaction roles from the server.
-{% endhint %}
+<Warning>
+  This **CAN NOT** be undone and will remove **ALL** reaction roles from the
+  server.
+</Warning>
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_Lk04LuXR1v.png" alt=""><figcaption></figcaption></figure>
+<Frame>
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/configuration/roles/reaction/reset.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=8b0130a7d917a6254cda9beb54682eb7" width="382" height="173" data-path="images/configuration/roles/reaction/reset.png" />
+</Frame>
 
+## Setting up a verification system
 
----
+Reaction roles can be used to create a verification system where members must react to a message to gain access to the server.
 
-# Agent Instructions
-This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+<Info>
+  In order for this to work, you'll need to create a role that will be assigned
+  to members when they react to the message, such as a **Member** role.
+</Info>
 
-## Querying This Documentation
-If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
-
-Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
-
-```
-GET https://docs.evelina.bot/server/roles/reaction.md?ask=<question>&goal=<endgoal>
-```
-
-`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
-`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
-
-The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
-
-Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
+This section hasn't been written yet. If you'd like to contribute, open a pull request on [Github](https://github.com/ju/docs).

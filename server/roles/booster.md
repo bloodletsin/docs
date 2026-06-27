@@ -1,6 +1,10 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/server/roles/booster.md).
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
+> Use this file to discover all available pages before exploring further.
 
 # Booster Roles
+
+> Reward your boosters with unique roles for themselves.
 
 ## What are booster roles?
 
@@ -10,66 +14,90 @@ Booster roles are unique roles that are given to members which have boosted your
 
 In order for the booster roles to work, you must set a base role. All booster roles will be placed under this role.
 
-{% hint style="info" %}
-The base role should be a role which is above any roles with a color, otherwise the color won’t be visible due to Discord’s role hierarchy.
-{% endhint %}
+<Tip>The base role should be a role which is above any roles with a color, otherwise the color won't be visible due to Discord's role hierarchy.</Tip>
 
-```
-Syntax: ;boosterrole base [role]
-Example: ;boosterrole base @---------
-```
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,boosterrole base (role)
+  ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202024-11-19%20223820.png" alt=""><figcaption></figcaption></figure>
+  ```javascript Example theme={null}
+  ,boosterrole base @------
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/roles/booster/base-position.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=69530273dbb7d4126fe46d57a81021ec" width="419" height="203" data-path="images/configuration/roles/booster/base-position.png" />
+</Frame>
 
 ## Creating a booster role
 
 You can create a booster role by using the `boosterrole` command itself.
 
-{% hint style="info" %}
-The `color` parameter can be a hex code or a color name.
-{% endhint %}
+<Info>The `color` parameter can be a hex code or a color name.</Info>
 
-```
-Syntax: ;boosterrole create [color] [name]
-Example: ;boosterrole create #3498DB boss
-```
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,boosterrole (color) <name>
+  ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_Hv7PERxQWD.png" alt=""><figcaption></figcaption></figure>
+  ```javascript Example theme={null}
+  ,boosterrole #3498DB boss
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/roles/booster/create.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=ed19a5fab4e276d531c673ea89fb02fd" width="611" height="171" data-path="images/configuration/roles/booster/create.png" />
+</Frame>
 
 ## Customizing your booster role
 
 ### Changing the name
 
-You can use the `boosterrole name` command to change the name of your booster role.
+You can use the `boosterrole rename` command to change the name of your booster role.
 
-```
-Syntax: ;boosterrole name [name]
-Example: ;boosterrole name boss
-```
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,boosterrole rename (new name)
+  ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_I25XSaDWMz.png" alt=""><figcaption></figcaption></figure>
+  ```javascript Example theme={null}
+  ,boosterrole rename boss role
+  ```
+</CodeGroup>
 
-### Changing the color
+<br />
 
-You can use the `boosterrole color` command to change the color of your booster role.
-
-```
-Syntax: ;boosterrole color [name]
-Example: ;boosterrole color #3498DB
-```
-
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_szBXE2J30Q.png" alt=""><figcaption></figcaption></figure>
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/roles/booster/rename.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=32dd493db9b9a4e5433b63de8964c95f" width="532" height="170" data-path="images/configuration/roles/booster/rename.png" />
+</Frame>
 
 ### Changing the icon
 
 You can use the `boosterrole icon` command to change the icon of your booster role.
 
-```
-Syntax: ;boosterrole icon [emoji]
-Example: ;boosterrole icon :cool:
-```
+<Info>You can use an emoji or an attachment.</Info>
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_GGTEMi6yUn.png" alt=""><figcaption></figcaption></figure>
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,boosterrole icon (emoji or attachment)
+  ```
+
+  ```javascript Example theme={null}
+  ,boosterrole icon :cool:
+  ,boosterrole icon https://bleh.bot/bleh.png
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/roles/booster/icon.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=02914bfd9e092274b5bfc9523e076a8f" width="476" height="506" data-path="images/configuration/roles/booster/icon.png" />
+</Frame>
 
 ## Removing your booster role
 
@@ -77,93 +105,49 @@ If you no longer want your booster role, you can use the `boosterrole remove` co
 
 ## Automatically grant a role to boosters
 
-You can reward your boosters with a role upon boosting your server. You can use the `boosterrole award add` command to set this up.
+You can reward your boosters with a role upon boosting your server. You can use the `boosterrole award` command to set this up.
 
-```
-Syntax: ;boosterrole award add [role]
-Example: ;boosterrole award add gang
-```
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,boosterrole award (role)
+  ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_iQv6PwLzH8.png" alt=""><figcaption></figcaption></figure>
+  ```javascript Example theme={null}
+  ,boosterrole award @immunity
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/roles/booster/award.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=6bbef20cb67b922f629e627b3105993f" width="432" height="168" data-path="images/configuration/roles/booster/award.png" />
+</Frame>
+
+### Viewing the role being awarded
+
+You can use the `boosterrole award view` command to view the role being awarded.
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/roles/booster/award-view.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=91ed94dd4f9b6317a3064c7c890884ec" width="461" height="168" data-path="images/configuration/roles/booster/award-view.png" />
+</Frame>
 
 ### Removing the role being awarded
 
 You can use the `boosterrole award remove` command to remove the role being awarded.
 
-```
-Syntax: ;boosterrole award remove [role]
-Example: ;boosterrole award remove gang
-```
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/roles/booster/award-remove.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=572f4489b66e95843373932cefc2f2fe" width="416" height="165" data-path="images/configuration/roles/booster/award-remove.png" />
+</Frame>
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_KL5k3OIF7o.png" alt=""><figcaption></figcaption></figure>
+## Related commands
 
-### Viewing the role being awarded
+<AccordionGroup>
+  <Accordion title="Viewing all booster roles">
+    You can use the `boosterrole list` command to view all booster roles.
+  </Accordion>
 
-You can use the `boosterrole award list` command to view the roles being awarded.
-
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_6s0ApP7kTD.png" alt=""><figcaption></figcaption></figure>
-
-## Share your boosterrole with other users
-
-In order for the booster roles share to work, you must set a limit. Every user can share then there booster role with this amount of users.
-
-{% hint style="warning" %}
-Use `boosterrole share enable` to enable sharing their roles.
-{% endhint %}
-
-```
-Syntax: ;boosterrole share limit [limit]
-Example: ;boosterrole share limit 5
-```
-
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_OCeuAOPJ2k.png" alt=""><figcaption></figcaption></figure>
-
-### Add a member to share your role
-
-You can use the `boosterrole share add` command to share your role with a member.
-
-```
-Syntax: ;boosterrole share add [user]
-Example: ;boosterrole share add @bender.py
-```
-
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_CMcxHqg4z2.png" alt=""><figcaption></figcaption></figure>
-
-### Remove a member from sharing your role
-
-You can use the `boosterrole share remove` command to stop share your role with a member.
-
-```
-Syntax: ;boosterrole share remove [user]
-Example: ;boosterrole share remove @bender.py
-```
-
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_DE9M0zOyGz.png" alt=""><figcaption></figcaption></figure>
-
-### List all members you are sharing your role with
-
-You can use the `boosterrole share list` command to view all members your are sharing your role with.
-
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_To1iEUBmIy.png" alt=""><figcaption></figcaption></figure>
-
-
----
-
-# Agent Instructions
-This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
-
-## Querying This Documentation
-If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
-
-Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
-
-```
-GET https://docs.evelina.bot/server/roles/booster.md?ask=<question>&goal=<endgoal>
-```
-
-`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
-`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
-
-The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
-
-Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
+  <Accordion title="Cleaning up booster roles">
+    You can use the `boosterrole cleanup` command if they weren't removed
+    properly.
+  </Accordion>
+</AccordionGroup>

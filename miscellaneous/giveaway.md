@@ -1,174 +1,269 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/miscellaneous/giveaway.md).
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
+> Use this file to discover all available pages before exploring further.
 
 # Giveaway
 
+> Easily create events where members can win prizes.
+
 ## Starting a Giveaway
 
-You can start a giveaway with the `giveaway create` command.
+You can start a giveaway with the `giveaway start` command.
 
-```
-Syntax: ;giveaway create [channel] [time] [winners] [prize]
-Example: ;giveaway create #giveaway 12h 1 Nitro
-```
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,giveaway start <channel> (duration) <winners> (prize)
+  ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202024-12-21%20221201.png" alt=""><figcaption></figcaption></figure>
+  ```javascript Example theme={null}
+  ,giveaway start #giveaways 24h 2 Concert Tickets
+  ,giveaway start 24h Concert Tickets
+  ```
+</CodeGroup>
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202024-12-21%20221228.png" alt=""><figcaption></figcaption></figure>
+<br />
 
-## Giveaway Requirements <a href="#changing-the-details" id="changing-the-details"></a>
+<Frame>
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/giveaway/start.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=8a3125bfbb0ce1f50769fd28bc95ef87" width="388" height="387" data-path="images/miscellaneous/giveaway/start.png" />
+</Frame>
 
-You can set a `role`, `messages`, `level` & `invites` as requirement to join a giveaway.
-
-```
-Syntax: ;giveaway create [channel] [time] [winners] [prize]
-Example: ;giveaway create #giveaway 12h 1 Nitro --role @Trusted --messages 100 --level 10
-```
-
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202024-12-21%20223108.png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202024-12-21%20223128.png" alt=""><figcaption></figcaption></figure>
-
-## Giveaway Bonus Entries <a href="#changing-the-details" id="changing-the-details"></a>
-
-You can set a `role` that get double entries for your giveaway.
-
-```
-Syntax: ;giveaway create [channel] [time] [winners] [prize]
-Example: ;giveaway create #giveaway 12h 1 Nitro --bonus @Booster
-```
-
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202024-12-25%20235555.png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/imaefefge.png" alt=""><figcaption></figcaption></figure>
-
-## Giveaway Blacklist <a href="#changing-the-details" id="changing-the-details"></a>
-
-You can set a `role` that can't join your giveaway.
-
-```
-Syntax: ;giveaway create [channel] [time] [winners] [prize]
-Example: ;giveaway create #giveaway 12h 1 Nitro --ignore @Jail
-```
-
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-01-09%20052437.png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-01-09%20052454.png" alt=""><figcaption></figcaption></figure>
-
-## Changing the details <a href="#changing-the-details" id="changing-the-details"></a>
+### Changing the details
 
 You can customize the giveaway with the following commands
 
-<details>
+<AccordionGroup>
+  <Accordion title="Changing the host">
+    Use the `giveaway edit host` command to change the giveaway host.
 
-<summary>Changing the host</summary>
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      ,giveaway edit host (message link) (member)
+      ```
 
-Use the `giveaway edit host` command to change the giveaway host.
+      ```javascript Example theme={null}
+      ,giveaway edit host .../channels/... @jonathan
+      ```
+    </CodeGroup>
+  </Accordion>
 
-```
-Syntax: ;giveaway edit host [message] [host]
-Example: ;giveaway edit host 1256932539411468380 bender.py
-```
+  <Accordion title="Changing the prize">
+    Use the `giveaway edit prize` command to change the giveaway prize.
 
-</details>
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      ,giveaway edit prize (message link) (prize)
+      ```
 
-<details>
+      ```javascript Example theme={null}
+      ,giveaway edit prize .../channels/... bleh whitelist
+      ```
+    </CodeGroup>
+  </Accordion>
 
-<summary>Changing the prize</summary>
+  <Accordion title="Changing the duration">
+    Use the `giveaway edit duration` command to change the duration of the giveaway.
 
-Use the `giveaway edit prize` command to change the giveaway prize.
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      ,giveaway edit duration (message link) (duration)
+      ```
 
-```
-Syntax: ;giveaway edit price [message] [price]
-Example: ;giveaway edit price 1256932539411468380 Nitro Yearly
-```
+      ```javascript Example theme={null}
+      ,giveaway edit duration .../channels/... 24h
+      ```
+    </CodeGroup>
+  </Accordion>
 
-</details>
+  <Accordion title="Changing the amount of winners">
+    Use the `giveaway edit winners` command to change the amount of people that can win the giveaway.
 
-<details>
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      ,giveaway edit winners (message link) (amount)
+      ```
 
-<summary>Changing the duration</summary>
+      ```javascript Example theme={null}
+      ,giveaway edit winners .../channels/... 3
+      ```
+    </CodeGroup>
+  </Accordion>
+</AccordionGroup>
 
-Use the `giveaway edit duration` command to change the duration of the giveaway.
+### Customizing the embed
 
-```
-Syntax: ;giveaway edit duration [message] [duration]
-Example: ;giveaway edit duration 1256932539411468380 1d
-```
+You can customize the giveaway embed with the following commands
 
-</details>
+<AccordionGroup>
+  <Accordion title="Changing the description">
+    Use the `giveaway edit description` command to change the giveaway description.
 
-<details>
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      ,giveaway edit description (message link) (text)
+      ```
 
-<summary>Changing the amount of winners</summary>
+      ```javascript Example theme={null}
+      ,giveaway edit description .../channels/... Tickets for the Ken Carson concert!
+      ```
+    </CodeGroup>
 
-Use the `giveaway edit winners` command to change the amount of people that can win the giveaway.
+    <br />
 
-```
-Syntax: ;giveaway edit winners [message] [winners]
-Example: ;giveaway edit winners 1256932539411468380 2
-```
+    <Frame>
+      <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/giveaway/edit/embed/description.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=8af8d617b2fd70ce6acf20a714ce1dcc" width="390" height="298" data-path="images/miscellaneous/giveaway/edit/embed/description.png" />
+    </Frame>
+  </Accordion>
 
-</details>
+  <Accordion title="Changing the thumbnail">
+    Use the `giveaway edit thumbnail` command to change the giveaway thumbnail.
 
-<details>
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      ,giveaway edit thumbnail (message link) (thumbnail)
+      ```
 
-<summary>Changing the requirements</summary>
+      ```javascript Example theme={null}
+      ,giveaway edit thumbnail .../channels/... https://bleh.bot/bleh.png
+      ```
+    </CodeGroup>
 
-Use the `giveaway requirements` command to requirements for a giveaway.
+    <br />
 
-```
-Syntax: ;giveaway requirements add/remove/edit [message] [flag] [input]
-Example: ;giveaway requirements edit role 1256932539411468380 Moderator
-```
+    <Frame>
+      <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/giveaway/edit/embed/thumbnail.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=01162dc147f61d22375b8a77c2507597" width="494" height="304" data-path="images/miscellaneous/giveaway/edit/embed/thumbnail.png" />
+    </Frame>
+  </Accordion>
 
-</details>
+  <Accordion title="Changing the image">
+    Use the `giveaway edit image` command to change the giveaway image.
+
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      ,giveaway edit image (message link) (image)
+      ```
+
+      ```javascript Example theme={null}
+      ,giveaway edit image .../channels/... https://bleh.bot/bleh.png
+      ```
+    </CodeGroup>
+
+    <br />
+
+    <Frame>
+      <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/giveaway/edit/embed/image.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=de2c94065099abeae664ef47fe0378dd" width="452" height="648" data-path="images/miscellaneous/giveaway/edit/embed/image.png" />
+    </Frame>
+  </Accordion>
+</AccordionGroup>
+
+### Setting requirements
+
+You can set requirements for the giveaway with the following commands
+
+<AccordionGroup>
+  <Accordion title="Setting a required role">
+    You can set a required role to enter the giveaway with the following command.
+    <Info>If you no longer want to require roles, you can re-run the command without a role.</Info>
+    <Warning>You can use multiple roles by separating them with a comma (`,`).</Warning>
+
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      ,giveaway edit requiredroles (message link) (roles)
+      ```
+
+      ```javascript Example theme={null}
+      ,giveaway edit requiredroles .../channels/... @Staff, @Booster
+      ```
+    </CodeGroup>
+  </Accordion>
+
+  <Accordion title="Setting a required level">
+    You can set a required level for the giveaway with the following commands.
+    <Warning>This relies on bleh's [leveling system](/configuration/level-rewards), not other bots.</Warning>
+
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      ,giveaway edit minlevel (message link) (level)
+      ,giveaway edit maxlevel (message link) (level)
+      ```
+
+      ```javascript Example theme={null}
+      ,giveaway edit minlevel .../channels/... 10
+      ,giveaway edit maxlevel .../channels/... 50
+      ```
+    </CodeGroup>
+  </Accordion>
+</AccordionGroup>
 
 ## Ending a Giveaway
 
 You can end a giveaway early with the `giveaway end` command.
 
-```
-Syntax: ;giveaway end [message]
-Example: ;giveaway end 1256932539411468380
-```
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,giveaway end (message link)
+  ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_mnyT6DImRt.png" alt=""><figcaption></figcaption></figure>
+  ```javascript Example theme={null}
+  ,giveaway end .../channels/...
+  ```
+</CodeGroup>
 
-## Rerolling a Giveaway <a href="#rerolling-a-giveaway" id="rerolling-a-giveaway"></a>
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/giveaway/end.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=1671c36f6c4233e589d95b2ed5db6724" width="453" height="230" data-path="images/miscellaneous/giveaway/end.png" />
+</Frame>
+
+## Rerolling a Giveaway
 
 You can reroll the winners of a giveaway with the `giveaway reroll` command.
 
-```
-Syntax: ;giveaway reroll [message] [winners]
-Example: ;giveaway reroll 1256932539411468380 1
-```
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,giveaway reroll (message link)
+  ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_tgGgMv4dan.png" alt=""><figcaption></figcaption></figure>
+  ```javascript Example theme={null}
+  ,giveaway reroll .../channels/...
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/giveaway/reroll.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=05c0e12d792b972f7f8306038a1c1d7b" width="395" height="198" data-path="images/miscellaneous/giveaway/reroll.png" />
+</Frame>
+
+## Canceling a Giveaway
+
+You can cancel a giveaway with the `giveaway cancel` command.
+
+<Warning>
+  This will not draw any winners and will delete the giveaway message.
+</Warning>
+
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,giveaway cancel (message link)
+  ```
+
+  ```javascript Example theme={null}
+  ,giveaway cancel .../channels/...
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/giveaway/cancel.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=da1ee98c80d9936e17c71e27d5d0b0c3" width="446" height="172" data-path="images/miscellaneous/giveaway/cancel.png" />
+</Frame>
 
 ## Viewing all Giveaways
 
 You can view all giveaways with the `giveaway list` command.
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_pEZ7547S6X.png" alt=""><figcaption></figcaption></figure>
+<Info>This will display past and active giveaways.</Info>
 
-
----
-
-# Agent Instructions
-This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
-
-## Querying This Documentation
-If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
-
-Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
-
-```
-GET https://docs.evelina.bot/miscellaneous/giveaway.md?ask=<question>&goal=<endgoal>
-```
-
-`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
-`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
-
-The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
-
-Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
+<Frame>
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/giveaway/list.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=7bb0101b5a0d5e01329bcde8178a84bb" width="301" height="287" data-path="images/miscellaneous/giveaway/list.png" />
+</Frame>

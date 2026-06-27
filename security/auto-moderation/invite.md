@@ -1,4 +1,4 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/security/auto-moderation/invite.md).
+> For the complete documentation index, see [llms.txt](https://docs.bleh.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.bleh.bot/security/auto-moderation/invite.md).
 
 # Invite
 
@@ -11,7 +11,7 @@ Syntax: ;automod invites enable
 Example: ;automod invites enable 
 ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20210254.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20210254.png" alt=""><figcaption></figcaption></figure>
 
 ## Customize Invite Filter
 
@@ -22,21 +22,21 @@ Syntax: ;automod invites timeout [time]
 Example: ;automod invites timeout 1d
 ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20210650.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20210650.png" alt=""><figcaption></figcaption></figure>
 
 ```
 Syntax: ;automod invites message [message]
 Example: ;automod invites message You are not allowed to send invite links here.
 ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20210724.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20210724.png" alt=""><figcaption></figcaption></figure>
 
 ```
 Syntax: ;automod invites logs [channel]
 Example: ;automod invites logs #logs
 ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20210815.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20210815.png" alt=""><figcaption></figcaption></figure>
 
 ## Whitelist Channel, Category or Role
 
@@ -47,21 +47,21 @@ Syntax: ;automod invites ignore add [target]
 Example: ;automod invites ignore add #channel
 ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20211049.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20211049.png" alt=""><figcaption></figcaption></figure>
 
 ```
 Syntax: ;automod invites ignore remove [target]
 Example: ;automod invites ignore remove #channel
 ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20211322.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20211322.png" alt=""><figcaption></figcaption></figure>
 
 ```
 Syntax: ;automod invites ignore list
 Example: ;automod invites ignore list
 ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20211422.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20211422.png" alt=""><figcaption></figcaption></figure>
 
 
 ---
@@ -75,7 +75,7 @@ If you need additional information that is not directly available in this page, 
 Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
 
 ```
-GET https://docs.evelina.bot/security/auto-moderation/invite.md?ask=<question>&goal=<endgoal>
+GET https://docs.bleh.bot/security/auto-moderation/invite.md?ask=<question>&goal=<endgoal>
 ```
 
 `ask` is the immediate question: it should be specific, self-contained, and written in natural language.

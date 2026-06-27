@@ -1,88 +1,65 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/resources/scripting/pagination.md).
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
+> Use this file to discover all available pages before exploring further.
 
 # Pagination
 
+> Guide to paginating embeds with bleh.
+
 ## Setup
 
-{% stepper %}
-{% step %}
+<Warning>Only embeds created with `createembed` can be paginated.</Warning>
 
-#### Create the embed
+<Steps>
+  <Step title="Set the embed">
+    Firstly you must set the embed to work with pagination. `,pagination set     [message link]` <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/resources/scripting/pagination/set.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=e064c90b7f4c8f3786fbce1d5b3a5aac" alt="pn set" width="702" height="415" data-path="images/resources/scripting/pagination/set.png" />
+  </Step>
 
-Firstly you must create the embed to work with pagination. `;``paginate create [embed]`
+  <Step title="Add the next page">
+    You can now add further pages to your embed. This command works with adding
+    any number of pages required. `,pagination add [message link] [embed
+            content]` <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/resources/scripting/pagination/add.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=6586ce6e9588f4c669491faee179e3fb" alt="pn add" width="771" height="417" data-path="images/resources/scripting/pagination/add.png" />
+  </Step>
 
-<img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_3gN9ww9LpK.png" alt="" data-size="original">
-{% endstep %}
+  <Step title="Updating a paginated embed">
+    If you need to edit a page you've made during setup, you can use the command
+    below. `,pagination update [message link] [page number]` <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/resources/scripting/pagination/update.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=0185c856efe1ceaa2562d8e2b87e323d" alt="pn
+    update" width="838" height="632" data-path="images/resources/scripting/pagination/update.png" />
+  </Step>
 
-{% step %}
+  <Step title="Removing a page">
+    If you want to remove a page you have setup, you can use the below command
+    `,pagination remove [message link] [page number]` <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/resources/scripting/pagination/remove.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=b4da64a32dfbfc620aa3eebe2ab1a47f" alt="pn
+    del" width="684" height="411" data-path="images/resources/scripting/pagination/remove.png" />
+  </Step>
+</Steps>
 
-#### Add the next page
+## Related commands
 
-You can now add further pages to your embed. This command works with adding any number of pages required. `;paginate add [message] [embed]`
+<AccordionGroup>
+  <Accordion title="Delete a paginated embed entirely">
+    ```
+    ,pagination delete [message link]
+    ```
+  </Accordion>
 
-<img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_mbBKE5leXJ%20(1).png" alt="" data-size="original">
-{% endstep %}
+  {" "}
 
-{% step %}
+  <Accordion title="Reset all paginated embeds in a guild">
+    `,pagination reset`
+  </Accordion>
 
-#### Edit a paginated embed
+  <Accordion title="List all active paginations">
+    ```
+    ,pagination list
+    ```
+  </Accordion>
 
-If you need to edit a page you’ve made during setup, you can use the command below. `;paginate edit [message] [page] [embed]`
+  <Accordion title="Readd the navigation reactions">
+    Use this command in case the arrow reactions allowing navigation between pages were deleted.
 
-<img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_xbI9aXdD0M.png" alt="" data-size="original">
-{% endstep %}
-
-{% step %}
-
-#### Removing a page
-
-If you want to remove a page you have setup, you can use the below command `;paginate remove [message] [page]`
-
-<img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_xgBDsOsbzp.png" alt="" data-size="original">
-{% endstep %}
-{% endstepper %}
-
-## List all pagination messages
-
-You can use the `paginate list` command to view all pagination messages.
-
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_V6Tgyqz7H1.png" alt="" width="250"><figcaption></figcaption></figure>
-
-## Clear all pages of a pagination message
-
-You can use the `paginate clear` command to clear all pages of a pagination messages.
-
-```
-Syntax: ;paginate clear [message]
-Example: ;paginate clear .../channels/...
-```
-
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_IlvhDMtLya.png" alt="" width="402"><figcaption></figcaption></figure>
-
-## Reset all pagination messages
-
-You can use the `paginate reset` command to reset all pagination messages.
-
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_xEuBdsqyKS.png" alt="" width="440"><figcaption></figcaption></figure>
-
-
----
-
-# Agent Instructions
-This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
-
-## Querying This Documentation
-If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
-
-Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
-
-```
-GET https://docs.evelina.bot/resources/scripting/pagination.md?ask=<question>&goal=<endgoal>
-```
-
-`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
-`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
-
-The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
-
-Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
+    ```
+    ,pagination restorereactions (message link)
+    ```
+  </Accordion>
+</AccordionGroup>

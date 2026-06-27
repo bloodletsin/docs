@@ -1,4 +1,4 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/security/auto-moderation/repeat.md).
+> For the complete documentation index, see [llms.txt](https://docs.bleh.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.bleh.bot/security/auto-moderation/repeat.md).
 
 # Repeat
 
@@ -11,7 +11,7 @@ Syntax: ;automod repeat enable
 Example: ;automod repeat enable
 ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20213141.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20213141.png" alt=""><figcaption></figcaption></figure>
 
 ## Customize Repeat Filter
 
@@ -22,21 +22,21 @@ Syntax: ;automod repeat timeout [time]
 Example: ;automod repeat timeout 1h
 ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20213200.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20213200.png" alt=""><figcaption></figcaption></figure>
 
 ```
 Syntax: ;automod repeat rate [rate]
 Example: ;automod repeat rate 5
 ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20213218.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20213218.png" alt=""><figcaption></figcaption></figure>
 
 ```
 Syntax: ;automod repeat message [option]
 Example: ;automod repeat message on
 ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20213238.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/BlehServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-27%20213238.png" alt=""><figcaption></figcaption></figure>
 
 
 ---
@@ -50,7 +50,7 @@ If you need additional information that is not directly available in this page, 
 Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
 
 ```
-GET https://docs.evelina.bot/security/auto-moderation/repeat.md?ask=<question>&goal=<endgoal>
+GET https://docs.bleh.bot/security/auto-moderation/repeat.md?ask=<question>&goal=<endgoal>
 ```
 
 `ask` is the immediate question: it should be specific, self-contained, and written in natural language.

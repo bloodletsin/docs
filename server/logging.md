@@ -1,77 +1,99 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/server/logging.md).
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
+> Use this file to discover all available pages before exploring further.
 
 # Logging
 
+> Log events in your server.
+
 ## Overview
 
-Logging allows you to log events in your server. This can be useful for keeping track of what’s happening in your server.
+Logging allows you to log events in your server. This can be useful for keeping track of what's happening in your server.
 
-## Adding a logging event <a href="#adding-a-logging-event" id="adding-a-logging-event"></a>
+## Adding a logging event
 
-You can add a logging event using the `logs add` command.
+You can add a logging event using the `log add` command.
 
-{% hint style="info" %}
-Available logging events are `messages`, `members`, `roles`, `channels`, `moderation`, `appeals`, `guild` and `voice`.
-{% endhint %}
+<Info>
+  Available logging events are `messages`, `members`, `roles`, `channels`,
+  `invites`, `emojis` and `voice`.
+</Info>
 
-```
-Syntax: ;logs add [event] [channel]
-Example: ;logs add messages #server
-```
+<Warning>
+  Do not delete the webhook that bleh creates in your logging channels!
+</Warning>
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_Dj1FfyGZcP.png" alt=""><figcaption></figcaption></figure>
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,log add (channel) (event)
+  ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_0DKaoZGT9m.png" alt=""><figcaption></figcaption></figure>
+  ```javascript Example theme={null}
+  ,log add #logs messages
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/logging/add.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=b6f2e7dfe8d6a2f4f7cc1faa5882902a" width="407" height="155" data-path="images/configuration/logging/add.png" />
+</Frame>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/logging/example.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=e74f31d984d2b34b04f12ff41357d68c" width="416" height="389" data-path="images/configuration/logging/example.png" />
+</Frame>
 
 ## Removing a logging event
 
-You can remove a logging event using the `logs remove` command.
+You can remove a logging event using the `log remove` command.
 
-```
-Syntax: ;logs remove [event]
-Example: ;logs remove messages 
-```
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,log remove (channel) (event)
+  ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_K4lx1c0W48.png" alt=""><figcaption></figcaption></figure>
+  ```javascript Example theme={null}
+  ,log remove #logs messages
+  ```
+</CodeGroup>
 
-## Ignoring a member or channel <a href="#ignoring-a-member-or-channel" id="ignoring-a-member-or-channel"></a>
+<br />
 
-You can ignore and unignore a member or channel from being logged using the `log ignore add` command.
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/logging/remove.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=276266440470159494b486f90f7ce621" width="435" height="156" data-path="images/configuration/logging/remove.png" />
+</Frame>
 
-```
-Syntax: ;level ignore add [target]
-Example: ;level ignore add #general
+<Tip>
+  You can leave the event parameter empty to add or remove all logging events
+  from a channel.
+</Tip>
 
-Syntax: ;level ignore remove [target]
-Example: ;level ignore remove #general
-```
+## Ignoring a member or channel
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_YWWx5LAKFu.png" alt=""><figcaption></figcaption></figure>
+You can ignore and unignore a member or channel from being logged using the `log ignore` command.
 
-## View all enabled logging events
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,log ignore (member or channel)
+  ```
 
-You can use the `logs list` command to view all enabled logging events.
+  ```javascript Example theme={null}
+  ,log ignore @jonathan
+  ,log ignore #staff-chat
+  ```
+</CodeGroup>
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_O9J8PoRkeG.png" alt=""><figcaption></figcaption></figure>
+<br />
 
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/logging/ignore.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=496feec888e9132ef2da48c0b819f8ea" width="370" height="318" data-path="images/configuration/logging/ignore.png" />
+</Frame>
 
----
+## Related commands
 
-# Agent Instructions
-This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
-
-## Querying This Documentation
-If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
-
-Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
-
-```
-GET https://docs.evelina.bot/server/logging.md?ask=<question>&goal=<endgoal>
-```
-
-`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
-`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
-
-The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
-
-Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
+<Info>
+  You can use the `log ignore list` command to view all ignored members and
+  channels.
+</Info>

@@ -1,17 +1,17 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/security/antinuke/rolelock.md).
+> For the complete documentation index, see [llms.txt](https://docs.bleh.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.bleh.bot/security/antinuke/rolelock.md).
 
 # Role locking
 
 ## Command <a href="#command" id="command"></a>
 
-Add a role that should be locked through evelina
+Add a role that should be locked through bleh
 
 ```
 Syntax: ;antinuke rolelock add [role]
 Example: ;antinuke rolelock add @role
 ```
 
-Remove a role that shouldn't be locked through evelina anymore
+Remove a role that shouldn't be locked through bleh anymore
 
 ```
 Syntax: ;antinuke rolelock remove [role]
@@ -30,7 +30,7 @@ If you need additional information that is not directly available in this page, 
 Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
 
 ```
-GET https://docs.evelina.bot/security/antinuke/rolelock.md?ask=<question>&goal=<endgoal>
+GET https://docs.bleh.bot/security/antinuke/rolelock.md?ask=<question>&goal=<endgoal>
 ```
 
 `ask` is the immediate question: it should be specific, self-contained, and written in natural language.

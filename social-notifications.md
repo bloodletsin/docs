@@ -1,73 +1,145 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/social-notifications.md).
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
+> Use this file to discover all available pages before exploring further.
 
 # Social Notifications
 
-## Supported Platforms <a href="#supported-platforms" id="supported-platforms"></a>
+> Automatically announce new posts from your favorite creators.
+
+## Supported Platforms
 
 There are nine social notification commands, each with the same subcommands.
 
+<Card title="Subscription Required" icon="medal" iconType="duotone" horizontal>
+  **Instagram** requires a [subscription](/overview/donator-perks)
+  to use, while the other social notification commands are available to all
+  users without any additional cost.
+</Card>
+
 * **TikTok** - Dispatched whenever a new video is uploaded.
-* **Instagram** - Dispatched whenever a new post or story is uploaded.
+* **Instagram** <Badge stroke color="yellow" icon="medal">Tier 3</Badge> - Dispatched whenever a new post or story is uploaded.
 * **YouTube** - Dispatched whenever a new video or short is uploaded.
 * **Twitter** - Dispatched whenever a new tweet is posted by a user.
-* **Twitch** - Dispatched whenever a streamer goes live.
+* **Subreddit** - Dispatched whenever a new post is made in a subreddit.
+* **SoundCloud** - Dispatched whenever an artist releases a song or album.
+* **Pinterest** - Dispatched whenever a new pin is saved to a board.
+* **Twitch** & **Kick** - Dispatched whenever a streamer goes live.
 
-## Commands <a href="#commands" id="commands"></a>
+## Commands
 
 The following examples use the `twitter` command, but the same syntax applies to the other social notification commands.
 
-<details>
+<AccordionGroup>
+  <Accordion title="Creating a new feed">
+    Use the `twitter add` subcommand receive notifications for a specific user.
 
-<summary>Creating a new feed</summary>
+    <Tip>
+      For **YouTube**, you can use a **channel URL** instead of a **username**.
+    </Tip>
 
-Use the `twitter add` subcommand receive notifications for a specific user.
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      ,twitter add (channel) (username)
+      ```
 
-```
-Syntax: ;twitter add [username] [channel] [message]
-Example: ;twitter add nike #feed @everyone
-```
+      ```javascript Example theme={null}
+      ,twitter add #notifs playboicarti
+      ```
+    </CodeGroup>
+  </Accordion>
 
-</details>
+  <Accordion title="Removing a social feed">
+    Use the `twitter remove` subcommand to no longer receive notifications for a specific user.
 
-<details>
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      ,twitter remove (channel) (username)
+      ```
 
-<summary>Removing a social feed</summary>
+      ```javascript Example theme={null}
+      ,twitter remove #notifs playboicarti
+      ```
+    </CodeGroup>
+  </Accordion>
 
-Use the `twitter remove` subcommand to no longer receive notifications for a specific user.
+  <Accordion title="Customizing the message">
+    Use the `twtter message` subcommand to customize the message content that is displayed when a social notification is dispatched.
 
-```
-Syntax: ,twitter remove [username]
-Example: ,twitter remove nike
-```
+    <Tip>
+      This command is usually used to ping a role or user. In order for the message to actually notify the role or user, you must include the `--pingable on` flag in the command.
+    </Tip>
 
-</details>
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      ,twitter message (username) (message) [--pingable on|off]
+      ```
 
-<details>
+      ```javascript Example theme={null}
+      ,twitter message playboicarti @everyone he posted?? --pingable on
+      ```
+    </CodeGroup>
+  </Accordion>
 
-<summary>Viewing all users being monitored</summary>
+  <Accordion title="Viewing all users being monitored">
+    Use the `twitter list` subcommand to view all users being monitored.
+  </Accordion>
+</AccordionGroup>
 
-Use the `twitter list` subcommand to view all users being monitored.
+## Specific Commands
 
-</details>
+<AccordionGroup>
+  <Accordion title="Twitter Retweets">
+    The `twitter retweets` subcommand allows you to toggle notifications for retweets.
 
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      ,twitter retweets (channel) (username) (yes|no)
+      ```
 
----
+      ```javascript Example theme={null}
+      ,twitter retweets #notifs playboicarti yes
+      ```
+    </CodeGroup>
+  </Accordion>
 
-# Agent Instructions
-This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+  <Accordion title="Pinterest Embeds">
+    The `pinterest embeds` subcommand allows you to toggle the embed for the notification.
 
-## Querying This Documentation
-If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      ,pinterest embeds (channel) (yes|no)
+      ```
 
-Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
+      ```javascript Example theme={null}
+      ,pinterest embeds #pfps no
+      ```
+    </CodeGroup>
+  </Accordion>
+</AccordionGroup>
 
-```
-GET https://docs.evelina.bot/social-notifications.md?ask=<question>&goal=<endgoal>
-```
+## Important Notes
 
-`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
-`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
+<Card title="Twitter Spamming" icon="twitter">
+  It's important to make the **channel private** while setting up Twitter.
+  This is to avoid spamming the channel with notifications, as the bot will bulk
+  send the first few tweets from the user, which can cause people to get pinged
+  multiple times repeatedly in a short period of time.
+</Card>
 
-The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+<Card title="YouTube Channel Incorrect" icon="youtube">
+  Sometimes **YouTube** provides the incorrect channel from the username.
+  This is because the channel isn't a known result on YouTube. If this happens, you can use the **channel URL** instead of the **username** to fix this issue.
+</Card>
 
-Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
+<Card title="Slight Delay in Notifications" icon="clock">
+  Most social notifications are monitored at an interval.
+  This can cause a slight delay in the notification being dispatched, however **YouTube** and **Twitch**
+  notifications should be dispatched instantly whenever a new video or stream goes live.
+</Card>
+
+<Card title="Customizing the Message" icon="message">
+  You can't customize the embed for social notifications.
+  However you can customize the **message content** that is dispatched with the `message`
+  subcommand. The `pinterest` command is the only exception, as it has an
+  `embeds` subcommand which can be used to toggle the embed for the notification.
+</Card>

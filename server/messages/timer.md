@@ -1,68 +1,83 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/server/messages/timer.md).
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
+> Use this file to discover all available pages before exploring further.
 
 # Auto Messages
 
-{% hint style="warning" %}
-You can only have **one** auto message per channel, and the interval must be at least **5 minutes**.
-{% endhint %}
+> Schedule messages to be sent at an interval.
 
-## Creating an auto message <a href="#creating-an-auto-message" id="creating-an-auto-message"></a>
+<Warning>
+  You can only have **one** auto message per channel, and the interval must be
+  at least **10 minutes**.
+</Warning>
+
+## Creating an auto message
 
 You can create an auto message with the `timer add` command.
 
-```
-Syntax: ;timer add [channel] [interval] [code]
-Example: ;timer add #general 10m {embed}$v{description: Hello world}
-```
+<Info>
+  The `interval` parameter must use the proper format, you can learn more
+  [here](/resources/syntax#formatting-a-duration).
+</Info>
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_NeS6BXHWd1.png" alt=""><figcaption></figcaption></figure>
+<Tip>
+  The `message` parameter can be raw text or an [embed](/resources/scripting) with dynamic [variables](/resources/scripting/variables).
+</Tip>
+
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,timer add (channel) (interval) (message)
+  ```
+
+  ```javascript Example theme={null}
+  ,timer add #general 2h hey sexy ass people
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/messages/timer/add.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=07bbdc815e1eef4e13a85546be023e8c" width="613" height="226" data-path="images/configuration/messages/timer/add.png" />
+</Frame>
 
 ## Removing an auto message
 
 You can remove an auto message with the `timer remove` command.
 
-```
-Syntax: ;timer remove [channel]
-Example: ;timer remove #general
-```
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,timer remove (channel)
+  ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_w68LfK7159.png" alt=""><figcaption></figcaption></figure>
+  ```javascript Example theme={null}
+  ,timer remove #general
+  ```
+</CodeGroup>
 
-## Test an auto message
+<br />
 
-You can test a auto message with the `timer test` command.
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/messages/timer/remove.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=1c91b147a73d25c0ca69d5a47775f3ff" width="483" height="174" data-path="images/configuration/messages/timer/remove.png" />
+</Frame>
 
-```
-Syntax: ;timer test [channel]
-Example: ;timer test #general
-```
+## Related commands
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_hEoPERYygK.png" alt=""><figcaption></figcaption></figure>
+<AccordionGroup>
+  <Accordion title="Viewing an auto messages">
+    You can use the `timer view` command to view auto message.
 
-## Viewing all system messages
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      ,timer view (channel)
+      ```
 
-You can use the `timer list` command to view all auto messages.
+      ```javascript Example theme={null}
+      ,timer view #general
+      ```
+    </CodeGroup>
+  </Accordion>
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_Gu5ZcM1SW9.png" alt=""><figcaption></figcaption></figure>
-
-
----
-
-# Agent Instructions
-This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
-
-## Querying This Documentation
-If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
-
-Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
-
-```
-GET https://docs.evelina.bot/server/messages/timer.md?ask=<question>&goal=<endgoal>
-```
-
-`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
-`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
-
-The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
-
-Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
+  <Accordion title="Viewing all auto messages">
+    You can use the `timer list` command to view all auto messages.
+  </Accordion>
+</AccordionGroup>

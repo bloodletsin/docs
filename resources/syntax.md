@@ -1,6 +1,10 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/resources/syntax.md).
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
+> Use this file to discover all available pages before exploring further.
 
 # Syntax
+
+> General explanation of the syntax used for commands.
 
 ## Formatting a duration
 
@@ -12,31 +16,47 @@ When a command requires a `duration` parameter, you format it as a number follow
 * `d` for days.
 * `w` for weeks.
 
-For example, `1d` represents one day, and `1w` represents one week.
+For example, `1d` represents one day, and `1w` represents one week. You can also combine units, for example, `1w2d` represents one week and two days.
 
-```
-Syntax: ;mute [member] [time] [reason]
-Example: ;mute bender.py 1d rassist
-```
+<CodeGroup>
+  ```javascript Correct theme={null}
+  ,timeout @member 1h
+  ,timeout @member 2d3h
+  ```
 
+  ```javascript Incorrect theme={null}
+  ,timeout @member 1 hour
+  ,timeout @member 2 days 3 hours
+  ```
+</CodeGroup>
 
----
+## Removing entries via ID
 
-# Agent Instructions
-This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+For some commands, you can remove entries by their ID. The ID for entry can be found with the `list` subcommand.
+After you have the ID, you can remove the entry with the `remove` subcommand followed by the format: `select:ID`.
 
-## Querying This Documentation
-If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+<Frame>
+  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/resources/syntax/select.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=2d1b423fe77408e4ba3f41df9a8cf4b6" width="388" height="437" data-path="images/resources/syntax/select.png" />
+</Frame>
 
-Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
+## Flag Punishments
 
-```
-GET https://docs.evelina.bot/resources/syntax.md?ask=<question>&goal=<endgoal>
-```
+When a command has a `--do` flag, you can use it to specify the action to take. The available actions are:
 
-`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
-`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
+* `warn` to warn the user.
+* `jail` to jail the user.
+* `kick` to kick the member from the server.
+* `ban` to ban the member from the server.
+* `delete` to delete the message if applicable.
+* `stripstaff` to remove the staff role from the member.
+  * This is only available for **antinuke** commands.
+  * This will only work for roles set via the `bind staff` command.
+  * You can find more information about binding staff roles in the [moderation](/security/moderation#setting-staff-roles) section.
 
-The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+For example, to warn a user, you would use `--do warn`.
 
-Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
+<Tip>
+  If bleh is responding with a different action than the one you specified,
+  make sure you're using the correct `--` instead of `—`. Learn more about the
+  difference [here](/common-issues/ios-dash).
+</Tip>

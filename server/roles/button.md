@@ -1,76 +1,102 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/server/roles/button.md).
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
+> Use this file to discover all available pages before exploring further.
 
 # Button Roles
+
+> Allow your members to assign themselves roles by clicking a button.
 
 ## What are button roles?
 
 Button roles are roles that are assigned to members when they click a button on an existing message or embed. They can be useful for letting members choose unique roles or as a way to verify themselves.
 
-## Creating a button role <a href="#creating-a-button-role" id="creating-a-button-role"></a>
+## Creating a button role
 
 You can create multiple button roles for a single message.
 
-{% hint style="warning" %}
-Button roles can only be placed on messages & embeds sent by evelina. Learn how to create an embed [**here**](/resources/scripting/embeds.md)!
-{% endhint %}
+<Warning>
+  Button roles can only be placed on messages & embeds sent by bleh. Learn how to create an embed [**here**](/resources/scripting/embeds)!
+</Warning>
 
-```
-Syntax: ;buttonrole add [message] [role] [label] [emoji] [color]
-Example: ;buttonrole add .../channels/... member Verify ✅ green
-```
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,buttonrole add (message link) (role) (style) (emoji) (label)
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-01-04%20000538.png" alt=""><figcaption></figcaption></figure>
+  // Available styles: "green," "blurple," "gray," or "red."
+  ```
 
-{% hint style="warning" %}
-If you don't want a name or an emoji on the button, you can enter "none" as the name/emoji for either of them.
-{% endhint %}
+  ```javascript Example theme={null}
+  ,buttonrole add .../channels/... Verified green ✅ Verify
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/roles/button/add.gif?s=3636b8310f2de2dd6e1e01c8d30c673c" width="800" height="452" data-path="images/configuration/roles/button/add.gif" />
+</Frame>
 
 ## Removing a button role
 
 You can remove a specific button role by using the `buttonrole remove` command.
 
-{% hint style="info" %}
-You can use the `buttonrole list` command to see all button roles in your server.
-{% endhint %}
+<Tip>
+  You can use the `buttonrole list` command to see all button roles in your server.
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-01-04%20000603.png" alt=""><figcaption></figcaption></figure>
+  <Frame>
+    <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/roles/button/list.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=1a4c43fd23bdede43d24f17231ade3f6" width="923" height="376" data-path="images/configuration/roles/button/list.png" />
+  </Frame>
+</Tip>
+
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,buttonrole remove (message link) (button number)
+  ```
+
+  ```javascript Example theme={null}
+  ,buttonrole remove .../channels/... 1
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/configuration/roles/button/remove.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=2db1ee7e6ea3c6209b982507a073852a" width="966" height="275" data-path="images/configuration/roles/button/remove.png" />
+</Frame>
+
+### Removing all button roles for a message
+
+Additionally, you can remove all button roles from a message by using the `buttonrole removeall` command.
+
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,buttonrole removeall (message link)
+  ```
+
+  ```javascript Example theme={null}
+  ,buttonrole removeall .../channels/...
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/configuration/roles/button/removeall.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=e2b434c27a05f051da32228371c69ebe" width="985" height="245" data-path="images/configuration/roles/button/removeall.png" />
+</Frame>
+
+### Removing all button roles from the server
+
+You can remove all button roles from the server by using the `buttonrole reset` command.
+
+<Warning>
+  Please note that this **cannot** be undone & will **permanently** remove **all** button roles from the
+  server.
+</Warning>
 
 ```
-Syntax: ;buttonrole remove [button_id]
-Example: ;buttonrole remove 5j4ji97J
+,buttonrole reset
 ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-01-04%20000631.png" alt=""><figcaption></figcaption></figure>
-
-## Removing all button roles for a message <a href="#removing-all-button-roles-for-a-message" id="removing-all-button-roles-for-a-message"></a>
-
-Additionally, you can remove all button roles from a message by using the `buttonrole clear` command.
-
-```
-Syntax: ;buttonrole clear [message]
-Example: ;buttonrole clear .../channels/...
-```
-
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-01-04%20000656.png" alt=""><figcaption></figcaption></figure>
-
-
----
-
-# Agent Instructions
-This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
-
-## Querying This Documentation
-If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
-
-Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
-
-```
-GET https://docs.evelina.bot/server/roles/button.md?ask=<question>&goal=<endgoal>
-```
-
-`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
-`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
-
-The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
-
-Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
+<Frame>
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/configuration/roles/button/reset.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=a4f66c55a7293802be840206cdc2b348" width="921" height="252" data-path="images/configuration/roles/button/reset.png" />
+</Frame>

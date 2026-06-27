@@ -1,27 +1,124 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/resources/scripting.md).
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
+> Use this file to discover all available pages before exploring further.
 
-# Scripting
+# Embeds
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Embeds</td><td>Guide to understand the fundamentals of scripting embeds.</td><td><a href="/pages/gnB3eihswUbsz7QJyDfM">/pages/gnB3eihswUbsz7QJyDfM</a></td></tr><tr><td>Variables</td><td>All available variables within evelina.</td><td><a href="/pages/SFWWA6PdVCpk2WZwz7cf">/pages/SFWWA6PdVCpk2WZwz7cf</a></td></tr><tr><td>Pagination</td><td>Guide to paginating embeds with evelina.</td><td><a href="/pages/zyOTakP7RWzWCksTnKOd">/pages/zyOTakP7RWzWCksTnKOd</a></td></tr></tbody></table>
+> Guide to understand the fundamentals of scripting embeds.
 
+## Structure
 
----
+Each parameter in the embed is represented by a key-value pair which is separated by a colon. For example, the `title` parameter will look like `{title: hello {user}}`. The `{user}` is a [variable](/resources/scripting/variables) which will be filled in with the user's display name.
 
-# Agent Instructions
-This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+* `{` begins a parameter.
+* `:` separates parameter from content.
+* `$v` separates the parameters.
+* `}` ends a parameter.
 
-## Querying This Documentation
-If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+### Parameters
 
-Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
+* `url` - The embed URL. (`https://..`)
+* `color` - The embed color. (`#FFFFFF`)
+* `title` - The embed title. (`hello {user}`)
+* `description` - The embed description. (`hello {user}`)
+* `image` - The embed image URL. (`https://..`)
+* `thumbnail` - The embed thumbnail URL. (`https://..`)
+* `timestamp` - The embed timestamp. (**NO ARGUMENTS**)
+
+The following parameters require additional arguments which are separated by `&&`.
+
+<AccordionGroup>
+  <Accordion title="Author">
+    * `name` - The author's name.
+    * `icon` - The author's icon. **Optional**
+    * `url` - The author's URL. **Optional**
+
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      {author: name && icon && url}
+      ```
+
+      ```javascript Example theme={null}
+      {author: {user} && {user.avatar}}
+      ```
+    </CodeGroup>
+  </Accordion>
+
+  <Accordion title="Field">
+    * `name` - The field name.
+    * `value` - The field value.
+
+    <Info>Include **inline** at the end of the field to make it inline.</Info>
+
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      {field: name && value}
+      ```
+
+      ```javascript Example theme={null}
+      {field: {user} && this is the value}
+      ```
+    </CodeGroup>
+  </Accordion>
+
+  <Accordion title="Footer">
+    * `text` - The footer text.
+    * `icon` - The footer icon. **Optional**
+
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      {footer: text && icon}
+      ```
+
+      ```javascript Example theme={null}
+      {footer: {user}}
+      {footer: {user} && {user.avatar}}
+      ```
+    </CodeGroup>
+  </Accordion>
+
+  <Accordion title="Button">
+    * `type` - `Link`, `Blurple`, `Green`, `Grey` or `Red`.
+    * `label` - The button label.
+    * `url` - The button URL or emoji.
+
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      {button: type && label && url && enabled|disabled}
+      ```
+
+      ```javascript Example theme={null}
+      {button: blurple && heyy && disabled}
+      {button: https://example.com && click this}
+      ```
+    </CodeGroup>
+  </Accordion>
+</AccordionGroup>
+
+### Variables
+
+You can use dynamic variables in your embeds to display user-specific information. For example, `{user}` will be replaced with the user's display name.
+
+<Info>You can view the available variables by clicking [here](/resources/scripting/variables).</Info>
 
 ```
-GET https://docs.evelina.bot/resources/scripting.md?ask=<question>&goal=<endgoal>
+{description: {guild.name}}$v{message: Hello! {user.mention}}
 ```
 
-`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
-`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
+<Frame type="glass">
+  <img src="https://i.imgur.com/PDikvh8.png" />
+</Frame>
 
-The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+## Frequently Asked Questions
 
-Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
+### How can I add a new line to my description parameter?
+
+If you want to add a new line to your description parameter, you can press `SHIFT` + `ENTER` to create a new line.
+
+### Why isn't my embed code working for some commands?
+
+Some commands allow both raw text and embed code. Because of this, you'll need to specify if you're entering an embed. To do this, you'll need to begin your embed code with `{embed}$v` then proceed to write your embed code after as normal.
+
+```
+ welcome add #channel {embed}$v{message: Welcome to /{guild.name} {user.mention}}$v{description: Welcome}
+```

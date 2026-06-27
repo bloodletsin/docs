@@ -1,108 +1,176 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/server/reaction.md).
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
+> Use this file to discover all available pages before exploring further.
 
 # Reaction Triggers
 
+> Automatically react to trigger messages.
+
 ## Manually reacting to a message
 
-You can use the `react` command to react to a message with evelina.
+You can use the `reaction` command to react to a message with bleh.
 
-```
-Syntax: ;react [message] [emoji]
-Example: ;react .../channels/... :f_thumbsup:
-```
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,reaction (message link) (emoji)
+  ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_2c9GoCUeWo.png" alt=""><figcaption></figcaption></figure>
+  ```javascript Example theme={null}
+  ,reaction .../channels/... 😍
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/reaction-triggers/react.gif?s=df4e22789a64022bb936a55eebef1815" width="427" height="187" data-path="images/configuration/reaction-triggers/react.gif" />
+</Frame>
 
 ## Creating a reaction trigger
 
-You can create a reaction trigger with the `autoreact add` command.
+You can create a reaction trigger with the `reaction add` command.
 
-```
-Syntax: ;autoreact add [content]
-Example: ;autoreact add panda, :f_thumbsup:
-```
+<Warning>
+  Common words such as `hey` are not allowed as triggers, as they cause heavy
+  load on the bot.
+</Warning>
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_aS13udGbMP.png" alt=""><figcaption></figcaption></figure>
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,reaction add (emoji) (trigger)
+  ```
 
-## Removing a reaction trigger <a href="#removing-a-reaction-trigger" id="removing-a-reaction-trigger"></a>
+  ```javascript Example theme={null}
+  ,reaction add 😍 jon
+  ```
+</CodeGroup>
 
-You can remove a reaction trigger with the `autoreact remove` command.
+<br />
 
-```
-Syntax: ;autoreact remove [trigger]
-Example: ;autoreact remove panda
-```
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/reaction-triggers/add.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=a20a58bb2ad5e0ea74fab668747b6c9f" width="397" height="274" data-path="images/configuration/reaction-triggers/add.png" />
+</Frame>
+
+### Viewing who added a reaction trigger
+
+You can use the `reaction owner` command to view who added a reaction trigger.
+
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,reaction owner (trigger)
+  ```
+
+  ```javascript Example theme={null}
+  ,reaction owner jon
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/reaction-triggers/owner.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=756ac665a4209887a018c31dc5634b05" width="478" height="170" data-path="images/configuration/reaction-triggers/owner.png" />
+</Frame>
+
+## Removing a reaction trigger
+
+You can remove a reaction trigger with the `reaction remove` command.
+
+<Info>If you're struggling to remove a reaction trigger, refer to the [selection removal](/resources/syntax#removing-entries-via-id).</Info>
+
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,reaction remove (emoji) (trigger)
+  ```
+
+  ```javascript Example theme={null}
+  ,reaction remove 😍 jon
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/reaction-triggers/remove.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=80b290f8649afc3e342496794aaec575" width="392" height="171" data-path="images/configuration/reaction-triggers/remove.png" />
+</Frame>
+
+### Removing all reactions for a trigger
+
+You can remove all reactions for a trigger with the `reaction removeall` command.
+
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,reaction removeall (trigger)
+  ```
+
+  ```javascript Example theme={null}
+  ,reaction removeall jon
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/reaction-triggers/removeall.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=71c9fe755fb82cd5f5c03e7d16634aae" width="444" height="167" data-path="images/configuration/reaction-triggers/removeall.png" />
+</Frame>
 
 ## Reacting to every message
 
-If you’re interested in having reactions on every message, you can use the `autoreact channel add` command. This is useful for channels like `#selfies` where messages can be voted on.
+If you're interested in having reactions on every message, you can use the `reaction messages` command.
+This is useful for channels like `#selfies` where messages can be voted on.
 
-{% hint style="warning" %}
-The channel must either be set as `imgonly` or have a slowmode of at least **one minute**.
-{% endhint %}
+<Warning>
+  The channel must either be set as `imgonly` or have a slowmode of at least
+  **one minute**.
+</Warning>
 
-```
-Syntax: ;autoreact channel add [channel] [reactions]
-Example: ;autoreact channel add #general 😍 😐 🤮
-```
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,reaction messages (channel) (up to three emojis)
+  ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_Qu9GpzFzaz.png" alt=""><figcaption></figcaption></figure>
+  ```javascript Example theme={null}
+  ,reaction messages #selfies 😍 😐 🤮
+  ```
+</CodeGroup>
 
-### Removing all message reactions <a href="#removing-all-message-reactions" id="removing-all-message-reactions"></a>
+<br />
 
-You can use the `autoreact channel remove` command without emojis to remove all reactions.
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/reaction-triggers/messages.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=2a8a4bfe567a9ef439ed862cbe0fb2be" width="506" height="173" data-path="images/configuration/reaction-triggers/messages.png" />
+</Frame>
 
-```
-Syntax: ;autoreact channel remove [channel]
-Example: ;autoreact channel remove #general
-```
+### Removing all message reactions
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_s8kKLqO2A2.png" alt=""><figcaption></figcaption></figure>
+You can use the `reaction messages` command without emojis to remove all reactions.
+
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,reaction messages (channel)
+  ```
+
+  ```javascript Example theme={null}
+  ,reaction messages #selfies
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/reaction-triggers/messages-remove.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=03f13efb41c4a21a0f92121efc1ad3d8" width="467" height="170" data-path="images/configuration/reaction-triggers/messages-remove.png" />
+</Frame>
 
 ## Related commands
 
-<details>
+<AccordionGroup>
+  <Accordion title="Removing all reaction triggers">
+    You can use the `reaction reset` command to remove all reaction triggers.
+  </Accordion>
 
-<summary>Removing all reaction triggers</summary>
+  <Accordion title="Viewing all reaction triggers">
+    You can use the `reaction list` command to view all reaction triggers.
+  </Accordion>
 
-You can use the `autoreact reset` or `autoreact channel reset` command to remove all reaction triggers.
-
-</details>
-
-<details>
-
-<summary>Viewing all reaction triggers</summary>
-
-You can use the `autoreact list` command to view all reaction triggers.
-
-</details>
-
-<details>
-
-<summary>Viewing all channels that are receiving reactions</summary>
-
-You can use the `autoreact channel list` command to view all channels receiving reactions.
-
-</details>
-
-
----
-
-# Agent Instructions
-This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
-
-## Querying This Documentation
-If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
-
-Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
-
-```
-GET https://docs.evelina.bot/server/reaction.md?ask=<question>&goal=<endgoal>
-```
-
-`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
-`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
-
-The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
-
-Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
+  <Accordion title="Viewing all channels that are receiving reactions">
+    You can use the `reaction messages list` command to view all channels receiving reactions.
+  </Accordion>
+</AccordionGroup>

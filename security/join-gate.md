@@ -1,71 +1,248 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/security/join-gate.md).
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
+> Use this file to discover all available pages before exploring further.
 
 # Join Gate
 
+> Prevent automated accounts from joining your server.
+
 ## Configuring the antiraid system
 
-### Preventing mass joins <a href="#preventing-mass-joins" id="preventing-mass-joins"></a>
+### Preventing mass joins
 
 This module will trigger when the number of accounts joining the server exceeds the threshold within a short time frame.
 
-```
-Syntax: ;antiraid massjoin enable [punishment] [threshold]
-Example: ;antiraid massjoin enable ban 3
-```
+<Warning>
+  Whenever the threshold is reached, the server will be placed in a raid state.
+  This will temporarily disable intensive events which bleh dispatches, such as
+  **welcome** and **goodbye** messages.
+</Warning>
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-26%20022438.png" alt=""><figcaption></figcaption></figure>
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,antiraid massjoin (on or off) [--threshold (number)] [--do (action)] [--lock (true | false)] [--punish (true | false)]
+  ```
 
-### Requiring an avatar <a href="#requiring-an-avatar" id="requiring-an-avatar"></a>
+  ```javascript Example theme={null}
+  ,antiraid massjoin on --threshold 5 --do ban --lock true --punish true
+  ```
+</CodeGroup>
+
+<br />
+
+<AccordionGroup>
+  <Accordion title="Threshold">
+    The threshold is the number of accounts that can join the server within the time frame.
+    <Info>It's recommended to keep the threshold between `5` and `10` to stay safe.</Info>
+
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      --threshold (number)
+      ```
+
+      ```javascript Example theme={null}
+      --threshold 5
+      ```
+    </CodeGroup>
+  </Accordion>
+
+  <Accordion title="Punishment">
+    The action which will be taken when the threshold is reached.
+    <Info>Available actions are `ban` and `kick`.</Info>
+
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      --do (action)
+      ```
+
+      ```javascript Example theme={null}
+      --do ban
+      ```
+    </CodeGroup>
+  </Accordion>
+
+  <Accordion title="Lock channels">
+    Whether to lock all channels when the threshold is reached.
+
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      --lock (true | false)
+      ```
+
+      ```javascript Example theme={null}
+      --lock true
+      ```
+    </CodeGroup>
+  </Accordion>
+
+  <Accordion title="Punish new accounts">
+    Whether to punish new accounts that join the server.
+
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      --punish (true | false)
+      ```
+
+      ```javascript Example theme={null}
+      --punish true
+      ```
+    </CodeGroup>
+  </Accordion>
+</AccordionGroup>
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antiraid/massjoin.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=5a0ef54c0b01df31d4d840e7d4a954ec" width="661" height="190" data-path="images/security/antiraid/massjoin.png" />
+</Frame>
+
+### Requiring an avatar
 
 This module will trigger when an account joins the server without an avatar.
 
-```
-Syntax: ;antiraid avatar enable [punishment]
-Example: ;antiraid avatar enable ban
-```
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,antiraid avatar (on or off) [--do (action)]
+  ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-26%20022541.png" alt=""><figcaption></figcaption></figure>
+  ```javascript Example theme={null}
+  ,antiraid avatar on --do kick
+  ```
+</CodeGroup>
+
+<br />
+
+<AccordionGroup>
+  <Accordion title="Punishment">
+    The action which will be taken when the threshold is reached.
+    <Info>Available actions are `ban` and `kick`.</Info>
+
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      --do (action)
+      ```
+
+      ```javascript Example theme={null}
+      --do ban
+      ```
+    </CodeGroup>
+  </Accordion>
+</AccordionGroup>
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antiraid/avatar.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=b3e366950ba2a00238095c9d2a9c53b5" width="521" height="172" data-path="images/security/antiraid/avatar.png" />
+</Frame>
 
 ### Setting a minimum account age
 
 This module will trigger when an account joins the server that is younger than the specified age.
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-26%20022658.png" alt=""><figcaption></figcaption></figure>
+<Info>
+  The `threshold` flag is the numbers of days for an account to be considered
+  old enough.
+</Info>
 
-### Exempting accounts from the antiraid <a href="#exempting-accounts-from-the-antiraid" id="exempting-accounts-from-the-antiraid"></a>
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,antiraid age (on or off) [--threshold (number)] [--do (action)]
+  ```
+
+  ```javascript Example theme={null}
+  ,antiraid age on --threshold 7 --do ban
+  ```
+</CodeGroup>
+
+<br />
+
+<AccordionGroup>
+  <Accordion title="Threshold">
+    The threshold is the number of accounts that can join the server within the time frame.
+    <Info>It's recommended to keep the threshold between `5` and `10` to stay safe.</Info>
+
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      --threshold (number)
+      ```
+
+      ```javascript Example theme={null}
+      --threshold 5
+      ```
+    </CodeGroup>
+  </Accordion>
+
+  <Accordion title="Punishment">
+    The action which will be taken when the threshold is reached.
+    <Info>Available actions are `ban` and `kick`.</Info>
+
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      --do (action)
+      ```
+
+      ```javascript Example theme={null}
+      --do ban
+      ```
+    </CodeGroup>
+  </Accordion>
+</AccordionGroup>
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antiraid/age.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=3c68e3976fa9fee11fc1d269c17434ee" width="663" height="194" data-path="images/security/antiraid/age.png" />
+</Frame>
+
+### Exempting accounts from the antiraid
 
 You can exempt accounts from the antiraid with the `antiraid whitelist` command.
 
-{% hint style="info" %}
-You can use the `antiraid whitelist view` command to view all whitelisted accounts.
-{% endhint %}
+<Info>You can use the `antiraid whitelist view` command to view all whitelisted accounts.</Info>
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-26%20022814.png" alt=""><figcaption></figcaption></figure>
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,antiraid whitelist (user)
+  ```
 
-## Viewing the antiraid configuration <a href="#viewing-the-antiraid-configuration" id="viewing-the-antiraid-configuration"></a>
+  ```javascript Example theme={null}
+  ,antiraid whitelist @jonathan
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antiraid/whitelist.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=f6c055f770a392c9cb8b8e82c2b10406" width="545" height="175" data-path="images/security/antiraid/whitelist.png" />
+</Frame>
+
+## Viewing the antiraid configuration
 
 You can use the `antiraid config` command to view the current antiraid configuration.
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-26%20022847.png" alt=""><figcaption></figcaption></figure>
+<Frame>
+  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/antiraid/config.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=d33fdc88289eff3c9920d740cb672952" width="452" height="331" data-path="images/security/antiraid/config.png" />
+</Frame>
 
+## What to do after a raid
 
----
+<Steps>
+  <Step title="Cleaning up">
+    After a raid, it's recommended to clean up the server by removing all the accounts that joined during the raid, you can do this with the `recentban` and `raid` commands.
 
-# Agent Instructions
-This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+    <Info>
+      The `duration` parameter must use the proper format, you can learn more
+      [here](/resources/syntax#formatting-a-duration).
+    </Info>
 
-## Querying This Documentation
-If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      ,recentban (amount) <reason>
+      ,raid (duration) (kick or ban) <reason>
+      ```
 
-Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
+      ```javascript Example theme={null}
+      ,recentban 50 // Bans the last 50 accounts that joined the server
+      ,raid 2h ban // Bans all accounts that joined the server in the last 2 hours
+      ```
+    </CodeGroup>
+  </Step>
 
-```
-GET https://docs.evelina.bot/security/join-gate.md?ask=<question>&goal=<endgoal>
-```
-
-`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
-`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
-
-The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
-
-Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
+  <Step title="Disabling the raid state">
+    After the raid is over, you can disable the raid state with the `antiraid state` command, this will re-enable events, unlock channels, and allow accounts to join the server.
+  </Step>
+</Steps>

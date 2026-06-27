@@ -1,151 +1,182 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/server/level.md).
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
+> Use this file to discover all available pages before exploring further.
 
 # Level Rewards
 
+> Reward your members for being active in your server.
+
 ## Getting started
 
-Before you run any commands, it’s important to use the `levels enable` command otherwise XP will not be tracked for users. You can also use the `levels disable` command reset it.
+Before you run any commands, it's important to use the `levels unlock` command otherwise
+XP will not be tracked for users. You can also use the `levels lock` command to temporarily stop tracking XP.
 
-## Ignoring channels, roles & members <a href="#ignoring-channels-and-roles" id="ignoring-channels-and-roles"></a>
+## Ignoring channels and roles
 
-You should immediately ignore channels, roles & member that you don’t want gaining XP. You can do this by using the `levels ignore` command.
+You should immediately ignore channels and roles that you don't want gaining XP. You can do this by using the `levels ignore` command.
 
-{% hint style="info" %}
-If you no longer want to ignore a channel or role, you can re-run the command. You can also use `level ignore list` to view all ignored channels, roles & members.
-{% endhint %}
+<Info>
+  If you no longer want to ignore a channel or role, you can re-run the command.
+  You can also use `levels list` to view all ignored channels and roles.
+</Info>
 
-```
-Syntax: ;level ignore add [target]
-Example: ;level ignore add #general
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,levels ignore (channel or role)
+  ```
 
-Syntax: ;level ignore remove [target]
-Example: ;level ignore remove #general
-```
+  ```javascript Example theme={null}
+  ,levels ignore #spam
+  ,levels ignore @jailed
+  ```
+</CodeGroup>
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_vPvQBf0kAk.png" alt=""><figcaption></figcaption></figure>
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/level-rewards/ignore-channel.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=740e7ba32d5b5a7c285eb1862b4f7f0e" width="553" height="353" data-path="images/configuration/level-rewards/ignore-channel.png" />
+</Frame>
 
 ## Setting up roles to reward
 
-You can reward your members with roles when they reach a certain level. You can use the `level rewards add` command to add a level reward.
+You can reward your members with roles when they reach a certain level. You can use the `levels add` command to add a level reward.
 
-{% hint style="info" %}
-If you no longer want to reward a role for a level, you can use the `level rewards remove` command.
-{% endhint %}
+<Info>
+  If you no longer want to reward a role for a level, you can use the `level
+      remove` command.
+</Info>
 
-{% hint style="warning" %}
-If your server already has XP, you can use the `levels sync` command to ensure that all users have the correct roles based on their XP.
-{% endhint %}
+<Tip>If your server already has XP, you can use the `levels sync` command to ensure that all users have the correct roles based on their XP.</Tip>
 
-```
-Syntax: ;level rewards add [level] [role]
-Example: ;level rewards add 15 gang
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,levels add (role) (level)
+  ,levels remove (level)
+  ```
 
-Syntax: ;level rewards remove [role]
-Example: ;level rewards remove gang
-```
+  ```javascript Example theme={null}
+  ,levels add @Levelone 5
+  ,levels remove 5
+  ```
+</CodeGroup>
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_TVbf88AIJQ.png" alt=""><figcaption></figcaption></figure>
+<br />
 
-### Stacking reward roles <a href="#stacking-reward-roles" id="stacking-reward-roles"></a>
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/level-rewards/setting-roles.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=88f01c934af7b1a1cf567e59291f41e7" width="462" height="349" data-path="images/configuration/level-rewards/setting-roles.png" />
+</Frame>
 
-Stacking roles means that users will keep all the roles they’ve earned when they reach a new level, instead of only having the role for their current level. By default, this feature is enabled.
+### Stacking reward roles
 
-```
-Syntax: ;level rewards stack [option]
-Example: ;level rewards stack on
-```
+Stacking roles means that users will keep all the roles they've earned when they reach a new level, instead of only having the role for their current level. By default, this feature is enabled.
+
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,levels stackroles (on or off)
+  ```
+
+  ```javascript Example theme={null}
+  ,levels stackroles off
+  ```
+</CodeGroup>
 
 ## Customizing level-up messages
 
 You can customize the level-up message that will be sent when a user achieves a new level.
 
-{% hint style="info" %}
-The `message` parameter can be raw text or an [embed](/resources/scripting/embeds.md) with dynamic [variables](/resources/scripting/variables.md).
-{% endhint %}
+<Danger>
+  Level up messages start sending at level four. This is intended behavior.
+</Danger>
 
-```
-Syntax: ;level message [message]
-Example: ;level message Good job, {user}! You leveled up to **Level {level}**
-```
+<Info>
+  The `message` parameter can be raw text or an [embed](/resources/scripting)
+  with dynamic [variables](/resources/scripting/variables).
+</Info>
+
+<Warning>You must include the `{guild.name}` variable in your message if `messagemode` is set to `pm`.</Warning>
+
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,levels message (text or embed code)
+  ```
+
+  ```javascript Example theme={null}
+  ,levels message Congrats {user} on reaching level {level.new_rank} in {guild.name}!
+  ,levels message {embed}$v{message: {user.mention}}$v{description: you have reached level {level.new_rank} in {guild.name}}
+  ```
+</CodeGroup>
 
 ### Setting where the message is sent
 
 You can set the channel where the level-up message will be sent. By default, the message is sent in the same channel where the user achieved the level.
 
-```
-Syntax: ;level channel [channel]
-Example: ;level channel #levels
-```
+The `option` parameter can be one of the following:
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_TVbf88AIJQ.png" alt=""><figcaption></figcaption></figure>
+* `pm` - Sends the message in the user's direct messages.
+* `context` - Sends the message in the same channel where the user gained XP.
+* `#channel` - Sends the message in the specified channel.
+* `none` - Entirely disables the level-up message.
 
-## Changing a member’s level <a href="#changing-a-members-level" id="changing-a-members-level"></a>
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,levels messagemode (option)
+  ```
 
-You can change a member’s level to a specific level.
+  ```javascript Example theme={null}
+  ,levels messagemode #level-up
+  ,levels messagemode pm
+  ```
+</CodeGroup>
 
-```
-Syntax: ;level set [member] [level]
-Example: ;level set bender.py 15
-```
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/level-rewards/message-mode.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=2c0bb4fc7cf2cfc3f27beb4cde82c55a" width="576" height="352" data-path="images/configuration/level-rewards/message-mode.png" />
+</Frame>
+
+## Changing a member's level
+
+You can change a member's level to a specific level or set their XP to a specific amount.
+
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,setlevel (member) (level)
+  ,setxp (member) (xp)
+  ```
+
+  ```javascript Example theme={null}
+  ,setlevel @user 5
+  ,setxp @user 10000
+  ```
+</CodeGroup>
 
 ## Changing the XP multiplier
 
 You can change the XP multiplier to increase or decrease the amount of XP members receive.
 
-<pre><code><strong>Syntax: ;level multiplier [multiplier]
-</strong>Example: ;level multiplier 2
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,levels setrate (multiplier)
+  ```
 
-Syntax: ;level booster [multiplier]
-Example: ;level booster 2
+  ```javascript Example theme={null}
+  ,levels setrate 2.4
+  ```
+</CodeGroup>
 
-Syntax: ;level rolemultiplier add/remove [role] [multiplier]
-Example: ;level rolemultiplier addVanity 3
-</code></pre>
+## Related commands
 
-## Related commands <a href="#related-commands" id="related-commands"></a>
+<AccordionGroup>
+  <Accordion title="Viewing a user's level and XP">
+    Use the `rank` command to view a user's level and XP.
+  </Accordion>
 
-<details>
+  <Accordion title="Viewing the XP leaderboard">
+    Use the `levels leaderboard` subcommand to highest XP earners in the server.
+  </Accordion>
 
-<summary>Viewing a user's level and XP</summary>
-
-Use the `rank` command to view a user’s level and XP.
-
-</details>
-
-<details>
-
-<summary>Viewing the XP leaderboard</summary>
-
-Use the `level leaderboard` subcommand to highest XP earners in the server.
-
-</details>
-
-<details>
-
-<summary>Viewing the level rewards</summary>
-
-Use the `level rewards list` subcommand to view all level rewards.
-
-</details>
-
-
----
-
-# Agent Instructions
-This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
-
-## Querying This Documentation
-If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
-
-Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
-
-```
-GET https://docs.evelina.bot/server/level.md?ask=<question>&goal=<endgoal>
-```
-
-`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
-`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
-
-The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
-
-Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
+  <Accordion title="Viewing the level rewards">
+    Use the `levels roles` subcommand to view all level rewards and the
+    remaining XP needed to receive them.
+  </Accordion>
+</AccordionGroup>

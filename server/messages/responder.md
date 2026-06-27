@@ -1,110 +1,156 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/server/messages/responder.md).
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
+> Use this file to discover all available pages before exploring further.
 
 # Auto Responders
 
-## Creating an auto responder <a href="#creating-an-auto-responder" id="creating-an-auto-responder"></a>
+> Automatically respond to trigger messages.
+
+## Creating an auto responder
 
 You can create an auto responder with the `autoresponder add` command.
 
-{% hint style="warning" %}
-The **trigger** and **response** must be separated by a comma (`,`).
-{% endhint %}
+<Warning>
+  The **trigger** and **response** must be separated by a comma (`,`).
+</Warning>
 
-{% hint style="info" %}
-The `message` parameter can be raw text or an [embed](https://github.com/EvelinaServices/docs/blob/main/server/messages/broken-reference/README.md) with dynamic [variables](/resources/scripting/variables.md).
-{% endhint %}
+<Tip>
+  The `message` parameter can be raw text or an [embed](/resources/scripting) with dynamic [variables](/resources/scripting/variables).
+</Tip>
 
-```
-Syntax: ;autoresponder add [response]
-Example: ;autoresponder add hello, hello world --not_strict --delete --reply
-```
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,autoresponder add (trigger, response) [--flags]
+  ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_95BAukreZ2.png" alt=""><figcaption></figcaption></figure>
+  ```javascript Example theme={null}
+  ,autoresponder add welc, welcome to the server!
+  ,autoresponder add welc, {embed}$v{title: welcome}$v{description: welcome to the server!}
+  ```
+
+  ```javascript Example with flags theme={null}
+  ,autoresponder add welc, welcome to the server! --self_destruct 10 --reply
+  ,autoresponder add ,welc, welcome to the server! --not_strict --ignore_command_check
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/messages/responder/add.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=43f4150e0e52478ee4576cd3aeaf46ea" width="800" height="789" data-path="images/configuration/messages/responder/add.png" />
+</Frame>
 
 ### Available flags
 
-<details>
+The following flags can be used to customize the response
 
-<summary>Not strict</summary>
+<AccordionGroup>
+  <Accordion title="Not strict">
+    The `--not_strict` flag will search for the trigger anywhere in the message.
+    For example, if the trigger is `hello`, it will respond to `hello there`.
+  </Accordion>
 
-The `--not_strict` flag will search for the trigger anywhere in the message. For example, if the trigger is `hello`, it will respond to `hello there`.
+  <Accordion title="Self destruct">
+    The `--self_destruct` flag schedules the response for deletion after a
+    specified time, which must be between `6` and `60` seconds.
+  </Accordion>
 
-</details>
+  <Accordion title="Delete trigger">
+    The `--delete` flag will delete the trigger message after the response is
+    sent.
+  </Accordion>
 
-<details>
+  <Accordion title="Reply to trigger">
+    The `--reply` flag will reply to the trigger message.
+  </Accordion>
 
-<summary>Delete trigger</summary>
-
-The `--delete` flag will delete the trigger message after the response is sent.
-
-</details>
-
-<details>
-
-<summary>Reply to trigger</summary>
-
-The `--reply` flag will reply to the trigger message.
-
-</details>
+  <Accordion title="Ignore command check">
+    The `--ignore_command_check` flag will allow the responder to trigger even
+    if it's a pre-existing command.
+  </Accordion>
+</AccordionGroup>
 
 ## Removing an auto responder
 
 You can remove an auto responder with the `autoresponder remove` command.
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_9DJZQW7p8N.png" alt=""><figcaption></figcaption></figure>
+<Info>If you're struggling to remove an auto responder, refer to the [selection removal](/resources/syntax#removing-entries-via-id).</Info>
 
-## Viewing all auto responders
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,autoresponder remove (trigger)
+  ```
 
-You can use the `autoresponder list` command to view all auto responders.
+  ```javascript Example theme={null}
+  ,autoresponder remove welc
+  ```
+</CodeGroup>
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_0eBkheb9tL.png" alt="" width="236"><figcaption></figcaption></figure>
+<br />
 
-## Removing all auto responders
-
-You can use the `autoresponder clear` command to remove all auto responders.
-
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_66PwpxbpWE.png" alt="" width="438"><figcaption></figcaption></figure>
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/messages/responder/remove.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=2e34076e374c2ef715d727c6ac679e3e" width="384" height="176" data-path="images/configuration/messages/responder/remove.png" />
+</Frame>
 
 ## Restricting auto responders
 
-You can restrict an auto responder to a specific user, channel or role with the `autoresponder allow` command.
+### Restricting to a channel or role
 
-```
-Syntax: ,autoresponder allow [trigger] [target]
-Example: ,autoresponder allow hello bender.py
-```
+Toggle exclusive access for an autoresponder to a role or channel with the `autoresponder exclusive` command
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-01-19%20190830.png" alt=""><figcaption></figcaption></figure>
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,autoresponder exclusive (role or channel) (trigger)
+  ```
 
-## Disabling auto responders
+  ```javascript Example theme={null}
+  ,autoresponder exclusive #general lifetime
+  ```
+</CodeGroup>
 
-You can disable an auto responder in a specific channel or for a specific role/user with the `autoresponder deny` command.
+<br />
 
-```
-Syntax: ,autoresponder deny [trigger] [target]
-Example: ,autoresponder deny hello bender.py
-```
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/messages/responder/role3.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=bcbbe2e396cbd31072b841e1f80c5935" width="524" height="344" data-path="images/configuration/messages/responder/role3.png" />
+</Frame>
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-01-19%20191244.png" alt=""><figcaption></figcaption></figure>
+## Auto Responder Roles
 
+Autoresponder roles are roles that are assigned or removed to members when they say a specific message.
 
----
+<Warning>It's easy to confuse these commands! Running the `add` command again would undo the functionality of giving members roles.</Warning>
 
-# Agent Instructions
-This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,autoresponder role (add or remove) (role) (trigger)
+  ```
 
-## Querying This Documentation
-If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+  ```javascript Example theme={null}
+  ,autoresponder role add Verified Verify
+  ```
+</CodeGroup>
 
-Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/messages/responder/role2.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=75de23a96f10db8138f06929cbe03152" width="489" height="329" data-path="images/configuration/messages/responder/role2.png" />
+</Frame>
 
-```
-GET https://docs.evelina.bot/server/messages/responder.md?ask=<question>&goal=<endgoal>
-```
+### Removing an autoresponder role
 
-`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
-`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
+You can remove an autoresponder role by running the same command again. This action will reverse the previous configuration and remove the assignment or removals of the role
 
-The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+## Related commands
 
-Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
+<AccordionGroup>
+  <Accordion title="Updating an auto responder">
+    You can use the `autoresponder update` command to update an auto responder.
+    <Info>This command uses the same syntax as the `autoresponder add` command.</Info>
+  </Accordion>
+
+  <Accordion title="Removing all auto responders">
+    You can use the `autoresponder reset` command to remove all auto responders.
+  </Accordion>
+
+  <Accordion title="Viewing all auto responders">
+    You can use the `autoresponder list` command to view all auto responders.
+  </Accordion>
+</AccordionGroup>

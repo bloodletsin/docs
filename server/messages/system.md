@@ -1,87 +1,100 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/server/messages/system.md).
+> ## Documentation Index
+> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
+> Use this file to discover all available pages before exploring further.
 
 # System Messages
 
+> Automatically send messages when certain member events occur.
+
 ## Commands
 
-There are four system message commands, each with the same subcommands.
+There are three system message commands, each with the same subcommands.
 
 * `welcome` - Dispatched whenever a user joins the server.
 * `goodbye` - Dispatched whenever a user leaves the server.
 * `boost` - Dispatched whenever a user boosts the server.
-* `joindm` - Dispatched whenever a user joins the server.
 
-{% hint style="info" %}
-The `boost` event is only dispatched if the server has the **Discord System Message** enabled or whenever the user receives the **Server Booster** role which only occurs once.
-{% endhint %}
+<Tip>
+  The `boost` event is only dispatched if the server has the **Discord System
+  Message** enabled or whenever the user receives the **Server Booster** role
+  which only occurs once.
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_hCHUTim30M.png" alt=""><figcaption></figcaption></figure>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/messages/system/integrated.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=d85571a9469b39091778b675a2b68897" width="749" height="319" data-path="images/configuration/messages/system/integrated.png" />
+</Tip>
 
-{% hint style="info" %}
-The following examples use the `welcome` command, but the same syntax is applied for the other system message commands.
-{% endhint %}
+<Info>
+  The following examples use the `welcome` command, but the same syntax is
+  applied for the other system message commands.
+</Info>
 
-```
-Syntax: ;welcome add [channel] [code]
-Example: ;welcome add #general Hi, {user.mention}
-```
+## Creating a system message
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_wvM0SSEqok.png" alt=""><figcaption></figcaption></figure>
+You can create a system message with the `welcome add` command.
 
-## Removing a system message
+<Tip>
+  The `message` parameter can be raw text or an [embed](/resources/scripting) with dynamic [variables](/resources/scripting/variables).
+</Tip>
+
+<Info>
+  The `--self_destruct` flag in system messages schedules the message for
+  deletion after a specified time, which must be between `6` and `60` seconds.
+</Info>
+
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,welcome add (channel) (message) [--self_destruct [6-60]]
+  ```
+
+  ```javascript Example theme={null}
+  ,welcome add #general welcome to {guild} {user.mention} --self_destruct 30
+  ,welcome add #general {embed}$v{message: {user.mention}}$v{description: welcome to {guild.name}}
+  ```
+</CodeGroup>
+
+<br />
+
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/messages/system/add.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=29bd6269965c1da77c9eeb05050b4b4a" width="669" height="193" data-path="images/configuration/messages/system/add.png" />
+</Frame>
+
+# Removing a system message
 
 You can remove a system message with the `welcome remove` command.
 
-```
-Syntax: ;welcome remove [channel]
-Example: ;welcome remove #general
-```
+<CodeGroup>
+  ```javascript Syntax theme={null}
+  ,welcome remove <channel>
+  ```
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_9p6OF1nFRf.png" alt=""><figcaption></figcaption></figure>
+  ```javascript Example theme={null}
+  ,welcome remove #joneral
+  ```
+</CodeGroup>
 
-## Test a system message
+<br />
 
-You can test a system message with the `welcome test` command.
+<Frame>
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/messages/system/remove.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=c09d10ddc9c93ddafd77e05c40f5edfe" width="481" height="172" data-path="images/configuration/messages/system/remove.png" />
+</Frame>
 
-```
-Syntax: ;welcome test [channel]
-Example: ;welcome test #general
-```
+## Related commands
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_FNY5TZSr3b.png" alt=""><figcaption></figcaption></figure>
+<AccordionGroup>
+  <Accordion title="Viewing a system message">
+    You can use the `welcome view` command to view a system message.
 
-## Viewing all system messages
+    <CodeGroup>
+      ```javascript Syntax theme={null}
+      ,welcome view (channel)
+      ```
 
-You can use the `welcome list` command to view all system messages.
+      ```javascript Example theme={null}
+      ,welcome view #general
+      ```
+    </CodeGroup>
+  </Accordion>
 
-<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_RERmX3YSoQ.png" alt="" width="453"><figcaption></figcaption></figure>
-
-## Ping on Join
-
-Set a normal welcome message but with this embed code:
-
-```
-{embed}$v{content: {user.mention}}$v{delete: 1}
-```
-
-
----
-
-# Agent Instructions
-This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
-
-## Querying This Documentation
-If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
-
-Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
-
-```
-GET https://docs.evelina.bot/server/messages/system.md?ask=<question>&goal=<endgoal>
-```
-
-`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
-`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
-
-The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
-
-Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.
+  <Accordion title="Viewing all system messages">
+    You can use the `welcome list` command to view all system messages.
+  </Accordion>
+</AccordionGroup>
