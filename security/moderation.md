@@ -1,80 +1,82 @@
-> ## Documentation Index
-> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
-> Use this file to discover all available pages before exploring further.
+> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/security/moderation.md).
 
 # Moderation
 
-> Guide to setting up moderation commands in your server.
-
-## Overview
+## Overview <a href="#overview" id="overview"></a>
 
 Moderation commands require some basic setup before they can be used. This includes **moderation logs**, **mute roles**, and the **jailed role & channel**.
 
-<Steps>
-  <Step title="Creating the case logs & jail role">
-    <Info>
-      Jail is a feature similar to mute, but it restricts users from all channels except `#jail`.
-    </Info>
+{% stepper %}
+{% step %}
 
-    Use the `,setup` command to create the case logs channel and jail role.
-  </Step>
+#### Creating the case logs & jail role
 
-  <Step title="Creating the necessary mute roles">
-    <Info>
-      This will create a **text mute**, **image mute**, and **reaction mute** role.
-    </Info>
+*Jail is a feature similar to mute, but it restricts users from all channels except `#jail`*
 
-    Use the `,setupmute` command to create the necessary mute roles.
-  </Step>
-</Steps>
+Use the `;setjail` command to create the case logs channel and jail role.
+{% endstep %}
 
-Upon completion of the setup, you'll notice a few new roles and channels in your server.
+{% step %}
 
-* **Muted** - Used to restrict users from sending messages.
+#### Creating the necessary mute roles
+
+*This will create a **image mute**, and **reaction mute** role.*
+
+Use the `;setmute` command to create the necessary mute roles.
+{% endstep %}
+{% endstepper %}
+
+Upon completion of the setup, you’ll notice a few new roles and channels in your server.
+
 * **Image Muted** - Used to restrict users from uploading attachments.
 * **Reaction Muted** - Used to restrict users from reacting to messages.
 * **Jailed** - Used to restrict users from all channels except the `#jail` channel.
+  * The jailed role can be renamed since it’s found by its id.
 
-<Info>
-  The `#jail-log` channel logs all moderation actions done through bleh (e.g.
-  `,ban` & `,kick`). The `#jail` channel is where users jailed by the `jail`
-  command are restricted to.
-</Info>
+## Invoke Messages <a href="#invoke-messages" id="invoke-messages"></a>
 
-## Setting Staff Roles
-
-It's important to set the staff roles in your server to ensure that bleh can identify who has dangerous permissions. This is necessary for the `stripstaff` punishment to work.
-
-Use the `,bind staff @role` command to set a role as a staff role, you would re-run the command if you don't want a role set as staff anymore.
-
-<Tip>
-  You can view set staff roles with the `,bind staff list` command.
-</Tip>
-
-<Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/moderation/staff-role.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=2b4663617337a1fc244ab07f1a065783" width="427" height="347" data-path="images/security/moderation/staff-role.png" />
-</Frame>
-
-## Invoke Messages
-
-You can customize the response for moderation commands which is by default `👍` and the direct message which will be sent after punishing the user.
+You can customize the response for moderation commands and the direct message which will be sent after punishing the user.
 
 The following moderation commands can be customized:
 
-* `jail`, `kick`, `ban`, `tempban`, `softban`, `hardban`, `timeout` & `warn`.
+* `jail`, `kick`, `ban` & `mute`
 
-<Tip>
-  The `message` parameter can be raw text or an [embed](/resources/scripting/embeds) with dynamic [variables](/resources/scripting/variables).
-</Tip>
+{% hint style="info" %}
+The `message` parameter can be raw text or an [embed](https://github.com/EvelinaServices/docs/blob/main/security/broken-reference/README.md) with dynamic [variables](/resources/scripting/variables.md).
+{% endhint %}
 
-<CodeGroup>
-  ```javascript Syntax theme={null}
-  ,invoke (command) message (message)
-  ,invoke (command) dm (message)
-  ```
+Command response:
 
-  ```javascript Example theme={null}
-  ,invoke jail message {user.mention} has been jailed for {reason}
-  ,invoke jail dm you have been jailed for {reason}
-  ```
-</CodeGroup>
+```
+;invoke message (command) add [code]
+;invoke message (command) add Kicked, {member.mention}
+```
+
+Direct messages:
+
+```
+;invoke dm (command) add [code]
+;invoke dm (command) add Kicked, {member.mention}
+```
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
+
+```
+GET https://docs.evelina.bot/security/moderation.md?ask=<question>&goal=<endgoal>
+```
+
+`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
+`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
+
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

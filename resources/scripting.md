@@ -1,23 +1,8 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/resources/syntax.md).
+> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/resources/scripting.md).
 
-# Syntax
+# Scripting
 
-## Formatting a duration
-
-When a command requires a `duration` parameter, you format it as a number followed by a unit. The unit can be one of the following:
-
-* `s` for seconds.
-* `m` for minutes.
-* `h` for hours.
-* `d` for days.
-* `w` for weeks.
-
-For example, `1d` represents one day, and `1w` represents one week.
-
-```
-Syntax: ;mute [member] [time] [reason]
-Example: ;mute bender.py 1d rassist
-```
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Embeds</td><td>Guide to understand the fundamentals of scripting embeds.</td><td><a href="/pages/gnB3eihswUbsz7QJyDfM">/pages/gnB3eihswUbsz7QJyDfM</a></td></tr><tr><td>Variables</td><td>All available variables within evelina.</td><td><a href="/pages/SFWWA6PdVCpk2WZwz7cf">/pages/SFWWA6PdVCpk2WZwz7cf</a></td></tr><tr><td>Pagination</td><td>Guide to paginating embeds with evelina.</td><td><a href="/pages/zyOTakP7RWzWCksTnKOd">/pages/zyOTakP7RWzWCksTnKOd</a></td></tr></tbody></table>
 
 
 ---
@@ -31,7 +16,7 @@ If you need additional information that is not directly available in this page, 
 Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
 
 ```
-GET https://docs.evelina.bot/resources/syntax.md?ask=<question>&goal=<endgoal>
+GET https://docs.evelina.bot/resources/scripting.md?ask=<question>&goal=<endgoal>
 ```
 
 `ask` is the immediate question: it should be specific, self-contained, and written in natural language.

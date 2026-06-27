@@ -1,33 +1,33 @@
-> ## Documentation Index
-> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
-> Use this file to discover all available pages before exploring further.
+> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/overview/introduction.md).
 
 # Introduction
 
-> Learn how to set up bleh in your server or enhance your everyday use with commands & more.
-
 ## Guides
 
-<Info>
-  Server prefix is set to `,` by default. Use `,prefix set (symbol)` to change
-  it for your server.
-</Info>
+{% hint style="info" %}
+Server prefix is set to `;` by default. Use `;prefix set (symbol)` to change it for your server.
+{% endhint %}
 
-<CardGroup cols={2}>
-  <Card title="Security Setup" icon="hammer" href="/security">
-    Quickly configure your server to use bleh's advanced moderation system.
-  </Card>
+<table data-card-size="large" data-view="cards"><thead><tr><th align="center"></th><th align="center"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td align="center">Security Setup</td><td align="center">Quickly configure your server to use evelina’s advanced moderation system.</td><td><a href="/pages/uFY4GnqQlPvYZntFDLM8">/pages/uFY4GnqQlPvYZntFDLM8</a></td></tr><tr><td align="center">Server Configuration</td><td align="center">Learn how to build embeds and use variables for your server’s configurations</td><td><a href="/pages/cKyl9NsiiqN8Z2gS0UC6">/pages/cKyl9NsiiqN8Z2gS0UC6</a></td></tr><tr><td align="center">Integrations</td><td align="center">Seamlessly integrate your favorite platforms directly into your server through evelina.</td><td><a href="/pages/uIevro7GO2Jd47PoR7iL">/pages/uIevro7GO2Jd47PoR7iL</a></td></tr><tr><td align="center">Embed Scripting</td><td align="center">Learn how to build embeds and use variables for your server’s configurations</td><td><a href="/pages/gnB3eihswUbsz7QJyDfM">/pages/gnB3eihswUbsz7QJyDfM</a></td></tr></tbody></table>
 
-  <Card title="Server Configuration" icon="gear" href="/configuration">
-    Set up welcome & goodbye messages, reaction roles, and more for your server.
-  </Card>
 
-  <Card title="Integrations" icon="share-nodes" href="/integrations">
-    Seamlessly integrate your favorite platforms directly into your server
-    through bleh.
-  </Card>
+---
 
-  <Card title="Embed Scripting" icon="code" href="/resources/scripting">
-    Learn how to build embeds and use variables for your server's configurations
-  </Card>
-</CardGroup>
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
+
+```
+GET https://docs.evelina.bot/overview/introduction.md?ask=<question>&goal=<endgoal>
+```
+
+`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
+`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
+
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

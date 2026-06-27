@@ -1,23 +1,18 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/resources/syntax.md).
+> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/resources/punishments.md).
 
-# Syntax
+# Punishments
 
-## Formatting a duration
+| Punishment | Description                                  |
+| ---------- | -------------------------------------------- |
+| Ban        | Bans the user from the guild                 |
+| Kick       | Kicks the user from the guild                |
+| Strip      | Removes all roles with dangerous permissions |
 
-When a command requires a `duration` parameter, you format it as a number followed by a unit. The unit can be one of the following:
+These can be used in the punishment parameter for antinuke.
 
-* `s` for seconds.
-* `m` for minutes.
-* `h` for hours.
-* `d` for days.
-* `w` for weeks.
-
-For example, `1d` represents one day, and `1w` represents one week.
-
-```
-Syntax: ;mute [member] [time] [reason]
-Example: ;mute bender.py 1d rassist
-```
+{% content-ref url="/pages/uFY4GnqQlPvYZntFDLM8" %}
+[Antinuke](/security/antinuke.md)
+{% endcontent-ref %}
 
 
 ---
@@ -31,7 +26,7 @@ If you need additional information that is not directly available in this page, 
 Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
 
 ```
-GET https://docs.evelina.bot/resources/syntax.md?ask=<question>&goal=<endgoal>
+GET https://docs.evelina.bot/resources/punishments.md?ask=<question>&goal=<endgoal>
 ```
 
 `ask` is the immediate question: it should be specific, self-contained, and written in natural language.

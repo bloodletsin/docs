@@ -1,17 +1,33 @@
-> ## Documentation Index
-> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
-> Use this file to discover all available pages before exploring further.
+> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/common-issues/server-removal.md).
 
 # Server Removal
 
-> Explanation of why bleh might leave your server.
+## Blacklisted <a href="#blacklisted" id="blacklisted"></a>
 
-## Inactivity
+If your server is caught violating Discord’s & evelina’s Terms of Service, it will be blacklisted, resulting in evelina leaving your server. Make sure to review the rules and guidelines to ensure compliance.
 
-One of the most common reasons for bleh leaving a server is inactivty, which can occur when bleh hasn't been interacted with for a prolonged period of time.
-<Tip>You can reinvite bleh by clicking [here](/invite). Your previous settings will be retained.</Tip>
+{% hint style="info" %}
+If you believe your server was wrongfully blacklisted, please contact [support](https://discord.gg/evelina).
+{% endhint %}
 
-## Blacklisted
 
-If your server is caught violating Discord's & bleh's Terms of Service, it will be blacklisted, resulting in bleh leaving your server. Make sure to review the rules and guidelines to ensure compliance.
-<Info>If you believe your server was wrongfully blacklisted, please contact [support](/discord).</Info>
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
+
+```
+GET https://docs.evelina.bot/common-issues/server-removal.md?ask=<question>&goal=<endgoal>
+```
+
+`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
+`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
+
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

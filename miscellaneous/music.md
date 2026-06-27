@@ -1,215 +1,131 @@
-> ## Documentation Index
-> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
-> Use this file to discover all available pages before exploring further.
+> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/miscellaneous/music.md).
 
 # Music
 
-> Listen to music from a variety of sources inside voice channels.
+## Configuration <a href="#configuration" id="configuration"></a>
 
-## Configuration
-
-### Setting the DJ role
+### Set teh DJ role
 
 You can set a DJ role which restricts who can control the music player.
 
-<CodeGroup>
-  ```javascript Syntax theme={null}
-  ,settings dj (role)
-  ```
+```
+Syntax: ;dj [role]
+Example: ;dj DJ
+```
 
-  ```javascript Example theme={null}
-  ,settings dj @DJ
-  ```
-</CodeGroup>
+<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_NmfRmBjruH.png" alt=""><figcaption></figcaption></figure>
 
-<br />
+### Remove the DJ role
 
-<Frame>
-  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/music/bind-dj.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=14e8c09fe03d8161543686c21b512a64" width="402" height="165" data-path="images/miscellaneous/music/bind-dj.png" />
-</Frame>
+```
+Syntax: ;dj [role]
+Example: ;dj none
+```
 
-### Auto play similar tracks
+<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_Nizp8f83XY.png" alt=""><figcaption></figcaption></figure>
 
-You can toggle auto play which will automatically play similar tracks when the queue is empty.
-
-<CodeGroup>
-  ```javascript Syntax theme={null}
-  ,settings autoplay (on or off)
-  ```
-
-  ```javascript Example theme={null}
-  ,settings autoplay on
-  ```
-</CodeGroup>
-
-<br />
-
-<Frame>
-  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/music/bind-autoplay.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=98a2ba16495d260a512de82e5157bc7d" width="422" height="173" data-path="images/miscellaneous/music/bind-autoplay.png" />
-</Frame>
-
-## Queueing Music
+## Queueing Music <a href="#queueing-music" id="queueing-music"></a>
 
 You can queue music with the `play` command.
 
-<Tip>
-  By default, the `play` command will search **Deezer**. You're able to provide
-  a **URL** which will queue the music directly from the source you provide.
-</Tip>
+{% hint style="info" %}
+By default, the `play` command will search **YouTube**. You’re able to provide a **URL** which will queue the music directly from the source you provide.
+{% endhint %}
 
-<CodeGroup>
-  ```javascript Syntax theme={null}
-  ,play (query or URL)
-  ```
-
-  ```javascript Example theme={null}
-  ,play jeans 2hollis
-  ,play https://open.spotify.com/track/6C2nVSSeXNqfoY8t6tliZ4
-  ```
-</CodeGroup>
+```
+Syntax: ;play [query]
+Example: ;play yeat, king tonka
+```
 
 ## Managing the Queue
 
-### Viewing the tracks in the queue
+### Viewing the tracks in the queue <a href="#viewing-the-tracks-in-the-queue" id="viewing-the-tracks-in-the-queue"></a>
 
-Use the `queue` command to view the tracks in the queue.
-Each track has a corresponding position which can be used to interact with the queue.
+Use the `queue` command to view the tracks in the queue. Each track has a corresponding position which can be used to interact with the queue.
 
-<Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/miscellaneous/music/queue.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=c525eb4f58c1497b89b6920674b37c55" width="344" height="235" data-path="images/miscellaneous/music/queue.png" />
-</Frame>
+<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_McACRCO4Ce.png" alt=""><figcaption></figcaption></figure>
 
-### Removing a track from the queue
+### Removing a track from the queue <a href="#removing-a-track-from-the-queue" id="removing-a-track-from-the-queue"></a>
 
-Use the `queue remove` command to remove a track from the queue.
-You must provide the [track position](#viewing-the-tracks-in-the-queue) which can be found with the `queue` command.
+Use the `queue remove` command to remove a track from the queue. You must provide the [track position](#viewing-the-tracks-in-the-queue) which can be found with the `queue` command.
 
-<CodeGroup>
-  ```javascript Syntax theme={null}
-  ,queue remove (position)
-  ```
+```
+Syntax: ;queue remove [position]
+Example: ;queue remove 1
+```
 
-  ```javascript Example theme={null}
-  ,queue remove 2
-  ```
-</CodeGroup>
-
-<br />
-
-<Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/miscellaneous/music/queue-remove.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=d4d4f7e5abf64a81111e1ba98bbbc7c0" width="393" height="175" data-path="images/miscellaneous/music/queue-remove.png" />
-</Frame>
-
-### Moving a track in the queue
-
-Use the `queue move` command to move a track in the queue.
-You must provide the [current position](#viewing-the-tracks-in-the-queue) and the new position.
-
-<CodeGroup>
-  ```javascript Syntax theme={null}
-  ,queue move (position) (new_position)
-  ```
-
-  ```javascript Example theme={null}
-  ,queue move 3 1
-  ```
-</CodeGroup>
-
-<br />
-
-<Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/miscellaneous/music/queue-move.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=79923c9850462d16b0fcd736b03f62eb" width="404" height="169" data-path="images/miscellaneous/music/queue-move.png" />
-</Frame>
+<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_He8pvRpjBu.png" alt=""><figcaption></figcaption></figure>
 
 ## Controlling Playback
 
 You can control playback with the following commands
 
-<AccordionGroup>
-  <Accordion title="Skipping to the next track">
-    Use the `skip` command to skip to the next track.
-  </Accordion>
+<details>
 
-  <Accordion title="Pausing & Resuming playback">
-    Use the `pause` & `resume` commands to pause and resume playback.
-  </Accordion>
+<summary>Skipping to the next track</summary>
 
-  <Accordion title="Seeking to a specific position">
-    Use the `seek` command to seek to a specific position in the track.
+Use the `skip` command to skip to the next track.
 
-    <Tip>
-      The position must use the format `mm:ss`, (e.g. `1:20`).
-    </Tip>
+</details>
 
-    <CodeGroup>
-      ```javascript Syntax theme={null}
-      ,seek (position)
-      ```
+<details>
 
-      ```javascript Example theme={null}
-      ,seek 2:30
-      ```
-    </CodeGroup>
-  </Accordion>
+<summary>Pausing &#x26; Resuming playback</summary>
 
-  <Accordion title="Changing the track volume">
-    Use the `volume` command to change the volume.
+Use the `pause` & `resume` commands to pause and resume playback.
 
-    <Tip>
-      The percentage must be between `0` and `100`.
-    </Tip>
+</details>
 
-    <CodeGroup>
-      ```javascript Syntax theme={null}
-      ,volume (percentage)
-      ```
+<details>
 
-      ```javascript Example theme={null}
-      ;volume 50
-      ```
-    </CodeGroup>
-  </Accordion>
+<summary>Changing the track volume</summary>
 
-  <Accordion title="Setting the repeat mode">
-    Use the `repeat` command to set the repeat mode.
+Use the `volume` command to change the volume.
 
-    <CodeGroup>
-      ```javascript Syntax theme={null}
-      ,repeat (off | queue | current)
-      ```
+```
+Syntax: ;volume [volume]
+Example: ;volume 75
+```
 
-      ```javascript Example theme={null}
-      ,repeat current
-      ```
-    </CodeGroup>
-  </Accordion>
-</AccordionGroup>
+</details>
 
-## Music Filters
+<details>
 
-You can use an equalizer preset to adjust how the audio sounds.
+<summary>Setting the repeat mode</summary>
 
-<Info>
-  You can view which presets are applied with the `preset active` command.
-</Info>
+Use the `repeat` command to set the repeat mode.
 
-| Command            | Description                                                                 |
-| ------------------ | --------------------------------------------------------------------------- |
-| `preset soft`      | Cuts high and mid frequencies, allowing only low frequencies                |
-| `preset 8d`        | Creates a stereo-like panning effect, rotating audio for immersive sound    |
-| `preset chipmunk`  | Accelerates track playback to produce a high-pitched, chipmunk-like sound   |
-| `preset boost`     | Enhances track with heightened bass and highs for a lively, energetic feel  |
-| `preset vaporwave` | Slows track playback for nostalgic and vintage half-speed effect            |
-| `preset vibrato`   | Introduces a wavering pitch effect for dynamic tone                         |
-| `preset piano`     | Enhances mid and high tones for standout piano-based tracks                 |
-| `preset metal`     | Amplifies midrange for a fuller, concert-like sound, ideal for metal tracks |
-| `preset flat`      | Represents a neutral EQ setting with default levels across the board        |
-| `preset karaoke`   | Filters out vocals from the track, leaving only the instrumental            |
-| `preset nightcore` | Accelerates track playback for nightcore-style music                        |
+```
+Syntax: ;repeat [mode]
+Example: ;repeat current
+```
+
+</details>
 
 ## Music Sources
 
-* **Deezer**
 * **Spotify**
 * **SoundCloud**
-* **Apple Music**
+* **YouTube**
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
+
+```
+GET https://docs.evelina.bot/miscellaneous/music.md?ask=<question>&goal=<endgoal>
+```
+
+`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
+`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
+
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

@@ -1,243 +1,154 @@
-> ## Documentation Index
-> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
-> Use this file to discover all available pages before exploring further.
+> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/resources/scripting/variables.md).
 
 # Variables
 
-> All available variables within bleh.
+These variables are accessible throughout evelina and can be used in any command context which contains a `message` or `embed code` parameter (e.g. `welcome`, `leave` & `goodbye`)
 
-These variables are accessible throughout bleh and can be used
-in any command context which contains a `message` or `embed code` parameter (e.g. `welcome`, `leave` & `goodbye`)
+## User Related Variables <a href="#user-related-variables" id="user-related-variables"></a>
 
-<Tabs>
-  <Tab title="Guild">
-    | Variable                          | Output                                                               |
-    | --------------------------------- | -------------------------------------------------------------------- |
-    | `{guild.name}`                    | The guild's name                                                     |
-    | `{guild.id}`                      | The guild's ID                                                       |
-    | `{guild.count}`                   | The guild's member count                                             |
-    | `{guild.region}`                  | The guild's voice region                                             |
-    | `{guild.shard}`                   | The guild's shard ID on bot                                          |
-    | `{guild.owner_id}`                | The guild's owner ID                                                 |
-    | `{guild.created_at}`              | The guild's creation date in UTC                                     |
-    | `{guild.created_at_timestamp}`    | The guild's creation date in UNIX                                    |
-    | `{guild.emoji_count}`             | The guild's emoji count                                              |
-    | `{guild.role_count}`              | The guild's role count                                               |
-    | `{guild.boost_count}`             | The guild's boost count                                              |
-    | `{guild.boost_tier}`              | The guild's boost tier, defaults to No Level if none                 |
-    | `{guild.preferred_locale}`        | The guild's preferred locale                                         |
-    | `{guild.key_features}`            | The guild's list of features (possibly `N/A`)                        |
-    | `{guild.icon}`                    | The guild's icon URL as a PNG (possibly `N/A`)                       |
-    | `{guild.banner}`                  | The guild's banner URL as a PNG (possibly `N/A`)                     |
-    | `{guild.splash}`                  | The guild's splash URL as a PNG (possibly `N/A`)                     |
-    | `{guild.discovery}`               | The guild's discovery splash URL as a PNG (possibly `N/A`)           |
-    | `{guild.max_presences}`           | The guild's max presences amount                                     |
-    | `{guild.max_members}`             | The guild's max members amount                                       |
-    | `{guild.max_video_channel_users}` | The guild's max video channel users                                  |
-    | `{guild.afk_timeout}`             | The guild's AFK timeout in seconds                                   |
-    | `{guild.afk_channel}`             | The guild's AFK channel (possibly `N/A`)                             |
-    | `{guild.channels}`                | The guild's list of text, voice & category channels (possibly `N/A`) |
-    | `{guild.channels_count}`          | The guild's total channel count                                      |
-    | `{guild.text_channels}`           | The guild's list of text channels                                    |
-    | `{guild.text_channels_count}`     | The guild's text channel count                                       |
-    | `{guild.voice_channels}`          | The guild's list of voice channels                                   |
-    | `{guild.voice_channels_count}`    | The guild's voice channel count                                      |
-    | `{guild.category_channels}`       | The guild's list of category channels                                |
-    | `{guild.category_channels_count}` | The guild's category channel count                                   |
-    | `{guild.vanity}`                  | The guild's custom vanity url                                        |
-  </Tab>
+| Variable             | Output                            |
+| -------------------- | --------------------------------- |
+| {user.id}            | Only users id                     |
+| {user.name}          | Only users name                   |
+| {user.nick}          | Only users nickname               |
+| {user.display}       | Only users display name           |
+| {user.mention}       | Mentions the user                 |
+| {user.discriminator} | Only users discriminator          |
+| {user.avatar}        | Only users avatar                 |
+| {user.guild.avatar}  | Only users guild avatar           |
+| {user.joined\_at}    | Joined date in timestamp format   |
+| {user.created\_at}   | Creation date in timestamp format |
 
-  <Tab title="User">
-    | Variable                       | Output                                                 |
-    | ------------------------------ | ------------------------------------------------------ |
-    | `{user}`                       | The user's name and discriminator                      |
-    | `{user.id}`                    | The user's ID                                          |
-    | `{user.mention}`               | The user's mention                                     |
-    | `{user.name}`                  | The user's name                                        |
-    | `{user.tag}`                   | The user's discriminator                               |
-    | `{user.avatar}`                | The user's profile picture                             |
-    | `{user.guild_avatar}`          | The user's guild profile picture                       |
-    | `{user.display_avatar}`        | The user's available profile picture                   |
-    | `{user.joined_at}`             | The user's guild join date in UTC                      |
-    | `{user.joined_at_timestamp}`   | The user's guild join date in UNIX                     |
-    | `{user.created_at}`            | The user's account creation date in UTC                |
-    | `{user.created_at_timestamp}`  | The user's account creation date in UNIX               |
-    | `{user.display_name}`          | The user's current display name                        |
-    | `{user.boost}`                 | `Yes`/`No` if the user is boosting the guild           |
-    | `{user.boost_since}`           | The user's initial guild boost date                    |
-    | `{user.boost_since_timestamp}` | The user's initial guild boost date in UNIX            |
-    | `{user.color}`                 | The user's top role hex code                           |
-    | `{user.top_role}`              | The user's top role name, defaults to N/A              |
-    | `{user.role_list}`             | The user's role list (possibly `N/A`)                  |
-    | `{user.role_text_list}`        | The user's role list in text (possibly `N/A`)          |
-    | `{user.bot}`                   | `Yes`/`No` if the user is a bot                        |
-    | `{user.badges_icons}`          | The user's profile badges with emotes (possibly `N/A`) |
-    | `{user.badges}`                | The user's profile badges in text (possibly `N/A`)     |
-    | `{user.join_position}`         | The user's join position                               |
-    | `{user.join_position_suffix}`  | The user's join position with suffix                   |
-  </Tab>
+## Guild Related Variables <a href="#guild-related-variables" id="guild-related-variables"></a>
 
-  <Tab title="Channel">
-    | Variable                   | Output                                                    |
-    | -------------------------- | --------------------------------------------------------- |
-    | `{channel.name}`           | The channel's name                                        |
-    | `{channel.id}`             | The channel's ID                                          |
-    | `{channel.mention}`        | The channel's mention                                     |
-    | `{channel.topic}`          | The channel's topic                                       |
-    | `{channel.type}`           | The channel's type (`text`/`news`/`..`)                   |
-    | `{channel.category_id}`    | The channel's category ID (possibly `N/A`)                |
-    | `{channel.category_name}`  | The channel's category name (possibly `N/A`)              |
-    | `{channel.position}`       | The channel's position in the guild channel list          |
-    | `{channel.slowmode_delay}` | The channel's slowmode delay in seconds (defaults to `0`) |
-  </Tab>
+| Variable                      | Output                                      |
+| ----------------------------- | ------------------------------------------- |
+| {guild.id}                    | Only guild id                               |
+| {guild.name}                  | Only guild name                             |
+| {guild.icon}                  | Only guild icon                             |
+| {guild.created\_at}           | Creation date in timestamp format           |
+| {guild.count}                 | Only member count                           |
+| {guild.count.format}          | Only guild count in ordinal format          |
+| {guild.boost\_count}          | Only guild boost amount                     |
+| {guild.boost\_count.format}   | Only guild boost amount in ordinal format   |
+| {guild.booster\_count}        | Amount of people boosting                   |
+| {guild.booster\_count.format} | Amount of people boosting in ordinal format |
+| {guild.boost\_tier}           | Only guild's boost level                    |
+| {guild.vanity}                | Only guild vanity                           |
 
-  <Tab title="Date & Time">
-    | Variable                  | Output                        |
-    | ------------------------- | ----------------------------- |
-    | `{date.now}`              | Current date in PST           |
-    | `{date.utc_timestamp}`    | Current date as UNIX          |
-    | `{date.now_proper}`       | Better formatted date in PST  |
-    | `{date.now_short}`        | Short formatted date in PST   |
-    | `{date.now_shorter}`      | Shorter formatted date in PST |
-    | `{time.now}`              | 12 hour timestamp in PST      |
-    | `{time.now_military}`     | 24 hour timestamp in PST      |
-    | `{date.utc_now}`          | Current date in UTC           |
-    | `{date.utc_now_proper}`   | Better formatted date in UTC  |
-    | `{date.utc_now_short}`    | Short formatted date in UTC   |
-    | `{date.utc_now_shorter}`  | Shorter formatted date in UTC |
-    | `{time.utc_now}`          | 12 hour timestamp in UTC      |
-    | `{time.utc_now_military}` | 24 hour timestamp in UTC      |
-  </Tab>
+## Lastfm Related Variables <a href="#guild-related-variables" id="guild-related-variables"></a>
 
-  <Tab title="Last.fm">
-    <Warning>
-      This section is only available for the `lastfm mode` command which requires a
-      [subscription](/overview/donator-perks).
-    </Warning>
+{% tabs %}
+{% tab title="Track" %}
 
-    | Variable                 | Output                                                 |
-    | ------------------------ | ------------------------------------------------------ |
-    | `{user.name}`            | Last.fm username                                       |
-    | `{user.avatar}`          | Last.fm profile picture                                |
-    | `{user.plays}`           | Total scrobbles for Last.fm account                    |
-    | `{proper(user.plays)}`   | Total scrobbles for Last.fm account (formatted number) |
-    | `{user.artist_crown}`    | Displays crown emoji if user has crown for artist      |
-    | `{user.url}`             | Profile URL for Last.fm account                        |
-    | `{author}`               | Author name and discriminator                          |
-    | `{author.name}`          | Author username                                        |
-    | `{author.nickname}`      | Author nickname                                        |
-    | `{author.discriminator}` | Author discriminator                                   |
-    | `{album.name}`           | Current playing album title                            |
-    | `{lower(album.name)}`    | Current playing album title in all lowercase           |
-    | `{album.url}`            | Current playing album URL                              |
-    | `{album.cover}`          | Current playing album cover                            |
-    | `{track.name}`           | Current playing track title                            |
-    | `{lower(track.name)}`    | Current playing track title in all lowercase           |
-    | `{track.url}`            | Current playing track URL (from Last.fm)               |
-    | `{track.spotify_url}`    | Current playing track URL (from Spotify)               |
-    | `{track.release_date}`   | Current playing track release date (from Spotify)      |
-    | `{track.duration}`       | Current playing track duration (from Spotify)          |
-    | `{track.plays}`          | Current playing track playcount                        |
-    | `{proper(track.plays)}`  | Current playing track playcount (formatted number)     |
-    | `{artist.name}`          | Current playing artist name (from Last.fm)             |
-    | `{lower(artist.name)}`   | Current playing artist name in all lowercase           |
-    | `{artist.plays}`         | Current playing artist plays (from local database)     |
-    | `{artist.url}`           | Current playing artist URL (from Last.fm)              |
-    | `{artist.image}`         | Current playing artist image (from Spotify)            |
-  </Tab>
+| Variable            | Output                                  |
+| ------------------- | --------------------------------------- |
+| {track.name}        | Shows track name                        |
+| {lower(track.name)} | Shows track name in lowercase           |
+| {track.url}         | Shows the track lastfm url              |
+| {track.image}       | Shows the track image                   |
+| {track.plays}       | Shows the track’s plays on your account |
+| {% endtab %}        |                                         |
 
-  <Tab title="Leveling">
-    <Info>
-      This section is only available for the `level message` command.
-    </Info>
+{% tab title="Artist" %}
 
-    | Variable           | Output                                 |
-    | ------------------ | -------------------------------------- |
-    | `{level.new_rank}` | Member's new level at time of level up |
-    | `{level.user_xp}`  | Member's current XP                    |
-  </Tab>
+| Variable             | Output                                 |
+| -------------------- | -------------------------------------- |
+| {artist.name}        | Shows the artist name                  |
+| {lower(artist.name)} | Shows artist name in lowercase         |
+| {artist.url}         | Shows the artist lastfm url            |
+| {artist.plays}       | Shows the artist plays on your account |
+| {% endtab %}         |                                        |
 
-  <Tab title="Boost">
-    <Info>
-      This section is only available for the `boost` command.
-    </Info>
+{% tab title="Album" %}
 
-    | Variable              | Output                           |
-    | --------------------- | -------------------------------- |
-    | `{boost.count}`       | Amount of times user has boosted |
-    | `{guild.boost_count}` | Overall guild boost count        |
-  </Tab>
+| Variable            | Output                                |
+| ------------------- | ------------------------------------- |
+| {album.name}        | Shows the album name                  |
+| {lower(album.name)} | Shows album name in lowercase         |
+| {album.url}         | Shows the album lastfm url            |
+| {album.plays}       | Shows the album plays on your account |
+| {% endtab %}        |                                       |
 
-  <Tab title="Bump Reminder">
-    <Info>
-      This section is only available for the `bumpreminder` command.
-    </Info>
+{% tab title="User" %}
 
-    | Variable                        | Output                                 |
-    | ------------------------------- | -------------------------------------- |
-    | `{bumpreminder.last_user_bump}` | The last user to bump the server       |
-    | `{bumpreminder.next_bump}`      | A relative timestamp for the next bump |
-  </Tab>
+| Variable       | Output                                                |
+| -------------- | ----------------------------------------------------- |
+| {username}     | Shows your lastfm username                            |
+| {useravatar}   | Shows your lastfm avatar                              |
+| {scrobbles}    | Shows total number of songs scrobbled on your account |
+| {lastfm.color} | Shows main color of lastfm logo                       |
+| {lastfm.emoji} | Shows lastfm logo emoji                               |
+| {% endtab %}   |                                                       |
+| {% endtabs %}  |                                                       |
 
-  <Tab title="Roblox">
-    | Variable                     | Output                                                  |
-    | ---------------------------- | ------------------------------------------------------- |
-    | `{roblox.name}`              | The Roblox user's username                              |
-    | `{roblox.id}`                | The Roblox user's ID                                    |
-    | `{roblox.followers}`         | The user's follower count                               |
-    | `{roblox.following}`         | The user's following count                              |
-    | `{roblox.display_name}`      | The Roblox user's current display name                  |
-    | `{roblox.description}`       | The user's profile description/bio                      |
-    | `{roblox.verified}`          | Returns `Yes`/`No` if the user has a verified badge     |
-    | `{roblox.premium}`           | Returns `Yes`/`No` if the user has Roblox Premium       |
-    | `{roblox.rap}`               | The user's Recent Average Price (RAP) for limited items |
-    | `{roblox.created}`           | The user's account creation date                        |
-    | `{roblox.created.raw}`       | The user's account creation date in UNIX                |
-    | `{roblox.created.short}`     | The user's account creation date (short format)         |
-    | `{roblox.age}`               | The user's account age in days                          |
-    | `{roblox.banned}`            | Returns `Yes`/`No` if the account is currently banned   |
-    | `{roblox.last_online}`       | The user's last online date                             |
-    | `{roblox.last_online.raw}`   | The user's last online date in UNIX                     |
-    | `{roblox.last_online.short}` | The user's last online date (short format)              |
-    | `{roblox.avatar}`            | The user's profile avatar image URL                     |
-    | `{roblox.badges}`            | The user's Roblox profile badges                        |
-    | `{roblox.previous_names}`    | A list of the user's past usernames                     |
-    | `{roblox.url}`               | Profile URL for the Roblox account                      |
-  </Tab>
+## Levels Related Variables
 
-  <Tab title="YouTube">
-    <Info>
-      This section is only available for the `youtube message` command.
-    </Info>
+| Variable     | Output                                      |
+| ------------ | ------------------------------------------- |
+| {level}      | Shows level you reached to                  |
+| {target\_xp} | Show new target xp amount you have to reach |
 
-    | Variable                        | Output                        |
-    | ------------------------------- | ----------------------------- |
-    | `{youtube.channel.name}`        | The YouTube channel's name    |
-    | `{youtube.channel.url}`         | The YouTube channel's URL     |
-    | `{youtube.channel.id}`          | The YouTube channel's ID      |
-    | `{youtube.video.url}`           | The YouTube video's URL       |
-    | `{youtube.video.title}`         | The YouTube video's title     |
-    | `{youtube.video.thumbnail_url}` | The YouTube video's thumbnail |
-  </Tab>
+## Invite Tracker Related Variables
 
-  <Tab title="Punishments">
-    <Info>
-      Only available for `bandm`, `softbandm`, `kickdm`, `warndm`, `jaildm`, `unjaildm`, `timeoutdm`, `ban message`, `kick message`, etc.
-    </Info>
+| Variable                 | Output                                    |
+| ------------------------ | ----------------------------------------- |
+| {inviter.id}             | Only inviter id                           |
+| {inviter.name}           | Only inviter name                         |
+| {inviter.display}        | Only inviter display name                 |
+| {inviter.mention}        | Mentions the inviter                      |
+| {inviter.avatar}         | Only inviters avatar                      |
+| {inviter.regular\_count} | Number of regular invites the inviter has |
+| {inviter.left\_count}    | Number of left invites the inviter has    |
+| {inviter.fake\_count}    | Number of fake invites the inviter has    |
+| {inviter.bonus\_count}   | Number of bonus invites the inviter has   |
+| {inviter.total\_count}   | Total number of invites the inviter has   |
 
-    | Punishment Variables     | Output                                                                          |
-    | ------------------------ | ------------------------------------------------------------------------------- |
-    | `{moderator}`            | Moderator name who performed action                                             |
-    | `{moderator.name}`       | Moderator username                                                              |
-    | `{moderator.tag}`        | Moderator discriminator (will always return 0 due to removal of discriminators) |
-    | `{moderator.avatar}`     | Moderator avatar                                                                |
-    | `{moderator.bot}`        | Return True or False if mod is a bot                                            |
-    | `{moderator.color}`      | Moderator’s highest role color                                                  |
-    | `{moderator.mention}`    | Mention moderator                                                               |
-    | `{moderator.created_at}` | Moderator discord creation date                                                 |
-    | `{reason}`               | Reason for punishment                                                           |
-    | `{duration}`             | Duration for punishments that use it                                            |
-    | `{invite_url}`           | Invite url generated for punishment (softban)                                   |
-    | `{moderator.id}`         | The ID of the moderator that enacted the punishment                             |
-  </Tab>
-</Tabs>
+## Ticket Related Variables
+
+| Variable       | Output                   |
+| -------------- | ------------------------ |
+| {user.id}      | Only ticket user id      |
+| {user.name}    | Only ticket user name    |
+| {support.role} | All ticket support roles |
+| {topic}        | Name of the ticket topic |
+
+## Punishments Related Variables
+
+{% hint style="info" %}
+Only available for `ban`, `unban`, `kick`, `mute`, `unmute`, `jail`, `unjail`
+{% endhint %}
+
+| Variable               | Output                                     |
+| ---------------------- | ------------------------------------------ |
+| {member.id}            | Shows id of the punished member            |
+| {member.name}          | Shows name of the punished member          |
+| {member.mention}       | Shows mention the punished member          |
+| {member.discriminator} | Shows discriminator of the punished member |
+| {member.avatar}        | Shows avatar of the punished member        |
+| {reason}               | Shows reason of the punishment             |
+| {duration}             | Shows duration for mute/jail               |
+| {appeal.url}           | Show appeal url of the punishment          |
+| {case.id}              | Show case id of the punishment             |
+
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
+
+```
+GET https://docs.evelina.bot/resources/scripting/variables.md?ask=<question>&goal=<endgoal>
+```
+
+`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
+`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
+
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

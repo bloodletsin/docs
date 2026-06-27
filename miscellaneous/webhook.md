@@ -1,116 +1,102 @@
-> ## Documentation Index
-> Fetch the complete documentation index at: https://docs.bleh.bot/llms.txt
-> Use this file to discover all available pages before exploring further.
+> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/miscellaneous/webhook.md).
 
 # Webhook
 
-> Relay messages through a webhook with a custom username and avatar.
-
-## What is a webhook?
+## What is a webhook? <a href="#what-is-a-webhook" id="what-is-a-webhook"></a>
 
 A webhook is a way to post a message with a custom username and avatar to a channel.
 
-<Info>
-  Webhooks support [embeds](/resources/scripting) with dynamic
-  [variables](/resources/scripting/variables).
-</Info>
+{% hint style="info" %}
+Webhooks support [embeds](/resources/scripting/embeds.md) with dynamic [variables](/resources/scripting/variables.md).
+{% endhint %}
 
-## Creating a webhook
+```
+Syntax: ;webhook create [channel] [name]
+Example: ;webhook create #welcome evelina
+```
 
-You can use the `webhook create` command to create a webhook.
+<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_kiAhPgu5Pe.png" alt=""><figcaption></figcaption></figure>
 
-<Info>The webhook identifier is important for referencing the webhook in other commands.</Info>
+### Customizing the webhook <a href="#customizing-the-webhook" id="customizing-the-webhook"></a>
 
-<CodeGroup>
-  ```javascript Syntax theme={null}
-  ,webhook create (name)
-  ```
+If you want to change the webhook’s username or avatar, you can use the `webhook edit` command.
 
-  ```javascript Example theme={null}
-  ,webhook create daddyhook
-  ```
-</CodeGroup>
+```
+Syntax: ;webhook edit name [code] [name]
+Example: ;webhook edit name bZYdgLvu evelina
+```
 
-<br />
+<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_nSA8AeM6lr.png" alt=""><figcaption></figcaption></figure>
 
-<Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/miscellaneous/webhook/create.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=080a1befc7b518464d2aeb0fc239cee4" width="653" height="189" data-path="images/miscellaneous/webhook/create.png" />
-</Frame>
+```
+Syntax: ;webhook edit avatar [code] [url]
+Example: ;webhook edit avatar bZYdgLvu https://evelina.bot/icon.png
+```
 
-### Customizing the webhook
+<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_n2UodoMHO7.png" alt=""><figcaption></figcaption></figure>
 
-If you want to change the webhook's username or avatar, you can open the **Webhooks** tab in the channel's integrations settings.
-
-<Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/miscellaneous/webhook/customize.gif?s=09c8cc7badc589c4bc5a69ab1c2f1e9f" width="1026" height="607" data-path="images/miscellaneous/webhook/customize.gif" />
-</Frame>
-
-## Sending a message
+## Sending a message <a href="#sending-a-message" id="sending-a-message"></a>
 
 After creating a webhook, you can use the `webhook send` command to send a message.
 
-<Info>
-  If you've forgotten the identifier, you can use the `webhook list` command to
-  view all webhooks.
-</Info>
+{% hint style="info" %}
+If you’ve forgotten the identifier, you can use the `webhook list` command to view all webhooks.
+{% endhint %}
 
-<Tip>You can use the `--add` flag to add another embed to the message.</Tip>
+<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_XfPoxQnxPa.png" alt=""><figcaption></figcaption></figure>
 
-<CodeGroup>
-  ```javascript Syntax theme={null}
-  ,webhook send (identifier) (message) [--add (embed code)]
-  ```
+### Editing the message <a href="#editing-the-message" id="editing-the-message"></a>
 
-  ```javascript Example theme={null}
-  ,webhook send 1cc8rax hello
-  ,webhook send 1cc8rax {embed}$v{title: hello} --add {embed}$v{title: hi}
-  ```
-</CodeGroup>
+You can use the `webhook update` command to edit a message sent by a webhook.
 
-<br />
+```
+Syntax: ;webhook update [message] [script]
+Example: ;webhook update .../channels.../ hello world
+```
 
-<Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/miscellaneous/webhook/send.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=dd6e8fd1cfa048b113de99bdf55cacb0" width="617" height="387" data-path="images/miscellaneous/webhook/send.png" />
-</Frame>
+<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Discord_KHTwSx2qPN.png" alt=""><figcaption></figcaption></figure>
 
-### Editing the message
+## Related commands <a href="#related-commands" id="related-commands"></a>
 
-You can use the `webhook edit` command to edit a message sent by a webhook.
+<details>
 
-<CodeGroup>
-  ```javascript Syntax theme={null}
-  ,webhook edit (message link) (new message)
-  ```
+<summary>Deleting a webhook</summary>
 
-  ```javascript Example theme={null}
-  ,webhook edit discord.com/.../ hello world
-  ```
-</CodeGroup>
+You can use the `webhook delete` command to delete a webhook.
 
-<br />
+```
+Syntax: ;webhook delete [code]
+Example: ;webhook delete bZYdgLvu
+```
 
-<Frame>
-  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/miscellaneous/webhook/edit.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=43774bf86369f668460e80127397d260" width="629" height="372" data-path="images/miscellaneous/webhook/edit.png" />
-</Frame>
+</details>
 
-## Related commands
+<details>
 
-<AccordionGroup>
-  <Accordion title="Deleting a webhook">
-    You can use the `webhook delete` command to delete a webhook.
+<summary>Viewing all webhooks</summary>
 
-    <CodeGroup>
-      ```javascript Syntax theme={null}
-      ,webhook delete (identifier)
-      ```
+You can use the `webhook list` command to view all webhooks.
 
-      ```javascript Example theme={null}
-      ,webhook delete 1cc8rax
-      ```
-    </CodeGroup>
-  </Accordion>
+</details>
 
-  <Accordion title="Viewing all webhooks">
-    You can use the `webhook list` command to view all webhooks.
-  </Accordion>
-</AccordionGroup>
+
+---
+
+# Agent Instructions
+This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
+
+## Querying This Documentation
+If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
+
+Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
+
+```
+GET https://docs.evelina.bot/miscellaneous/webhook.md?ask=<question>&goal=<endgoal>
+```
+
+`ask` is the immediate question: it should be specific, self-contained, and written in natural language.
+`goal` is optional and describes the broader end goal you are ultimately trying to accomplish on behalf of the user. GitBook uses it to tailor the answer towards what is most useful for that goal.
+
+The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
+
+Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

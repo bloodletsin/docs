@@ -1,22 +1,23 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/resources/syntax.md).
+> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/security/antinuke/roledelete.md).
 
-# Syntax
+# Role deletion
 
-## Formatting a duration
+## Parameters <a href="#parameters" id="parameters"></a>
 
-When a command requires a `duration` parameter, you format it as a number followed by a unit. The unit can be one of the following:
+| Name       | Description                   |
+| ---------- | ----------------------------- |
+| threshold  | threshold to trigger antinuke |
+| punishment | action to be taken            |
 
-* `s` for seconds.
-* `m` for minutes.
-* `h` for hours.
-* `d` for days.
-* `w` for weeks.
+{% content-ref url="/pages/M8W1s0B1kjPxF5dsKqD9" %}
+[Punishments](/resources/punishments.md)
+{% endcontent-ref %}
 
-For example, `1d` represents one day, and `1w` represents one week.
+## Command <a href="#command" id="command"></a>
 
 ```
-Syntax: ;mute [member] [time] [reason]
-Example: ;mute bender.py 1d rassist
+Syntax: ;antinuke roledelete enable [threshold] [punishment]
+Example: ;antinuke roledelete enable 2 kick
 ```
 
 
@@ -31,7 +32,7 @@ If you need additional information that is not directly available in this page, 
 Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
 
 ```
-GET https://docs.evelina.bot/resources/syntax.md?ask=<question>&goal=<endgoal>
+GET https://docs.evelina.bot/security/antinuke/roledelete.md?ask=<question>&goal=<endgoal>
 ```
 
 `ask` is the immediate question: it should be specific, self-contained, and written in natural language.

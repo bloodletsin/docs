@@ -1,23 +1,12 @@
-> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/resources/syntax.md).
+> For the complete documentation index, see [llms.txt](https://docs.evelina.bot/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://docs.evelina.bot/overview/donator.md).
 
-# Syntax
+# Donator Perks
 
-## Formatting a duration
+## How to obtain Donator Perks <a href="#how-to-obtain-donator-perks" id="how-to-obtain-donator-perks"></a>
 
-When a command requires a `duration` parameter, you format it as a number followed by a unit. The unit can be one of the following:
+Donator perks can be purchased via **our Store** on our [**Website**](https://evelina.bot/premium).
 
-* `s` for seconds.
-* `m` for minutes.
-* `h` for hours.
-* `d` for days.
-* `w` for weeks.
-
-For example, `1d` represents one day, and `1w` represents one week.
-
-```
-Syntax: ;mute [member] [time] [reason]
-Example: ;mute bender.py 1d rassist
-```
+<figure><img src="https://github.com/EvelinaServices/docs/blob/main/.gitbook/assets/Screenshot%202025-03-26%20003530.png" alt="" width="563"><figcaption></figcaption></figure>
 
 
 ---
@@ -31,7 +20,7 @@ If you need additional information that is not directly available in this page, 
 Perform an HTTP GET request on the current page URL with the `ask` query parameter, and the optional `goal` query parameter:
 
 ```
-GET https://docs.evelina.bot/resources/syntax.md?ask=<question>&goal=<endgoal>
+GET https://docs.evelina.bot/overview/donator.md?ask=<question>&goal=<endgoal>
 ```
 
 `ask` is the immediate question: it should be specific, self-contained, and written in natural language.
