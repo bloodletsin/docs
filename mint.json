@@ -1,0 +1,11 @@
+{
+  "name": "Bleh",
+  "colors": {
+    "primary": "#0c3175"
+  },
+  "logo": {
+    "light": "https://bleh.rest/logo.png",
+    "dark": "https://bleh.rest/logo.png"
+  },
+  "favicon": "https://bleh.rest/logo.png"
+}

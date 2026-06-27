@@ -9,7 +9,7 @@
 You can fully customize how the panel functions, and how it looks on the frontend. Panel management is structured into four key sections: **Behavior**, **Categories**, **Display**, and **Messages**.
 
 <Frame caption="An example of the panel options menu.">
-  
+  <img src="https://mintcdn.com/bleh/lAKpJHLfabW7E5g1/images/tickets/panel-options.png?fit=max&auto=format&n=lAKpJHLfabW7E5g1&q=85&s=109e6ac1e525e2a2dff08dd32e3877b1" alt="Ticket Panel Options" width="1426" height="498" data-path="images/tickets/panel-options.png" />
 </Frame>
 
 ***

@@ -25,7 +25,7 @@ You can set a DJ role which restricts who can control the music player.
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/music/bind-dj.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=14e8c09fe03d8161543686c21b512a64" width="402" height="165" data-path="images/miscellaneous/music/bind-dj.png" />
 </Frame>
 
 ### Auto play similar tracks
@@ -45,7 +45,7 @@ You can toggle auto play which will automatically play similar tracks when the q
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/music/bind-autoplay.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=98a2ba16495d260a512de82e5157bc7d" width="422" height="173" data-path="images/miscellaneous/music/bind-autoplay.png" />
 </Frame>
 
 ## Queueing Music
@@ -76,7 +76,7 @@ Use the `queue` command to view the tracks in the queue.
 Each track has a corresponding position which can be used to interact with the queue.
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/miscellaneous/music/queue.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=c525eb4f58c1497b89b6920674b37c55" width="344" height="235" data-path="images/miscellaneous/music/queue.png" />
 </Frame>
 
 ### Removing a track from the queue
@@ -97,7 +97,7 @@ You must provide the [track position](#viewing-the-tracks-in-the-queue) which ca
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/miscellaneous/music/queue-remove.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=d4d4f7e5abf64a81111e1ba98bbbc7c0" width="393" height="175" data-path="images/miscellaneous/music/queue-remove.png" />
 </Frame>
 
 ### Moving a track in the queue
@@ -118,7 +118,7 @@ You must provide the [current position](#viewing-the-tracks-in-the-queue) and th
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/miscellaneous/music/queue-move.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=79923c9850462d16b0fcd736b03f62eb" width="404" height="169" data-path="images/miscellaneous/music/queue-move.png" />
 </Frame>
 
 ## Controlling Playback

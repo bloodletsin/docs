@@ -37,7 +37,7 @@ You can create an auto responder with the `autoresponder add` command.
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/messages/responder/add.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=43f4150e0e52478ee4576cd3aeaf46ea" width="800" height="789" data-path="images/configuration/messages/responder/add.png" />
 </Frame>
 
 ### Available flags
@@ -89,7 +89,7 @@ You can remove an auto responder with the `autoresponder remove` command.
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/messages/responder/remove.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=2e34076e374c2ef715d727c6ac679e3e" width="384" height="176" data-path="images/configuration/messages/responder/remove.png" />
 </Frame>
 
 ## Restricting auto responders
@@ -111,7 +111,7 @@ Toggle exclusive access for an autoresponder to a role or channel with the `auto
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/messages/responder/role3.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=bcbbe2e396cbd31072b841e1f80c5935" width="524" height="344" data-path="images/configuration/messages/responder/role3.png" />
 </Frame>
 
 ## Auto Responder Roles
@@ -131,7 +131,7 @@ Autoresponder roles are roles that are assigned or removed to members when they 
 </CodeGroup>
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/messages/responder/role2.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=75de23a96f10db8138f06929cbe03152" width="489" height="329" data-path="images/configuration/messages/responder/role2.png" />
 </Frame>
 
 ### Removing an autoresponder role

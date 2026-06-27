@@ -34,7 +34,7 @@ You should immediately ignore channels and roles that you don't want gaining XP.
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/level-rewards/ignore-channel.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=740e7ba32d5b5a7c285eb1862b4f7f0e" width="553" height="353" data-path="images/configuration/level-rewards/ignore-channel.png" />
 </Frame>
 
 ## Setting up roles to reward
@@ -63,7 +63,7 @@ You can reward your members with roles when they reach a certain level. You can 
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/level-rewards/setting-roles.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=88f01c934af7b1a1cf567e59291f41e7" width="462" height="349" data-path="images/configuration/level-rewards/setting-roles.png" />
 </Frame>
 
 ### Stacking reward roles
@@ -131,7 +131,7 @@ The `option` parameter can be one of the following:
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/level-rewards/message-mode.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=2c0bb4fc7cf2cfc3f27beb4cde82c55a" width="576" height="352" data-path="images/configuration/level-rewards/message-mode.png" />
 </Frame>
 
 ## Changing a member's level

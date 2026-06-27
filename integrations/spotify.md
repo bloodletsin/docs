@@ -14,7 +14,7 @@
     response.
 
     <Frame>
-      
+      <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/integrations/spotify/authentication.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=8ce337d79dde628a729c32ee547dad58" width="927" height="315" data-path="images/integrations/spotify/authentication.png" />
     </Frame>
   </Step>
 
@@ -23,7 +23,7 @@
     **Spotify** account.
 
     <Frame>
-      
+      <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/integrations/spotify/authorization.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=cf70574ee48d01c0a0f8f48a18618b82" width="397" height="429" data-path="images/integrations/spotify/authorization.png" />
     </Frame>
   </Step>
 
@@ -31,7 +31,7 @@
     Once you've granted access, you will be given a code to submit in Discord.
 
     <Frame>
-      
+      <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/integrations/spotify/input.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=3948c0f9d71127db435309de1056c791" width="489" height="307" data-path="images/integrations/spotify/input.png" />
     </Frame>
   </Step>
 </Steps>
@@ -102,7 +102,7 @@ You can use the `spotify device` command to change the device that **Spotify** i
 playing on.
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/integrations/spotify/device.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=96293b8528081777cef2e182085e5f3e" width="546" height="187" data-path="images/integrations/spotify/device.png" />
 </Frame>
 
 ### Interacting with the queue

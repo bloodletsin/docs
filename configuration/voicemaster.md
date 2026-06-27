@@ -13,7 +13,7 @@ The first step to using **VoiceMaster** is to use the `voicemaster setup` comman
 <Tip>The created channels can be moved and renamed to your liking.</Tip>
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/configuration/voicemaster/setup.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=5eb08ffd86a00f29faff44ec1a71e677" width="651" height="213" data-path="images/configuration/voicemaster/setup.png" />
 </Frame>
 
 ### What is the interface channel?
@@ -21,7 +21,7 @@ The first step to using **VoiceMaster** is to use the `voicemaster setup` comman
 The `#interface` channel will contain an embed with buttons that allow members to customize their temporary voice channel. This channel should be locked to keep the embed message at the top of the channel.
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/configuration/voicemaster/interface.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=f0f770191a38be527cef9735fe4673e1" width="567" height="488" data-path="images/configuration/voicemaster/interface.png" />
 </Frame>
 
 ### What is the Join to Create channel?
@@ -29,7 +29,7 @@ The `#interface` channel will contain an embed with buttons that allow members t
 The **Join to Create** channel is where members will join to create their temporary voice channel. This channel is required for the **VoiceMaster** system to work.
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/configuration/voicemaster/join-to-create.gif?s=09bee0cbd0f373bc8ca7d540dd962c85" width="262" height="204" data-path="images/configuration/voicemaster/join-to-create.gif" />
 </Frame>
 
 ## Customizing new voice channels
@@ -120,7 +120,7 @@ If you're interested in making your `#interface` channel only visible to members
 You would need to deny the **View Channel** permission for the `@everyone` role and allow the **View Channel** permission for the role you set in the previous step.
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/configuration/voicemaster/interface-permissions.gif?s=d2e3023c9447706d5a6cdda43662b296" width="1012" height="911" data-path="images/configuration/voicemaster/interface-permissions.gif" />
 </Frame>
 
 ## Customizing your voice channel

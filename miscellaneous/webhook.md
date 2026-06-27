@@ -34,7 +34,7 @@ You can use the `webhook create` command to create a webhook.
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/miscellaneous/webhook/create.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=080a1befc7b518464d2aeb0fc239cee4" width="653" height="189" data-path="images/miscellaneous/webhook/create.png" />
 </Frame>
 
 ### Customizing the webhook
@@ -42,7 +42,7 @@ You can use the `webhook create` command to create a webhook.
 If you want to change the webhook's username or avatar, you can open the **Webhooks** tab in the channel's integrations settings.
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/miscellaneous/webhook/customize.gif?s=09c8cc7badc589c4bc5a69ab1c2f1e9f" width="1026" height="607" data-path="images/miscellaneous/webhook/customize.gif" />
 </Frame>
 
 ## Sending a message
@@ -70,7 +70,7 @@ After creating a webhook, you can use the `webhook send` command to send a messa
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/miscellaneous/webhook/send.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=dd6e8fd1cfa048b113de99bdf55cacb0" width="617" height="387" data-path="images/miscellaneous/webhook/send.png" />
 </Frame>
 
 ### Editing the message
@@ -90,7 +90,7 @@ You can use the `webhook edit` command to edit a message sent by a webhook.
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/miscellaneous/webhook/edit.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=43774bf86369f668460e80127397d260" width="629" height="372" data-path="images/miscellaneous/webhook/edit.png" />
 </Frame>
 
 ## Related commands

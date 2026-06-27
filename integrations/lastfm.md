@@ -30,7 +30,7 @@ to automatically scrobble your listening activity. You can do this by visiting t
 the **Connect** button next to **Spotify Scrobbling**.
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/integrations/lastfm/spotify-scrobbling.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=1dcd775b21221c1a1bfe0ce05a2ece71" width="766" height="72" data-path="images/integrations/lastfm/spotify-scrobbling.png" />
 </Frame>
 
 ## Connecting your Last.fm account
@@ -38,7 +38,7 @@ the **Connect** button next to **Spotify Scrobbling**.
 Use the `lastfm login` command, and follow the instructions sent in your direct messages.
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/integrations/lastfm/authentication.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=e360c1015a33d2fa01f65d030a59ba7e" width="649" height="277" data-path="images/integrations/lastfm/authentication.png" />
 </Frame>
 
 <Warning>

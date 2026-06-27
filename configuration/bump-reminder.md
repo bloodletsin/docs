@@ -28,7 +28,7 @@ Once you've invited the **DISBOARD** bot, you can set up bump reminders by setti
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/bump-reminder/channel.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=becbc6c155317bab276761d1e9a8f47d" width="528" height="172" data-path="images/configuration/bump-reminder/channel.png" />
 </Frame>
 
 ## Customizing bump reminders
@@ -63,7 +63,7 @@ This is the message that will be sent every **two hours** when it's time to `/bu
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/bump-reminder/message.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=ad5e6115f3d714f49e48452d6f5a395e" width="605" height="172" data-path="images/configuration/bump-reminder/message.png" />
 </Frame>
 
 ### Changing the thank you message
@@ -89,7 +89,7 @@ You can change the message which will be sent after bumping the server with the 
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/bump-reminder/thankyou.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=1d45c16d7e6dda47e3aa506442f3e137" width="640" height="172" data-path="images/configuration/bump-reminder/thankyou.png" />
 </Frame>
 
 ### Locking the channel
@@ -109,7 +109,7 @@ If you don't want members to send messages until it's time to bump the server, y
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/bump-reminder/autolock.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=24a9a479987e745e9fa81b6988060522" width="429" height="170" data-path="images/configuration/bump-reminder/autolock.png" />
 </Frame>
 
 ### Cleaning up the channel
@@ -129,7 +129,7 @@ If you don't want messages which aren't `/bump` to be sent in the channel, you c
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/bump-reminder/autoclean.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=c9b61f1e44fff4885cc5609779273310" width="432" height="168" data-path="images/configuration/bump-reminder/autoclean.png" />
 </Frame>
 
 ## Viewing the configuration
@@ -137,5 +137,5 @@ If you don't want messages which aren't `/bump` to be sent in the channel, you c
 You can use the `bumpreminder config` command to view the current configuration.
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/configuration/bump-reminder/config.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=64a1d8dc6063ecd0412a9d5e5cf7ae12" width="349" height="365" data-path="images/configuration/bump-reminder/config.png" />
 </Frame>

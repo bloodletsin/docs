@@ -106,7 +106,7 @@ You can use dynamic variables in your embeds to display user-specific informatio
 ```
 
 <Frame type="glass">
-  
+  <img src="https://i.imgur.com/PDikvh8.png" />
 </Frame>
 
 ## Frequently Asked Questions

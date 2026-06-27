@@ -9,7 +9,7 @@
 In the configuration system, options are structured into five main categories: **Behavior**, **Form**, **Messages**, **Style**, and **Convert**. Each option contains completely unique settings, allowing you to cater every ticket scenario differently.
 
 <Frame caption="Viewing a single ticket option's configuration.">
-  
+  <img src="https://mintcdn.com/bleh/lAKpJHLfabW7E5g1/images/tickets/option-categories.png?fit=max&auto=format&n=lAKpJHLfabW7E5g1&q=85&s=e91618c12b018e266e020ef1fa09c4fc" alt="Option categories" width="1426" height="498" data-path="images/tickets/option-categories.png" />
 </Frame>
 
 ***

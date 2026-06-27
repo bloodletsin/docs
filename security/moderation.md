@@ -52,7 +52,7 @@ Use the `,bind staff @role` command to set a role as a staff role, you would re-
 </Tip>
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/2xss_MWCdGi-bEKc/images/security/moderation/staff-role.png?fit=max&auto=format&n=2xss_MWCdGi-bEKc&q=85&s=2b4663617337a1fc244ab07f1a065783" width="427" height="347" data-path="images/security/moderation/staff-role.png" />
 </Frame>
 
 ## Invoke Messages

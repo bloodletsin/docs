@@ -37,7 +37,7 @@ Support visibility is controlled per option. If an option does not define suppor
     </CodeGroup>
 
     <Frame caption="Blacklisting a user.">
-      
+      <img src="https://mintcdn.com/bleh/lAKpJHLfabW7E5g1/images/tickets/blacklist-user.png?fit=max&auto=format&n=lAKpJHLfabW7E5g1&q=85&s=7b39c092f00f299820faa54ab89b61c7" alt="Blacklist User" width="1426" height="372" data-path="images/tickets/blacklist-user.png" />
     </Frame>
   </Accordion>
 
@@ -55,7 +55,7 @@ Support visibility is controlled per option. If an option does not define suppor
     </CodeGroup>
 
     <Frame caption="Blacklisting a role.">
-      
+      <img src="https://mintcdn.com/bleh/lAKpJHLfabW7E5g1/images/tickets/blacklist-role.png?fit=max&auto=format&n=lAKpJHLfabW7E5g1&q=85&s=50f5807e64b1eb74f86506f3aebebb93" alt="Blacklist Role" width="1426" height="350" data-path="images/tickets/blacklist-role.png" />
     </Frame>
   </Accordion>
 

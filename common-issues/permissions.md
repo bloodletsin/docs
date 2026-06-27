@@ -16,7 +16,7 @@ Usually, if members are still able to send messages in a text channel after bein
     Find the `@everyone` or **member** role and ensure that the **Send Messages** permission is set to **Neutral** (`/`).
 
     <Frame>
-      
+      <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/common-issues/channel-permission.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=f2a6898fe3e57aded62e959f17721718" className="w-auto" width="689" height="274" data-path="images/common-issues/channel-permission.png" />
     </Frame>
   </Step>
 
@@ -25,7 +25,7 @@ Usually, if members are still able to send messages in a text channel after bein
     Find the `@everyone` or **member** role and ensure that the **Send Messages** permission isn't enabled.
 
     <Frame>
-      
+      <img src="https://mintcdn.com/bleh/ERtszj3Wuzo7WvDX/images/common-issues/server-role-permission.png?fit=max&auto=format&n=ERtszj3Wuzo7WvDX&q=85&s=87b07b1e2f57ed45411b61a2888fe018" className="w-auto" width="471" height="294" data-path="images/common-issues/server-role-permission.png" />
     </Frame>
   </Step>
 

@@ -24,7 +24,7 @@ You can start a giveaway with the `giveaway start` command.
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/giveaway/start.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=8a3125bfbb0ce1f50769fd28bc95ef87" width="388" height="387" data-path="images/miscellaneous/giveaway/start.png" />
 </Frame>
 
 ### Changing the details
@@ -110,7 +110,7 @@ You can customize the giveaway embed with the following commands
     <br />
 
     <Frame>
-      
+      <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/giveaway/edit/embed/description.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=8af8d617b2fd70ce6acf20a714ce1dcc" width="390" height="298" data-path="images/miscellaneous/giveaway/edit/embed/description.png" />
     </Frame>
   </Accordion>
 
@@ -130,7 +130,7 @@ You can customize the giveaway embed with the following commands
     <br />
 
     <Frame>
-      
+      <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/giveaway/edit/embed/thumbnail.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=01162dc147f61d22375b8a77c2507597" width="494" height="304" data-path="images/miscellaneous/giveaway/edit/embed/thumbnail.png" />
     </Frame>
   </Accordion>
 
@@ -150,7 +150,7 @@ You can customize the giveaway embed with the following commands
     <br />
 
     <Frame>
-      
+      <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/giveaway/edit/embed/image.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=de2c94065099abeae664ef47fe0378dd" width="452" height="648" data-path="images/miscellaneous/giveaway/edit/embed/image.png" />
     </Frame>
   </Accordion>
 </AccordionGroup>
@@ -211,7 +211,7 @@ You can end a giveaway early with the `giveaway end` command.
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/giveaway/end.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=1671c36f6c4233e589d95b2ed5db6724" width="453" height="230" data-path="images/miscellaneous/giveaway/end.png" />
 </Frame>
 
 ## Rerolling a Giveaway
@@ -231,7 +231,7 @@ You can reroll the winners of a giveaway with the `giveaway reroll` command.
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/giveaway/reroll.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=05c0e12d792b972f7f8306038a1c1d7b" width="395" height="198" data-path="images/miscellaneous/giveaway/reroll.png" />
 </Frame>
 
 ## Canceling a Giveaway
@@ -255,7 +255,7 @@ You can cancel a giveaway with the `giveaway cancel` command.
 <br />
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/giveaway/cancel.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=da1ee98c80d9936e17c71e27d5d0b0c3" width="446" height="172" data-path="images/miscellaneous/giveaway/cancel.png" />
 </Frame>
 
 ## Viewing all Giveaways
@@ -265,5 +265,5 @@ You can view all giveaways with the `giveaway list` command.
 <Info>This will display past and active giveaways.</Info>
 
 <Frame>
-  
+  <img src="https://mintcdn.com/bleh/NOU9kBuI7_CopQLy/images/miscellaneous/giveaway/list.png?fit=max&auto=format&n=NOU9kBuI7_CopQLy&q=85&s=7bb0101b5a0d5e01329bcde8178a84bb" width="301" height="287" data-path="images/miscellaneous/giveaway/list.png" />
 </Frame>
